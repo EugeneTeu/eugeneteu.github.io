@@ -47,36 +47,37 @@ class Index extends Component {
             <React.Fragment>
 
                 {/* Hero Start */}
-                <section className="bg-home" style={{ background: `url(${bg01})`, backgroundPosition : "center" }} id="home">
+                <section className="bg-home" style={{ backgroundPosition : "center" }} id="home">
                     <div className="home-center">
                         <div className="home-desc-center">
                             <div className="container">
                                 <Row className="align-items-center">
                                     <Col lg={8} md={9} >
                                         <div className="title-heading mt-4">
-                                            <h1 className="display-3 font-weight-bold mb-3">Here I'm <br />
+                                            <h1 className="display-3 font-weight-bold mb-3">
                                                 <Typist>
-                                                    <span className="element">Calvin Carlo</span>
-                                                    <Typist.Backspace count={15} delay={200} />
-                                                    <span className="element">UI/UX Designer</span>
-                                                    <Typist.Backspace count={15} delay={200} />
-                                                    <span className="element">Web Developer</span>
+                                               
+                                                    <span className="element">Eugene Teu</span>
+                                                    <Typist.Backspace count={20} delay={200} />
+                                                    <span className="element">Computer Science Undergraduate</span>
+                                                    <Typist.Backspace count={30} delay={200} />
+                                                    <span className="element">Software Development</span>
+                                                    <Typist.Backspace count={20} delay={200} />
+                                                    <span className="element">Eugene Teu</span>
+                                               
                                                 </Typist>
                                             </h1>
-                                            <p className="para-desc text-muted">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
                                             <div className="mt-4 pt-2">
                                                 <ScrollspyNav
-                                                    scrollTargetIds={["portfolio","contact"]}
+                                                    scrollTargetIds={["portfolio"]}
                                                     activeNavClass="active"
-                                                    scrollDuration="800"
+                                                    scrollDuration="500"
                                                     headerBackground="true"
                                                    >
                                                      <a href="#portfolio" className="btn btn-primary mt-2 mr-2 mouse-down">
-                                                        <i className="mdi mdi-camera"></i> View Portfolio
+                                                        <i className="mdi mdi-code-array"></i> About Me
                                                       </a> 
-                                                      <a href="#contact" className="btn btn-outline-primary mt-2 mouse-down">
-                                                          <i className="mdi mdi-cloud-download"></i> Hire Me
-                                                      </a>
+                                           
                                                   </ScrollspyNav>
                                                 </div>
                                         </div>
@@ -89,22 +90,6 @@ class Index extends Component {
 
                 {/* About */}
                 <About />
-
-                {/* Testi */}
-                <Testi />
-
-                {/* Partner */}
-                <section className="pt-5 pb-5 border-bottom border-top">
-                    <div className="container">
-                        <Row className="justify-content-center">
-                            <Partner />
-                        </Row>
-                    </div>
-                </section>
-
-                {/* Blog */}
-                <Blog />
-
 
             </React.Fragment>
         );

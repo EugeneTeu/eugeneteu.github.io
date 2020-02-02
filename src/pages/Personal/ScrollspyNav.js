@@ -30,7 +30,6 @@ class ScrollspyNav extends Component {
         let change = to - start,
             currentTime = 0,
             increment = 10;
-
         let animateScroll = () => {
             currentTime += increment;
             let val = this.easeInOutQuad(currentTime, start, change, duration);
