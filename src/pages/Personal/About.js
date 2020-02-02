@@ -21,7 +21,7 @@ class About extends Component {
   render() {
     return (
       <React.Fragment>
-        <section className="section">
+        <section className="section" id="portfolio">
           <div className="container">
             <Row className="align-items-center">
               <Col md={6}>
@@ -32,11 +32,11 @@ class About extends Component {
                   </h6>
                   <p className="text-muted mb-0">
                     I specialize in Full Stack Software Development. Passionate
-                    about all things Tech. Currently pursuing my Degree @
+                    about all things Tech. Currently pursuing my Computer Science Degree @
                     National University Of Singapore. <br />
                     My focus area of study includes Software Engineering,
                     Programming languages and Database Management. I aspire to
-                    use my knowledge and skills to build things that will have
+                    use my knowledge and skills to build things that will 
                     leave an impact on society in the future.
                   </p>
                 </div>
@@ -183,237 +183,6 @@ class About extends Component {
                     <Progress value="60" />
                   </div>
                 </div>
-              </Col>
-            </Row>
-          </div>
-
-          <div className="container mt-100 mt-60" id="portfolio">
-            <Row>
-              <Col>
-                <div className="section-title mb-4 pb-2">
-                  <h4 className="title mb-4">My Work & Portfolio</h4>
-                  <p className="text-muted para-desc mb-0">
-                    My side projects I have worked on outside of School{" "}
-                  </p>
-                </div>
-              </Col>
-            </Row>
-
-            <Row>
-              <Col lg={4} md={6} className="mt-4 pt-2">
-                <div className="work-container position-relative d-block overflow-hidden rounded">
-                  <Link
-                    className="mfp-image d-inline-block"
-                    to={personal01}
-                    title=""
-                  >
-                    <img
-                      src={personal01}
-                      className="img-fluid rounded"
-                      alt="work"
-                    />
-                    <div className="overlay-work"></div>
-                  </Link>
-                  <div className="content personal-port">
-                    <Link
-                      to="page-work-detail"
-                      className="title text-white d-block font-weight-bold"
-                    >
-                      Shifting Perspective
-                    </Link>
-                    <small className="text-light">Studio</small>
-                  </div>
-                  <div className="client personal-port">
-                    <small className="text-light user d-block">
-                      <i className="mdi mdi-account"></i> Calvin Carlo
-                    </small>
-                    <small className="text-light date">
-                      <i className="mdi mdi-calendar-check"></i> 13th August,
-                      2019
-                    </small>
-                  </div>
-                </div>
-              </Col>
-
-              <Col lg={4} md={6} className="mt-4 pt-2">
-                <div className="work-container position-relative d-block overflow-hidden rounded">
-                  <Link
-                    className="mfp-image d-inline-block"
-                    to={personal02}
-                    title=""
-                  >
-                    <img
-                      src={personal02}
-                      className="img-fluid rounded"
-                      alt="work"
-                    />
-                    <div className="overlay-work"></div>
-                  </Link>
-                  <div className="content personal-port">
-                    <Link
-                      to="page-work-detail"
-                      className="title text-white d-block font-weight-bold"
-                    >
-                      Colors Magazine
-                    </Link>
-                    <small className="text-light">Web Design</small>
-                  </div>
-                  <div className="client personal-port">
-                    <small className="text-light user d-block">
-                      <i className="mdi mdi-account"></i> Calvin Carlo
-                    </small>
-                    <small className="text-light date">
-                      <i className="mdi mdi-calendar-check"></i> 13th August,
-                      2019
-                    </small>
-                  </div>
-                </div>
-              </Col>
-
-              <Col lg={4} md={6} className="mt-4 pt-2">
-                <div className="work-container position-relative d-block overflow-hidden rounded">
-                  <Link
-                    className="mfp-image d-inline-block"
-                    to={personal03}
-                    title=""
-                  >
-                    <img
-                      src={personal03}
-                      className="img-fluid rounded"
-                      alt="work"
-                    />
-                    <div className="overlay-work"></div>
-                  </Link>
-                  <div className="content personal-port">
-                    <Link
-                      to="page-work-detail"
-                      className="title text-white d-block font-weight-bold"
-                    >
-                      Spa Cosmetics
-                    </Link>
-                    <small className="text-light">Developing</small>
-                  </div>
-                  <div className="client personal-port">
-                    <small className="text-light user d-block">
-                      <i className="mdi mdi-account"></i> Calvin Carlo
-                    </small>
-                    <small className="text-light date">
-                      <i className="mdi mdi-calendar-check"></i> 13th August,
-                      2019
-                    </small>
-                  </div>
-                </div>
-              </Col>
-
-              <Col lg={4} md={6} className="mt-4 pt-2">
-                <div className="work-container position-relative d-block overflow-hidden rounded">
-                  <Link
-                    className="mfp-image d-inline-block"
-                    to={personal04}
-                    title=""
-                  >
-                    <img
-                      src={personal04}
-                      className="img-fluid rounded"
-                      alt="work"
-                    />
-                    <div className="overlay-work"></div>
-                  </Link>
-                  <div className="content personal-port">
-                    <Link
-                      to="page-work-detail"
-                      className="title text-white d-block font-weight-bold"
-                    >
-                      Riser Coffee
-                    </Link>
-                    <small className="text-light">Branding</small>
-                  </div>
-                  <div className="client personal-port">
-                    <small className="text-light user d-block">
-                      <i className="mdi mdi-account"></i> Calvin Carlo
-                    </small>
-                    <small className="text-light date">
-                      <i className="mdi mdi-calendar-check"></i> 13th August,
-                      2019
-                    </small>
-                  </div>
-                </div>
-              </Col>
-
-              <Col lg={4} md={6} className="mt-4 pt-2">
-                <div className="work-container position-relative d-block overflow-hidden rounded">
-                  <Link
-                    className="mfp-image d-inline-block"
-                    to={personal05}
-                    title=""
-                  >
-                    <img
-                      src={personal05}
-                      className="img-fluid rounded"
-                      alt="work"
-                    />
-                    <div className="overlay-work"></div>
-                  </Link>
-                  <div className="content personal-port">
-                    <Link
-                      to="page-work-detail"
-                      className="title text-white d-block font-weight-bold"
-                    >
-                      Dancing With Myself
-                    </Link>
-                    <small className="text-light">Photography</small>
-                  </div>
-                  <div className="client personal-port">
-                    <small className="text-light user d-block">
-                      <i className="mdi mdi-account"></i> Calvin Carlo
-                    </small>
-                    <small className="text-light date">
-                      <i className="mdi mdi-calendar-check"></i> 13th August,
-                      2019
-                    </small>
-                  </div>
-                </div>
-              </Col>
-
-              <Col lg={4} md={6} className="mt-4 pt-2">
-                <div className="work-container position-relative d-block overflow-hidden rounded">
-                  <Link
-                    className="mfp-image d-inline-block"
-                    to={personal06}
-                    title=""
-                  >
-                    <img
-                      src={personal06}
-                      className="img-fluid rounded"
-                      alt="work"
-                    />
-                    <div className="overlay-work"></div>
-                  </Link>
-                  <div className="content personal-port">
-                    <Link
-                      to="page-work-detail"
-                      className="title text-white d-block font-weight-bold"
-                    >
-                      New trends in SEO
-                    </Link>
-                    <small className="text-light">Business</small>
-                  </div>
-                  <div className="client personal-port">
-                    <small className="text-light user d-block">
-                      <i className="mdi mdi-account"></i> Calvin Carlo
-                    </small>
-                    <small className="text-light date">
-                      <i className="mdi mdi-calendar-check"></i> 13th August,
-                      2019
-                    </small>
-                  </div>
-                </div>
-              </Col>
-
-              <Col className="mt-4 pt-2">
-                <Link to="page-work" className="btn btn-outline-primary">
-                  See More <i className="mdi mdi-chevron-right"></i>
-                </Link>
               </Col>
             </Row>
           </div>
