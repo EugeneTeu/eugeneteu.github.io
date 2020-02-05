@@ -33,14 +33,27 @@ class FooterWithoutMenu extends Component {
                 <ul className="list-unstyled social-icon social mb-0 mt-4">
                   <p className="mb-0">Connect with Me</p>
                   <li className="list-inline-item">
-                    <a
-                      href="https://www.linkedin.com/in/eugeneteu/"
-                      className="rounded mr-1"
-                    >
-                      <i className="mdi mdi-linkedin" title="Linkedin"></i>
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
+                        <a href="https://www.instagram.com/cwteu/" className="rounded">
+                          <i
+                            className="mdi mdi-instagram"
+                            title="Instagram"
+                          ></i>
+                        </a>
+                      </li>
+                      <li className="list-inline-item">
+                        <a  href="https://www.linkedin.com/in/eugeneteu/" className="rounded">
+                          <i className="mdi mdi-linkedin" title="LinkedIn"></i>
+                        </a>
+                      </li>
+                      <li className="list-inline-item">
+                        <a href="mailto:eugeneteu@gmail.com" className="rounded">
+                          <i
+                            className="mdi mdi-email"
+                            title="Gmail"
+                          ></i>
+                        </a>
+                      </li>
+                      <li className="list-inline-item">
                     <a
                       href="https://github.com/EugeneTeu"
                       className="rounded mr-1"

@@ -9,6 +9,7 @@ import ScrollspyNav from './ScrollspyNav';
 import About from './About';
 import ShowCase from './ShowCase';
 import PageJob from './PageJob';
+import ContactMe from './ContactMe';
 
 class Index extends Component {
 
@@ -96,6 +97,9 @@ class Index extends Component {
                 <PageJob></PageJob>
                 {/* Feature */}
                 <ShowCase></ShowCase>
+                {/* Contact Me */}
+
+                <ContactMe></ContactMe>
 
             </React.Fragment>
         );
