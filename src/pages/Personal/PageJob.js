@@ -38,7 +38,7 @@ class PageJob extends Component {
                 </div>
               </Col>
             </Row>
-            <Row>
+            <Row className="row-eq-height">
               <Col lg={4} md={6} className="col-12 mt-4 ">
                 <div className=" p-4 border rounded position-relative overflow-hidden">
                   <div className="head pb-3 border-bottom">
@@ -71,8 +71,17 @@ class PageJob extends Component {
                   <ul className="job-facts pt-3 list-unstyled">
                     <li className="list-inline-item text-muted">
                      
-                      Software Engineer intern under Pslove Tech team. Using Flutter for Web to build an internal business system along with firebase and golang for Cloud Functions.
+                    Built and deployed an internal business management system via Flutter
                     </li>
+                    <li className="list-inline-item text-muted">
+                      Developed company landing and ecommerce website in Flutter for Web
+                      </li>
+                    <li className="list-inline-item text-muted">
+                      Implemented comprehensive integration and unit tests
+                      </li>
+                    <li className="list-inline-item text-muted">
+                      Boosted automation with cloud functions written using Golang and Node Js
+                      </li>
                   </ul>
                   
                 </div>
@@ -109,7 +118,13 @@ class PageJob extends Component {
                   </div>
                   <ul className="job-facts pt-3 list-unstyled">
                     <li className="list-inline-item text-muted">
-                      Software Engineer under External Team C. Building a pre employment platform to help disadvantage youths in SG.
+                     Developed and deployed a Pre-employment / Career readiness platform aimed at helping disadvantaged youths
+                    </li>
+                    <li className="list-inline-item text-muted">
+                      Spearheaded and Responsible for front-end Development using ReactJs
+                    </li>
+                    <li className="list-inline-item text-muted">
+                    Currently working and partnering with local Social Enterprises to integrate our product and boost their effectiveness
                     </li>
                   </ul>
                   
@@ -149,7 +164,11 @@ class PageJob extends Component {
                    
                     <li className="list-inline-item text-muted">
                      
-                      Worked on Design, Front-end development and Back-end development. Achieved project completion for companies like Addidas and Reebok
+                     Incorporated technologies (Vuejs, Yii2 framework , PHP) and CMSes (Wordpress and Drupal) across various projects for clients
+                    </li>
+                    <li className="list-inline-item text-muted">
+
+                     Spearheaded project management and achieved project completion for companies like Adidas/Reebok while managing key client relationships within the company
                     </li>
                     
                   </ul>
