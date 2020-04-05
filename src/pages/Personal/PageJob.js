@@ -40,7 +40,7 @@ class PageJob extends Component {
             </Row>
             <Row className="row-eq-height">
               <Col lg={4} md={6} className="col-12 mt-4 ">
-                <div className=" p-4 border rounded position-relative overflow-hidden">
+                <div className=" p-4 position-relative overflow-hidden">
                   <div className="head pb-3 border-bottom">
                     <ul className="list-unstyled mb-0">
                 
@@ -88,7 +88,7 @@ class PageJob extends Component {
               </Col>
 
               <Col lg={4} md={6} className="col-12 mt-4 ">
-                <div className="p-4 border rounded position-relative overflow-hidden">
+                <div className="p-4  position-relative overflow-hidden">
                   <div className="head pb-3 border-bottom">
                     <ul className="list-unstyled mb-0">
                 
@@ -132,7 +132,7 @@ class PageJob extends Component {
               </Col>
 
               <Col lg={4} md={6} className="col-12 mt-4 pt-2">
-                <div className=" p-4 border rounded position-relative overflow-hidden">
+                <div className=" p-4  position-relative overflow-hidden">
                   <div className="head pb-3 border-bottom">
                     <ul className="list-unstyled mb-0">
                   
