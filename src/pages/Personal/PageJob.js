@@ -39,6 +39,45 @@ class PageJob extends Component {
               </Col>
             </Row>
             <Row className="row-eq-height">
+            <Col lg={4} md={6} className="col-12 mt-4 ">
+                <div className=" p-4 position-relative overflow-hidden">
+                  <div className="head pb-3 border-bottom">
+                    <ul className="list-unstyled mb-0">
+                
+                      <li className="list-inline-item text-success">
+                        Full Time
+                      </li>
+                    </ul>
+                    <h4>
+                      <Link to="page-job-detail" className="text-dark title">
+                       Software Engineer Intern
+                      </Link>
+                    </h4>
+                    <p className="mb-2 h6 text-info">
+                    
+                      <Link to="#" className="h6 text-dark firm">
+                        Shopee Singapore
+                      </Link>
+                    </p>
+                    <p className="mb-2 h6 text-info">
+                      May 2020 - Aug 202
+                        </p>
+                    <p className="mb-0">
+                      <Link to="#" className="text-muted place">
+                        Singapore
+                      </Link>
+                    </p>
+                  </div>
+                  <ul className="job-facts pt-3 list-unstyled">
+                    <li className="list-inline-item text-muted">
+                     
+                    Incoming Software Engineer intern
+                    </li>
+                
+                  </ul>
+                  
+                </div>
+              </Col>
               <Col lg={4} md={6} className="col-12 mt-4 ">
                 <div className=" p-4 position-relative overflow-hidden">
                   <div className="head pb-3 border-bottom">
@@ -86,7 +125,7 @@ class PageJob extends Component {
                   
                 </div>
               </Col>
-
+             
               <Col lg={4} md={6} className="col-12 mt-4 ">
                 <div className="p-4  position-relative overflow-hidden">
                   <div className="head pb-3 border-bottom">
@@ -130,6 +169,8 @@ class PageJob extends Component {
                   
                 </div>
               </Col>
+              <Col lg={4} md={6} className="col-12 mt-4 ">
+                </Col>
 
               <Col lg={4} md={6} className="col-12 mt-4 pt-2">
                 <div className=" p-4  position-relative overflow-hidden">
@@ -174,6 +215,8 @@ class PageJob extends Component {
                   </ul>
                 </div>
               </Col>
+              <Col lg={4} md={6} className="col-12 mt-4 ">
+                </Col>
             </Row>
           </div>
         </section>
