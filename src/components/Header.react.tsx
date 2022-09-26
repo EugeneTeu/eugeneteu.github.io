@@ -9,8 +9,8 @@ export const Header = ({}: Props) => {
 
     return (
         <div className="bg-black">
-            <div className="max-w-3xl mx-auto ">
-                <div className="flex md:h-12 items-center">
+            <div className="max-w-5xl mx-auto ">
+                <div className="flex h-14 mx-8 items-center justify-center justify-items-center">
                     <div className="flex-grow ">
                         <h1>Eugene Teu</h1>
                     </div>
