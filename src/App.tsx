@@ -17,79 +17,108 @@ function App() {
     return (
         <div>
             <Header />
-            <div className="w-full bg-black">
-                <div className="max-w-2xl mx-auto shadow-lg py-14 sm:py-12 md:py-10 ">
+            <div className="w-full flex mt-6">
+                <div className="mx-auto">
                     <img
-                        className="w-full rounded"
-                        src="../src/assets/profile-1.jpg"
+                        className="object-cover p-1 w-32 h-32 rounded-full ring-2 dark:ring-gray-700"
+                        src="/profile-2.jpg"
                     />
                 </div>
             </div>
-            <div className="max-w-5xl mx-1 sm:mx-10 md:mx-auto mt-6">
-                <Tab.Group defaultIndex={0}>
-                    <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
-                        {Object.keys(categories).map((category) => (
-                            <Tab
-                                key={category}
-                                className={({ selected }) =>
-                                    classNames(
-                                        'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-white text-bold',
-                                        'ring-white ring-opacity-60 ring-offset-2',
-                                        selected
-                                            ? 'bg-white/[0.12]'
-                                            : 'text-blue-100 hover:bg-white/[0.05] hover:text-white'
-                                    )
-                                }
-                            >
-                                {category}
-                            </Tab>
-                        ))}
-                    </Tab.List>
-                    <Tab.Panels className="mt-6">
-                        {Object.values(categories).map((posts, idx) => (
-                            <Tab.Panel
-                                key={idx}
-                                className={classNames(
-                                    'rounded-xl p-3 text-sm font-medium leading-5 text-white text-bold',
-                                    'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2'
-                                )}
-                            >
-                                <ul>
-                                    {/* {posts.map((post) => (
-                                        <li
-                                            key={post.id}
-                                            className="relative rounded-md p-3 hover:bg-gray-100"
-                                        >
-                                            <h3 className="text-sm font-medium leading-5">
-                                                {post.title}
-                                            </h3>
-
-                                            <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
-                                                <li>{post.date}</li>
-                                                <li>&middot;</li>
-                                                <li>
-                                                    {post.commentCount} comments
-                                                </li>
-                                                <li>&middot;</li>
-                                                <li>
-                                                    {post.shareCount} shares
-                                                </li>
-                                            </ul>
-
-                                            <a
-                                                href="#"
-                                                className={classNames(
-                                                    'absolute inset-0 rounded-md',
-                                                    'ring-blue-400 focus:z-10 focus:outline-none focus:ring-2'
-                                                )}
-                                            />
-                                        </li>
-                                    ))} */}
-                                </ul>
-                            </Tab.Panel>
-                        ))}
-                    </Tab.Panels>
-                </Tab.Group>
+            <div className="max-w-5xl mx-1 sm:mx-10 md:mx-auto mt-6 ">
+                <article className="prose prose-md lg:prose-xl prose-normal">
+                    <h1>About</h1>
+                    <p>
+                        Hello there, my name is Eugene Teu and I am a currently
+                        a full time Software Engineer based in sunny Singapore
+                        🇸🇬
+                    </p>
+                    <h3>I specialise in Full Stack Web Development</h3>
+                </article>
+                <div className="my-6 border border-gray-500"></div>
+                <article className="prose prose-md lg:prose-xl prose-normal">
+                    <h1>Experience</h1>
+                    <p>
+                        I have extensive experience in the software engineering
+                        field and have a proven ability in delivering polished
+                        products.
+                    </p>
+                    <ul>
+                        <li>
+                            <b>Meta</b>, Full Stack Software Engineer (2022-)
+                        </li>
+                        <li>
+                            <b>Coinhall</b>, Founding Engineer (2021-2022)
+                        </li>
+                        <li>
+                            <b>Sprinklr</b>, Backend Developer Intern (2021)
+                        </li>
+                        <li>
+                            <b>Shopee</b>, Backend Developer Intern (2021)
+                        </li>
+                        <li>
+                            <b>Shopee</b>, Frontend Developer Intern (2020)
+                        </li>
+                    </ul>
+                    <h3>I thrive in Collobrative Environments</h3>
+                </article>
+                <div className="my-6 border border-gray-500"></div>
+                <article className="prose prose-md lg:prose-xl prose-normal">
+                    <h1>Skills</h1>
+                    <p>
+                        The following are the software and technologies that I
+                        have worked with
+                    </p>
+                    <h4>Web Technologies</h4>
+                    <div className="not-prose">
+                        <Tag label="ReactJS" custom="bg-blue-800" />
+                        <Tag label="Javascript" custom="bg-indigo-500" />
+                        <Tag label="HTML/CSS" custom="bg-indigo-500" />
+                        <Tag label="SolidJS" custom="bg-blue-500" />
+                        <Tag label="Relay" custom="bg-purple-800" />
+                        <Tag label="VueJS" custom="bg-purple-700" />
+                        <Tag label="Graphql" custom="bg-yellow-600" />
+                        <Tag label="NodeJS" custom="bg-orange-500" />
+                        <Tag label="ExpressJS" custom="bg-red-800" />
+                        <Tag label="NestJS" custom="bg-red-700" />
+                        <Tag
+                            label="Lucene/Elasticsearch"
+                            custom="bg-orange-800"
+                        />
+                    </div>
+                    <h4>Languages</h4>
+                    <div className="not-prose">
+                        <Tag label="Typescript" custom="bg-blue-800" />
+                        <Tag label="Javascript" custom="bg-indigo-600" />
+                        <Tag label="Java" custom="bg-yellow-800" />
+                        <Tag label="C++" custom="bg-indigo-500" />
+                        <Tag label="Python" custom="bg-purple-700" />
+                        <Tag label="Hack/php" custom="bg-indigo-800" />
+                    </div>
+                    <h3>Using the newest Technologies excites me</h3>
+                </article>
+                <div className="my-6 border border-gray-500"></div>
+                <article className="prose prose-md lg:prose-xl prose-normal">
+                    <h1>Socials</h1>
+                    <p>Connect with me</p>
+                    <div className="not-prose flex justify-center">
+                        <a href="https://www.linkedin.com/in/eugeneteu">
+                            <img
+                                alt="linkedin"
+                                className="w-16 h-16 mx-2"
+                                src="/linkedin.svg"
+                            />
+                        </a>
+                        <a href="https://github.com/EugeneTeu">
+                            <img
+                                alt="github"
+                                className="w-16 h-16 mx-2"
+                                src="/github.svg"
+                            />
+                        </a>
+                    </div>
+                    <h4>© 2022 Eugene Teu. All rights reserved.</h4>
+                </article>
             </div>
             <div className="max-w-5xl mx-auto mt-6 bg-grey"></div>
         </div>

@@ -2,7 +2,7 @@ import react, { ReactElement } from 'react'
 
 export type TagProps = {
     label: string
-    custom: string
+    custom?: string
 }
 
 export const Tag = ({ label, custom }: TagProps) => {
