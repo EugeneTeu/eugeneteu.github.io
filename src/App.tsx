@@ -21,7 +21,7 @@ function Home() {
             {RoundedAvatar()}
             <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
                 <div className="flex">
-                    <div className="mx-auto">
+                    <div className="mx-auto animate-bounce">
                         <Button
                             label={'Tap'}
                             onClick={() => {
