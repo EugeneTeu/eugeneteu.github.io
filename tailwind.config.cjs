@@ -12,14 +12,15 @@ module.exports = {
                 ],
             },
             typography: ({ theme }) => ({
-                normal: {
-                    css: {
-                        '--tw-prose-body': theme('colors.white'),
-                        '--tw-prose-headings': theme('colors.white'),
-                    },
-                },
+                // normal: {
+                //     css: {
+                //         '--tw-prose-body': theme('colors.white'),
+                //         '--tw-prose-headings': theme('colors.white'),
+                //     },
+                // },
             }),
         },
     },
+    darkMode: 'class',
     plugins: [require('@tailwindcss/typography')],
 }

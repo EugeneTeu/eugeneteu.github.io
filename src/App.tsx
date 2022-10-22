@@ -32,15 +32,15 @@ function Home() {
                 </div>
                 <div className={`${clicked ? ' my-7 animate-spin' : ''}`}>
                     {Intro()}
-                    <div className="my-6 border border-gray-500"></div>
+                    <div className="my-6 border dark:border-gray-500"></div>
                     {Experience()}
-                    <div className="my-6 border border-gray-500"></div>
+                    <div className="my-6 border dark:border-gray-500"></div>
                     {Skills()}
-                    <div className="my-6 border border-gray-500"></div>
+                    <div className="my-6 border dark:border-gray-500"></div>
                     {Socials()}
                 </div>
 
-                <div className="flex">
+                {/* <div className="flex">
                     <div className="mx-auto">
                         <Button
                             label={'Try Me'}
@@ -49,16 +49,16 @@ function Home() {
                             }}
                         />
                     </div>
-                </div>
+                </div> */}
             </div>
-            <div className="max-w-5xl mx-auto mt-6 bg-grey"></div>
+            <div className="max-w-5xl mx-auto mt-6 bg-white dark:bg-grey"></div>
         </>
     )
 }
 
 function Socials() {
     return (
-        <article className="prose prose-md lg:prose-xl prose-normal">
+        <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
             <h1>Socials</h1>
             <p>Connect with me</p>
             <div className="not-prose flex justify-center">
@@ -84,7 +84,7 @@ function Socials() {
 
 function Skills() {
     return (
-        <article className="prose prose-md lg:prose-xl prose-normal">
+        <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
             <h1>Skills</h1>
             <p>
                 The following are the software and technologies that I have
@@ -120,7 +120,7 @@ function Skills() {
 
 function Experience() {
     return (
-        <article className="prose prose-md lg:prose-xl prose-normal">
+        <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
             <h1>Experience</h1>
             <p>
                 I have extensive experience in the software engineering field
@@ -150,7 +150,7 @@ function Experience() {
 
 function Intro() {
     return (
-        <article className="prose prose-md lg:prose-xl prose-normal">
+        <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
             <h1>About</h1>
             <p>
                 Hello there, my name is Eugene Teu and I am a currently a full
