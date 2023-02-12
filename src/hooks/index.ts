@@ -1,0 +1,1 @@
+export { useIntersect } from './useIntersect.react'
