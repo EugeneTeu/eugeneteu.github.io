@@ -29,7 +29,7 @@ export const FadeInWrapper = ({ children }: ContainerProps) => {
             },
             {
                 rootMargin: '0px',
-                threshold: 0.8,
+                threshold: [0, 0.25, 0.5, 0.75, 1],
             }
         )
 
