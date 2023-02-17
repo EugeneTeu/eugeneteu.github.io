@@ -6,6 +6,7 @@ module.exports = {
             animation: {
                 fadeIn: 'fadeIn 800ms ease-in forwards',
                 pulseWhite: 'pulseWhite 2s infinite',
+                pulseBlack: 'pulseBlack 2s infinite',
             },
             keyframes: {
                 fadeIn: {
@@ -21,6 +22,17 @@ module.exports = {
                     },
                     '100%': {
                         boxShadow: '0 0 0 0 rgba(255, 255, 255, 0)',
+                    },
+                },
+                pulseBlack: {
+                    '0%': {
+                        boxShadow: '0 0 0 0 rgba(0,0,100)',
+                    },
+                    '70%': {
+                        boxShadow: '0 0 0 5px rgba(0,0,0,50)',
+                    },
+                    '100%': {
+                        boxShadow: '0 0 0 0 rgba(0,0,0,100)',
                     },
                 },
             },

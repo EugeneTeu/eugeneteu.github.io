@@ -6,9 +6,12 @@ export function Home() {
     // const navigate = useNavigate()
     return (
         <>
+            <FadeInWrapper>
+                <Hero />
+            </FadeInWrapper>
             {RoundedAvatar()}
             <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
-                <div className="flex">
+                {/* <div className="flex">
                     <div className="mx-auto animate-bounce">
                         <Button
                             label={'Tap'}
@@ -17,16 +20,16 @@ export function Home() {
                             }}
                         />
                     </div>
-                </div>
-                <div className={`${clicked ? ' my-7 animate-spin' : ''}`}>
-                    <FadeInWrapper>{Intro()}</FadeInWrapper>
-                    <div className="animate-fadeIn my-6 border dark:border-gray-500"></div>
-                    <FadeInWrapper>{Experience()}</FadeInWrapper>
-                    <div className="animate-fadeIn my-6 border dark:border-gray-500"></div>
-                    <FadeInWrapper>{Skills()}</FadeInWrapper>
-                    <div className="animate-fadeIn my-6 border dark:border-gray-500"></div>
-                    <FadeInWrapper>{Socials()}</FadeInWrapper>
-                </div>
+                </div> */}
+                {/* <div className={`${clicked ? ' my-7 animate-spin' : ''}`}> */}
+                <FadeInWrapper>{Intro()}</FadeInWrapper>
+                <Divider />
+                <FadeInWrapper>{Experience()}</FadeInWrapper>
+                <Divider />
+                <FadeInWrapper>{Skills()}</FadeInWrapper>
+                <Divider />
+                <FadeInWrapper>{Socials()}</FadeInWrapper>
+                {/* </div> */}
 
                 {/* <div className="flex">
                     <div className="mx-auto">
@@ -40,6 +43,32 @@ export function Home() {
                 </div> */}
             </div>
             <div className="max-w-5xl mx-auto mt-6 bg-white dark:bg-grey"></div>
+        </>
+    )
+}
+
+function Divider() {
+    return (
+        <div className="animate-fadeIn my-6 border dark:border-gray-500"></div>
+    )
+}
+
+function Hero() {
+    return (
+        <>
+            <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
+                <article className="mx-auto prose prose-md  prose-normal dark:prose-invert">
+                    <div className="text-center">
+                        <h1 className="mb-0">Eugene Teu</h1>
+                        <h4 className="mt-1">Software Engineer</h4>
+                        <h4 className="mt-1">Web Developer</h4>
+                    </div>
+                </article>
+            </div>
+
+            <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
+                <Divider />
+            </div>
         </>
     )
 }
@@ -158,7 +187,7 @@ function RoundedAvatar() {
         <div className="w-full flex mt-6">
             <div className="mx-auto">
                 <img
-                    className="animate-pulseWhite object-cover p-1 w-32 h-32 rounded-full ring-2 dark:ring-gray-700"
+                    className="dark:animate-pulseWhite animate-pulseBlack object-cover p-1 w-32 h-32 rounded-full ring-2 dark:ring-gray-700"
                     src="/profile-2.jpg"
                 />
             </div>
