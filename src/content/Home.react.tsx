@@ -21,7 +21,6 @@ export function Home() {
                 <div className={`${clicked ? ' my-7 animate-spin' : ''}`}>
                     <FadeInWrapper>{Intro()}</FadeInWrapper>
                     <div className="animate-fadeIn my-6 border dark:border-gray-500"></div>
-
                     <FadeInWrapper>{Experience()}</FadeInWrapper>
                     <div className="animate-fadeIn my-6 border dark:border-gray-500"></div>
                     <FadeInWrapper>{Skills()}</FadeInWrapper>
@@ -157,9 +156,9 @@ function Intro() {
 function RoundedAvatar() {
     return (
         <div className="w-full flex mt-6">
-            <div className="mx-auto ">
+            <div className="mx-auto">
                 <img
-                    className="transition duration-100 transform hover:-translate-y-1 hover:scale-110 ease-in-out object-cover p-1 w-32 h-32 rounded-full ring-2 dark:ring-gray-700"
+                    className="animate-pulseWhite object-cover p-1 w-32 h-32 rounded-full ring-2 dark:ring-gray-700"
                     src="/profile-2.jpg"
                 />
             </div>

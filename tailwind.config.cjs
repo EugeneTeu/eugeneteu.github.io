@@ -4,12 +4,24 @@ module.exports = {
     theme: {
         extend: {
             animation: {
-                fadeIn: 'fadeIn 2s ease-in forwards',
+                fadeIn: 'fadeIn 800ms ease-in forwards',
+                pulseWhite: 'pulseWhite 2s infinite',
             },
             keyframes: {
                 fadeIn: {
                     '0%': { opacity: 0 },
                     '100%': { opacity: 1 },
+                },
+                pulseWhite: {
+                    '0%': {
+                        boxShadow: '0 0 0 0 rgba(255, 255, 255, 0.7)',
+                    },
+                    '70%': {
+                        boxShadow: '0 0 0 5px rgba(255, 255, 255, 0)',
+                    },
+                    '100%': {
+                        boxShadow: '0 0 0 0 rgba(255, 255, 255, 0)',
+                    },
                 },
             },
 
