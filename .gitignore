@@ -37,3 +37,5 @@ next-env.d.ts
 
 gh-pages 
 gh-pages.pub
+
+.vscode
