@@ -10,7 +10,16 @@ import { ThemeContextProvider, useTheme } from "./context";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  return (
+    <ThemeContextProvider>
+      <HomeInner />
+    </ThemeContextProvider>
+  );
+}
+
+function HomeInner() {
   const { mode } = useTheme();
+
   return (
     <div className={`${mode}`}>
       <div className="bg-white dark:bg-gray-900">
