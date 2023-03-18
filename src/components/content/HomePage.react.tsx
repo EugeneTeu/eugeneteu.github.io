@@ -1,7 +1,8 @@
 import { Fragment, useState } from "react";
-import { Button, FadeInWrapper, Header, Tag } from "../components";
+import FadeInWrapper from "../FadeInWrapper.react";
+import Tag from "../Tag.react";
 
-export function HomePage() {
+export default function HomePage() {
   const [clicked, setClicked] = useState<boolean>(false);
   // const navigate = useNavigate()
   return (

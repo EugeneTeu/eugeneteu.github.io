@@ -1,12 +1,11 @@
 import { Switch } from "@headlessui/react";
-import react, { ReactElement, useState } from "react";
+
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
-import { Button } from "./Button.react";
-import { Theme, useTheme } from "../context";
+import { Theme, useTheme } from "./context/theme.context";
 
 type Props = {};
 
-export const Header = ({}: Props) => {
+const Header = ({}: Props) => {
   const { mode, setMode } = useTheme();
 
   const onModeChange = () => {
@@ -55,3 +54,4 @@ export const Header = ({}: Props) => {
     </div>
   );
 };
+export default Header;

@@ -1,11 +1,14 @@
-"use client";
+import Head from "next/head";
 
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "./page.module.css";
-import { Header } from "./components";
-import { HomePage } from "./content";
-import { ThemeContextProvider, useTheme } from "./context";
+import {
+  ThemeContextProvider,
+  useTheme,
+} from "@/components/context/theme.context";
+import Header from "@/components/Header.react";
+import HomePage from "@/components/content/HomePage.react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,6 @@ export default function Home() {
     </ThemeContextProvider>
   );
 }
-
 function HomeInner() {
   const { mode } = useTheme();
 
