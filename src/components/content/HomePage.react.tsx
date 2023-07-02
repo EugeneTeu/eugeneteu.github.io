@@ -28,6 +28,7 @@ export default function HomePage() {
           <BentoBox>
             <FadeInWrapper>{Socials()}</FadeInWrapper>
           </BentoBox>
+          <div className="pb-6"></div>
         </div>
       </div>
     </>
@@ -162,6 +163,7 @@ function RoundedAvatar() {
     <div className="w-full flex mt-6">
       <div className="mx-auto">
         <img
+          alt="profile picture of eugene teu"
           className="dark:animate-pulseWhite animate-pulseBlack object-cover p-1 w-32 h-32 rounded-full ring-2 dark:ring-gray-700"
           src="/profile-2.jpg"
         />
