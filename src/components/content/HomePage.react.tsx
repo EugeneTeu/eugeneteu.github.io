@@ -147,7 +147,7 @@ function Intro() {
       <h1>About</h1>
       <p>
         Hello there, my name is Eugene Teu and I am a currently a full time
-        Software Engineer based in sunny Singapore 🇸🇬
+        Software Engineer based in sunny Singapore
       </p>
       <p>
         I graduated in 2022 with a Bachelor Of Computing (Computer Science) from
