@@ -12,7 +12,7 @@ export default function HomePage() {
       </FadeInWrapper>
       {RoundedAvatar()}
       <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto mt-6`}>
-        <div className="lg:max-auto lg:w-fit">
+        <div className="lg:mx-auto lg:w-fit">
           <BentoBox>
             <FadeInWrapper>{Intro()}</FadeInWrapper>
           </BentoBox>
