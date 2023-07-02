@@ -2,6 +2,7 @@ import { Switch } from "@headlessui/react";
 
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { Theme, useTheme } from "./context/theme.context";
+import Link from "next/link";
 
 type Props = {};
 
@@ -17,7 +18,9 @@ const Header = ({}: Props) => {
       <div className="max-w-5xl mx-auto ">
         <div className="flex h-14 mx-8 items-center justify-center justify-items-center">
           <div className="flex-grow text-black dark:text-white ">
-            <h1>Eugene Teu 👋</h1>
+            <Link href="/">
+              <h1>Eugene Teu 👋</h1>{" "}
+            </Link>
           </div>
           <div className="items-center justify-center justify-items-center mx-3">
             <Switch.Group>

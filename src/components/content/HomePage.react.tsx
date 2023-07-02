@@ -4,7 +4,6 @@ import Tag from "../Tag.react";
 
 export default function HomePage() {
   const [clicked, setClicked] = useState<boolean>(false);
-  // const navigate = useNavigate()
   return (
     <>
       <FadeInWrapper>
@@ -20,7 +19,6 @@ export default function HomePage() {
         <Divider />
         <FadeInWrapper>{Socials()}</FadeInWrapper>
       </div>
-      <div className="max-w-5xl mx-auto mt-6 bg-white dark:bg-grey"></div>
     </>
   );
 }
