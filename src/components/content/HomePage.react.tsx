@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import FadeInWrapper from "../FadeInWrapper.react";
 import Tag from "../Tag.react";
+import BentoBox from "../BentoBox/BentoBox.react";
 
 export default function HomePage() {
   const [clicked, setClicked] = useState<boolean>(false);
@@ -10,34 +11,42 @@ export default function HomePage() {
         <Hero />
       </FadeInWrapper>
       {RoundedAvatar()}
-      <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
-        <FadeInWrapper>{Intro()}</FadeInWrapper>
-        <Divider />
-        <FadeInWrapper>{Experience()}</FadeInWrapper>
-        <Divider />
-        <FadeInWrapper>{Skills()}</FadeInWrapper>
-        <Divider />
-        <FadeInWrapper>{Socials()}</FadeInWrapper>
+      <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto mt-6`}>
+        <div className="lg:max-auto lg:w-fit">
+          <BentoBox>
+            <FadeInWrapper>{Intro()}</FadeInWrapper>
+          </BentoBox>
+          <Divider />
+          <BentoBox>
+            <FadeInWrapper>{Experience()}</FadeInWrapper>
+          </BentoBox>
+          <Divider />
+          <BentoBox>
+            <FadeInWrapper>{Skills()}</FadeInWrapper>
+          </BentoBox>
+          <Divider />
+          <BentoBox>
+            <FadeInWrapper>{Socials()}</FadeInWrapper>
+          </BentoBox>
+        </div>
       </div>
     </>
   );
 }
 
 function Divider() {
-  return (
-    <div className="animate-fadeIn my-6 border dark:border-gray-500"></div>
-  );
+  return <div className="animate-fadeIn my-6"></div>;
 }
 
 function Hero() {
   return (
     <>
       <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
-        <article className="mx-auto prose prose-md  prose-normal dark:prose-invert">
+        <article className="mx-auto prose prose-md prose-normal dark:prose-invert">
           <div className="text-center">
-            <h1 className="mb-0">Eugene Teu</h1>
-            <h4 className="mt-1">Software Engineer</h4>
-            <h4 className="mt-1">Web Developer</h4>
+            <h1 className="mb-1">Eugene Teu</h1>
+            <h3 className="mt-2">Software Engineer</h3>
+            <h3 className="mt-1">Web Developer</h3>
           </div>
         </article>
       </div>
@@ -53,7 +62,6 @@ function Socials() {
   return (
     <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
       <h1>Socials</h1>
-      <p>Connect with me</p>
       <div className="not-prose flex justify-center">
         <a href="https://www.linkedin.com/in/eugeneteu">
           <img alt="linkedin" className="w-16 h-16 mx-2" src="/linkedin.svg" />

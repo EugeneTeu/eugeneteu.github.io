@@ -45,14 +45,7 @@ module.exports = {
           ' ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;',
         ],
       },
-      typography: ({ theme }) => ({
-        // normal: {
-        //     css: {
-        //         '--tw-prose-body': theme('colors.white'),
-        //         '--tw-prose-headings': theme('colors.white'),
-        //     },
-        // },
-      }),
+      typography: ({ theme }) => ({}),
     },
   },
   darkMode: "class",

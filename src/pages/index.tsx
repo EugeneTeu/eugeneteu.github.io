@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Space_Mono } from "next/font/google";
 import styles from "./page.module.css";
 import {
   ThemeContextProvider,
@@ -11,7 +11,7 @@ import Header from "@/components/Header.react";
 import HomePage from "@/components/content/HomePage.react";
 import PageWrapper from "@/components/PageWrapper.react";
 
-const inter = Inter({ subsets: ["latin"] });
+const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] });
 
 export default function Home() {
   return (

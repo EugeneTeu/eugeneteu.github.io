@@ -4,8 +4,12 @@ type ContainerProps = {
   children: react.ReactElement;
 };
 
-const Container = ({ children }: ContainerProps) => {
-  return <div className="bg-stone-400">{children}</div>;
+const BentoBox = ({ children }: ContainerProps) => {
+  return (
+    <div className="rounded-lg bg-white dark:bg-gray-800 border-solid px-6 py-6 w-fit h-fit">
+      {children}
+    </div>
+  );
 };
 
-export default Container;
+export default BentoBox;
