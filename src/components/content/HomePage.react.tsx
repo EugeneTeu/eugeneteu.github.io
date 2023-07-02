@@ -2,17 +2,19 @@ import { Fragment, useState } from "react";
 import FadeInWrapper from "../FadeInWrapper.react";
 import Tag from "../Tag.react";
 import BentoBox from "../BentoBox/BentoBox.react";
+import Link from "next/link";
 
 export default function HomePage() {
   const [clicked, setClicked] = useState<boolean>(false);
   return (
     <>
+      {RoundedAvatar()}
       <FadeInWrapper>
         <Hero />
       </FadeInWrapper>
-      {RoundedAvatar()}
+      {/* {RoundedAvatar()} */}
       <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto mt-6`}>
-        <div className="lg:mx-auto lg:w-fit">
+        <div className="md:mx-auto md:w-fit">
           <BentoBox>
             <FadeInWrapper>{Intro()}</FadeInWrapper>
           </BentoBox>
@@ -46,14 +48,9 @@ function Hero() {
         <article className="mx-auto prose prose-md prose-normal dark:prose-invert">
           <div className="text-center">
             <h1 className="mb-1">Eugene Teu</h1>
-            <h3 className="mt-2">Software Engineer</h3>
-            <h3 className="mt-1">Web Developer</h3>
+            <h2 className="mt-2">Software Engineer</h2>
           </div>
         </article>
-      </div>
-
-      <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
-        <Divider />
       </div>
     </>
   );
@@ -61,18 +58,24 @@ function Hero() {
 
 function Socials() {
   return (
-    <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
-      <h1>Socials</h1>
-      <div className="not-prose flex justify-center">
-        <a href="https://www.linkedin.com/in/eugeneteu">
-          <img alt="linkedin" className="w-16 h-16 mx-2" src="/linkedin.svg" />
-        </a>
-        <a href="https://github.com/EugeneTeu">
-          <img alt="github" className="w-16 h-16 mx-2" src="/github.svg" />
-        </a>
-      </div>
-      <h4>© 2022 Eugene Teu. All rights reserved.</h4>
-    </article>
+    <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
+      <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
+        <h1>Socials</h1>
+        <div className="not-prose flex justify-center">
+          <Link href="https://www.linkedin.com/in/eugeneteu">
+            <img
+              alt="linkedin"
+              className="w-16 h-16 mx-2"
+              src="/linkedin.svg"
+            />
+          </Link>
+          <a href="https://github.com/EugeneTeu">
+            <img alt="github" className="w-16 h-16 mx-2" src="/github.svg" />
+          </a>
+        </div>
+        <h4>© 2022 Eugene Teu. All rights reserved.</h4>
+      </article>
+    </div>
   );
 }
 
@@ -80,31 +83,30 @@ function Skills() {
   return (
     <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
       <h1>Skills</h1>
-      <p>
-        The following are the software and technologies that I have worked with
-      </p>
-      <h4>Web Technologies</h4>
-      <div className="not-prose">
-        <Tag label="ReactJS" custom="bg-blue-800" />
-        <Tag label="Javascript" custom="bg-indigo-500" />
-        <Tag label="HTML/CSS" custom="bg-indigo-500" />
-        <Tag label="SolidJS" custom="bg-blue-500" />
-        <Tag label="Relay" custom="bg-purple-800" />
-        <Tag label="VueJS" custom="bg-purple-700" />
-        <Tag label="Graphql" custom="bg-yellow-600" />
-        <Tag label="NodeJS" custom="bg-orange-500" />
-        <Tag label="ExpressJS" custom="bg-red-800" />
-        <Tag label="NestJS" custom="bg-red-700" />
-        <Tag label="Lucene/Elasticsearch" custom="bg-orange-800" />
-      </div>
-      <h4>Languages</h4>
-      <div className="not-prose">
-        <Tag label="Typescript" custom="bg-blue-800" />
-        <Tag label="Javascript" custom="bg-indigo-600" />
-        <Tag label="Java" custom="bg-yellow-800" />
-        <Tag label="C++" custom="bg-indigo-500" />
-        <Tag label="Python" custom="bg-purple-700" />
-        <Tag label="Hack/php" custom="bg-indigo-800" />
+      <div className="not-prose flex w-100">
+        <div className="basis-1/2">
+          <h4>Web Technologies</h4>
+          <Tag label="ReactJS" custom="bg-blue-800" />
+          <Tag label="Javascript" custom="bg-indigo-500" />
+          <Tag label="HTML/CSS" custom="bg-indigo-500" />
+          <Tag label="SolidJS" custom="bg-blue-500" />
+          <Tag label="Relay" custom="bg-purple-800" />
+          <Tag label="VueJS" custom="bg-purple-700" />
+          <Tag label="Graphql" custom="bg-yellow-600" />
+          <Tag label="NodeJS" custom="bg-orange-500" />
+          <Tag label="ExpressJS" custom="bg-red-800" />
+          <Tag label="NestJS" custom="bg-red-700" />
+          <Tag label="Lucene/Elasticsearch" custom="bg-orange-800" />
+        </div>
+        <div className="basis-1/2">
+          <h4>Languages</h4>
+          <Tag label="Typescript" custom="bg-blue-800" />
+          <Tag label="Javascript" custom="bg-indigo-600" />
+          <Tag label="Java" custom="bg-yellow-800" />
+          <Tag label="C++" custom="bg-indigo-500" />
+          <Tag label="Python" custom="bg-purple-700" />
+          <Tag label="Hack/php" custom="bg-indigo-800" />
+        </div>
       </div>
       <h3>Using the newest Technologies excites me</h3>
     </article>
@@ -114,28 +116,44 @@ function Skills() {
 function Experience() {
   return (
     <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
-      <h1>Experience</h1>
-      <p>
-        I have extensive experience in the software engineering field and have a
-        proven ability in delivering polished products.
-      </p>
-      <ul>
-        <li>
-          <b>Meta</b>, Full Stack Software Engineer (2022-)
-        </li>
-        <li>
-          <b>Coinhall</b>, Founding Engineer (2021-2022)
-        </li>
-        <li>
-          <b>Sprinklr</b>, Backend Developer Intern (2021)
-        </li>
-        <li>
-          <b>Shopee</b>, Backend Developer Intern (2021)
-        </li>
-        <li>
-          <b>Shopee</b>, Frontend Developer Intern (2020)
-        </li>
-      </ul>
+      <div className="flex flex-col md:flex-row">
+        <div className="basis-full md:basis-1/2">
+          <h1>Experience</h1>
+          <p>
+            I have extensive experience in the software engineering field and
+            have a proven ability in delivering polished products.
+          </p>
+          <p>
+            I am currently working at Meta as a full stack software engineer
+          </p>
+        </div>
+        <div className="basis-full md:basis-1/2">
+          <ul>
+            <BentoBox
+              backgroundDark="dark:bg-gray-700"
+              backgroundLight="bg-gray-100"
+            >
+              <div className="px-6">
+                <li>
+                  <b>Meta</b>, Full Stack Software Engineer (2022-)
+                </li>
+              </div>
+            </BentoBox>
+            <li>
+              <b>Coinhall</b>, Founding Engineer (2021-2022)
+            </li>
+            <li>
+              <b>Sprinklr</b>, Backend Developer Intern (2021)
+            </li>
+            <li>
+              <b>Shopee</b>, Backend Developer Intern (2021)
+            </li>
+            <li>
+              <b>Shopee</b>, Frontend Developer Intern (2020)
+            </li>
+          </ul>
+        </div>
+      </div>
       <h3>I thrive in Collaborative Environments</h3>
     </article>
   );
