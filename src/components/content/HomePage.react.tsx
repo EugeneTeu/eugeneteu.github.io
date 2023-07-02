@@ -12,17 +12,6 @@ export default function HomePage() {
       </FadeInWrapper>
       {RoundedAvatar()}
       <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
-        {/* <div className="flex">
-                    <div className="mx-auto animate-bounce">
-                        <Button
-                            label={'Tap'}
-                            onClick={() => {
-                                setClicked(!clicked)
-                            }}
-                        />
-                    </div>
-                </div> */}
-        {/* <div className={`${clicked ? ' my-7 animate-spin' : ''}`}> */}
         <FadeInWrapper>{Intro()}</FadeInWrapper>
         <Divider />
         <FadeInWrapper>{Experience()}</FadeInWrapper>
@@ -30,18 +19,6 @@ export default function HomePage() {
         <FadeInWrapper>{Skills()}</FadeInWrapper>
         <Divider />
         <FadeInWrapper>{Socials()}</FadeInWrapper>
-        {/* </div> */}
-
-        {/* <div className="flex">
-                    <div className="mx-auto">
-                        <Button
-                            label={'Try Me'}
-                            onClick={() => {
-                                navigate('/experience')
-                            }}
-                        />
-                    </div>
-                </div> */}
       </div>
       <div className="max-w-5xl mx-auto mt-6 bg-white dark:bg-grey"></div>
     </>
