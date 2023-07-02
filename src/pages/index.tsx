@@ -9,25 +9,16 @@ import {
 } from "@/components/context/theme.context";
 import Header from "@/components/Header.react";
 import HomePage from "@/components/content/HomePage.react";
+import PageWrapper from "@/components/PageWrapper.react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <ThemeContextProvider>
-      <HomeInner />
-    </ThemeContextProvider>
-  );
-}
-function HomeInner() {
-  const { mode } = useTheme();
-
-  return (
-    <div className={`${mode}`}>
-      <div className="bg-white dark:bg-gray-900">
-        <Header />
+      <PageWrapper>
         <HomePage />
-      </div>
-    </div>
+      </PageWrapper>
+    </ThemeContextProvider>
   );
 }
