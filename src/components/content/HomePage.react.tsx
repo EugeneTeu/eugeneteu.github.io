@@ -83,8 +83,8 @@ function Skills() {
   return (
     <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
       <h1>Skills</h1>
-      <div className="not-prose flex w-100">
-        <div className="basis-1/2">
+      <div className="not-prose  sd:flex-col md:flex-row">
+        <div className="basis-1 md:basis-1/2">
           <h4>Web Technologies</h4>
           <Tag label="ReactJS" custom="bg-blue-800" />
           <Tag label="Javascript" custom="bg-indigo-500" />
@@ -98,7 +98,7 @@ function Skills() {
           <Tag label="NestJS" custom="bg-red-700" />
           <Tag label="Lucene/Elasticsearch" custom="bg-orange-800" />
         </div>
-        <div className="basis-1/2">
+        <div className="basis-1 md:basis-1/2">
           <h4>Languages</h4>
           <Tag label="Typescript" custom="bg-blue-800" />
           <Tag label="Javascript" custom="bg-indigo-600" />
