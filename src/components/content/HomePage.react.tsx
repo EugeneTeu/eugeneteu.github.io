@@ -164,7 +164,7 @@ function Intro() {
     <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
       <h1>About</h1>
       <p>
-        Hello there, my name is Eugene Teu and I am a currently a full time
+        Hello there, my name is Eugene Teu and I am currently a full time
         Software Engineer based in sunny Singapore
       </p>
       <p>
