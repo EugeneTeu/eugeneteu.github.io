@@ -15,17 +15,17 @@ export default function useIntersect<HTMLElement>(
         threshold: 0,
       }
     );
-
-    if (ref.current) {
-      observer.observe(ref.current);
+    const value = ref.current;
+    if (value) {
+      observer.observe(value);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (value) {
+        observer.unobserve(value);
       }
     };
-  }, []);
+  }, [ref]);
 
   return isIntersecting;
 }

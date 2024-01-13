@@ -19,7 +19,7 @@ const BentoBox = ({
 
   return (
     <div
-      className={`rounded-lg border-solid px-6 py-6 w-fit h-fit ${bgLight} ${bgDark} `}
+      className={`rounded-lg border-solid px-6 py-6 w-full h-fit ${bgLight} ${bgDark} `}
     >
       {children}
     </div>
