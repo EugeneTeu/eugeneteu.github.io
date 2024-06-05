@@ -73,7 +73,7 @@ function Socials() {
             <img alt="github" className="w-16 h-16 mx-2" src="/github.svg" />
           </a>
         </div>
-        <h4>© 2022 Eugene Teu. All rights reserved.</h4>
+        <h4>© 2024 Eugene Teu. All rights reserved.</h4>
       </article>
     </div>
   );

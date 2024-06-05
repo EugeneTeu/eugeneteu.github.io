@@ -44,6 +44,7 @@ module.exports = {
         sans: [
           ' ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;',
         ],
+        mono: ["var(--font-Roboto_Mono)"],
       },
       typography: ({ theme }) => ({}),
     },
