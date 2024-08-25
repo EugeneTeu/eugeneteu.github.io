@@ -1,35 +1,35 @@
-// export default function HomePage() {
-//   const [clicked, setClicked] = useState < boolean > false;
-//   return (
-//     <>
-//       {RoundedAvatar()}
-//       <FadeInWrapper>
-//         <Hero />
-//       </FadeInWrapper>
-//       {/* {RoundedAvatar()} */}
-//       <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto mt-6`}>
-//         <div className="md:mx-auto md:w-fit">
-//           <BentoBox>
-//             <FadeInWrapper>{Intro()}</FadeInWrapper>
-//           </BentoBox>
-//           <Divider />
-//           <BentoBox>
-//             <FadeInWrapper>{Experience()}</FadeInWrapper>
-//           </BentoBox>
-//           <Divider />
-//           <BentoBox>
-//             <FadeInWrapper>{Skills()}</FadeInWrapper>
-//           </BentoBox>
-//           <Divider />
-//           <BentoBox>
-//             <FadeInWrapper>{Socials()}</FadeInWrapper>
-//           </BentoBox>
-//           <div className="pb-6"></div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
+export default function HomePage() {
+  const [clicked, setClicked] = useState < boolean > false;
+  return (
+    <>
+      {RoundedAvatar()}
+      <FadeInWrapper>
+        <Hero />
+      </FadeInWrapper>
+      {/* {RoundedAvatar()} */}
+      <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto mt-6`}>
+        <div className="md:mx-auto md:w-fit">
+          <BentoBox>
+            <FadeInWrapper>{Intro()}</FadeInWrapper>
+          </BentoBox>
+          <Divider />
+          <BentoBox>
+            <FadeInWrapper>{Experience()}</FadeInWrapper>
+          </BentoBox>
+          <Divider />
+          <BentoBox>
+            <FadeInWrapper>{Skills()}</FadeInWrapper>
+          </BentoBox>
+          <Divider />
+          <BentoBox>
+            <FadeInWrapper>{Socials()}</FadeInWrapper>
+          </BentoBox>
+          <div className="pb-6"></div>
+        </div>
+      </div>
+    </>
+  );
+}
 
 export function Divider() {
   return <div className="animate-fadeIn my-6"></div>;

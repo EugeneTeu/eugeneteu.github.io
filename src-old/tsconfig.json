@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "old/components/context/theme.context.jsx", "../src/components/Tag.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "old/components/context/theme.context.jsx", "../src/components/Tag.tsx", "../src/components/Button.react.tsx", "../src/components/Container.react.tsx"],
   "exclude": ["node_modules"]
 }
