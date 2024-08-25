@@ -21,12 +21,12 @@ export default function Home(): JSXElement {
   const [state] = useTheme();
 
   return (
-    <main class="text-center mx-auto text-gray-700 p-4">
-      <div class={`${state.mode}`}>
-        <div class="bg-white dark:bg-gray-900 min-h-screen">
+    <main class="bg-white dark:bg-gray-900 min-h-screen">
+      <div>
+        <div class="pt-6">
           {RoundedAvatar()}
           <Hero />
-          <div class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto mt-6`}>
+          <div class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto`}>
             <div class="md:mx-auto md:w-fit">
               <BentoBox>{Intro()}</BentoBox>
               <Divider />

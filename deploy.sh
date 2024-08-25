@@ -4,10 +4,12 @@
 set -e
 
 # build
-yarn build
+bun build ./src/routes/index.tsx ==outfile=bundle.js
+
+mv -f bundle.js ./public/bundle.js
 
 # navigate into the build output directory
-cd out
+cd public
 
 # place .nojekyll to bypass Jekyll processing
 echo > .nojekyll
