@@ -4,12 +4,10 @@
 set -e
 
 # build
-bun build ./src/routes/index.tsx ==outfile=bundle.js
-
-mv -f bundle.js ./public/bundle.js
+bun build ./src/routes/index.tsx ==outfile=./out/bundle.js
 
 # navigate into the build output directory
-cd public
+cd out
 
 # place .nojekyll to bypass Jekyll processing
 echo > .nojekyll
