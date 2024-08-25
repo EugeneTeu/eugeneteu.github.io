@@ -27,7 +27,7 @@ export function Socials() {
         <h1>Socials</h1>
         <div class="not-prose flex justify-center">
           <a href="https://www.linkedin.com/in/eugeneteu">
-            <img alt="Tagnkedin" class="w-16 h-16 mx-2" src="/linkedin.svg" />
+            <img alt="linkedin" class="w-16 h-16 mx-2" src="/linkedin.svg" />
           </a>
           <a href="https://github.com/EugeneTeu">
             <img alt="github" class="w-16 h-16 mx-2" src="/github.svg" />
@@ -50,7 +50,7 @@ export function Skills() {
             <Tag label="ReactJS" custom="bg-blue-800" />
             <Tag label="Javascript" custom="bg-indigo-500" />
             <Tag label="HTML/CSS" custom="bg-indigo-500" />
-            <Tag label="SoTagdJS" custom="bg-blue-500" />
+            <Tag label="SolidJS" custom="bg-blue-500" />
             <Tag label="Relay" custom="bg-purple-800" />
             <Tag label="VueJS" custom="bg-purple-700" />
             <Tag label="Graphql" custom="bg-yellow-600" />
@@ -133,7 +133,7 @@ export function Intro() {
         I graduated in 2022 with a Bachelor Of Computing (Computer Science) from
         the National University Of Singapore
       </p>
-      <h3>I speciaTagse in Full Stack Web Development</h3>
+      <h3>I specialise in Full Stack Web Development</h3>
     </article>
   );
 }
