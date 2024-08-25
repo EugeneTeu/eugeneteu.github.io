@@ -4,7 +4,7 @@
 set -e
 
 # build
-bun build ./src/routes/index.tsx ==outfile=./out/bundle.js
+bun run build
 
 # navigate into the build output directory
 cd out
