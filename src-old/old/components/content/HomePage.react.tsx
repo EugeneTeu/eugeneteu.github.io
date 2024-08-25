@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import FadeInWrapper from "../FadeInWrapper.react";
-import Tag from "../Tag.react";
-import BentoBox from "../BentoBox/BentoBox.react";
+import Tag from "../../../../src/components/Tag";
+import BentoBox from "../../../../src/components/BentoBox";
 import Link from "next/link";
 
 export default function HomePage() {

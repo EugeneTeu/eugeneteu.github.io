@@ -1,7 +1,7 @@
-import react, { ReactElement } from "react";
+import { children, Component, JSXElement } from "solid-js";
 
 type ContainerProps = {
-  children: react.ReactElement;
+  children: JSXElement;
   backgroundDark?: string;
   backgroundLight?: string;
 };
@@ -9,17 +9,17 @@ type ContainerProps = {
 const defaultLight = "bg-gray-200";
 const defaultDark = "dark:bg-gray-800";
 
-const BentoBox = ({
-  children,
+const BentoBox: Component<ContainerProps> = ({
   backgroundDark,
   backgroundLight,
+  children,
 }: ContainerProps) => {
   const bgLight = backgroundLight ?? defaultLight;
   const bgDark = backgroundDark ?? defaultDark;
 
   return (
     <div
-      className={`rounded-lg border-solid px-6 py-6 w-full h-fit ${bgLight} ${bgDark} `}
+      class={`rounded-lg border-solid px-6 py-6 w-full h-fit ${bgLight} ${bgDark} `}
     >
       {children}
     </div>

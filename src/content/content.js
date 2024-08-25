@@ -31,11 +31,11 @@
 //   );
 // }
 
-function Divider() {
+export function Divider() {
   return <div className="animate-fadeIn my-6"></div>;
 }
 
-function Hero() {
+export function Hero() {
   return (
     <>
       <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
@@ -50,7 +50,7 @@ function Hero() {
   );
 }
 
-function Socials() {
+export function Socials() {
   return (
     <div className={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
       <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
@@ -73,7 +73,7 @@ function Socials() {
   );
 }
 
-function Skills() {
+export function Skills() {
   return (
     <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
       <h1>Skills</h1>
@@ -109,7 +109,7 @@ function Skills() {
   );
 }
 
-function Experience() {
+export function Experience() {
   return (
     <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
       <div className="flex flex-col md:flex-row">
@@ -155,7 +155,7 @@ function Experience() {
   );
 }
 
-function Intro() {
+export function Intro() {
   return (
     <article className="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
       <h1>About</h1>
@@ -172,7 +172,7 @@ function Intro() {
   );
 }
 
-function RoundedAvatar() {
+export function RoundedAvatar() {
   return (
     <div className="w-full flex mt-6">
       <div className="mx-auto">

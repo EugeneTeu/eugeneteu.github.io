@@ -1,34 +1,45 @@
 import { A } from "@solidjs/router";
-import { Theme, ThemeProvider } from "~/components/context/theme.context";
-import Counter from "~/components/Counter";
-import Test from "~/components/Test";
+import { Component, JSXElement } from "solid-js";
+import {
+  Theme,
+  ThemeProvider,
+  useTheme,
+} from "~/components/context/theme.context";
 
-export default function Home() {
+import {
+  Divider,
+  Experience,
+  Hero,
+  Intro,
+  RoundedAvatar,
+  Skills,
+  Socials,
+} from "~/content/content";
+import BentoBox from "~/components/BentoBox";
+
+export default function Home(): JSXElement {
+  const [state] = useTheme();
+
   return (
     <main class="text-center mx-auto text-gray-700 p-4">
-      <h1 class="max-6-xs text-6xl text-sky-700 font-thin uppercase my-16">
-        Hello world!
-      </h1>
-      <Test />
-      <Counter />
-      <p class="mt-8">
-        Visit{" "}
-        <a
-          href="https://solidjs.com"
-          target="_blank"
-          class="text-sky-600 hover:underline"
-        >
-          solidjs.com
-        </a>{" "}
-        to learn how to build Solid apps.
-      </p>
-      <p class="my-4">
-        <span>Home</span>
-        {" - "}
-        <A href="/about" class="text-sky-600 hover:underline">
-          About Page
-        </A>{" "}
-      </p>
+      <div class={`${state.mode}`}>
+        <div class="bg-white dark:bg-gray-900 min-h-screen">
+          {RoundedAvatar()}
+          <Hero />
+          <div class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto mt-6`}>
+            <div class="md:mx-auto md:w-fit">
+              <BentoBox>{Intro()}</BentoBox>
+              <Divider />
+              <BentoBox>{Experience()}</BentoBox>
+              <Divider />
+              <BentoBox>{Skills()}</BentoBox>
+              <Divider />
+              <BentoBox>{Socials()}</BentoBox>
+              <div class="pb-6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
