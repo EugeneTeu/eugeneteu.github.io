@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import Header from "./Header.react";
-import { useTheme } from "./context/theme.context";
+import { useTheme } from "../../../src/components/context/theme.context";
 
 export default function PageWrapper({ children }: { children: ReactElement }) {
   const { mode } = useTheme();

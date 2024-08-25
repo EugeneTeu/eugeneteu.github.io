@@ -1,13 +1,19 @@
-import { createSignal } from "solid-js";
+import { createSignal, useContext } from "solid-js";
+import { Theme, useTheme } from "./context/theme.context";
 
 export default function Counter() {
-  const [count, setCount] = createSignal(0);
+  const [state, { changeMode }] = useTheme();
+
   return (
     <button
-      class="w-[200px] rounded-full bg-gray-100 border-2 border-gray-300 focus:border-gray-400 active:border-gray-400 px-[2rem] py-[1rem]" 
-      onClick={() => setCount(count() + 1)}
+      class="hover:scale-110 ease-in-out inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 dark:bg-blue-800 bg-blue-400 text-black dark:text-white"
+      onClick={() => {
+        state.mode === Theme.dark
+          ? changeMode(Theme.light)
+          : changeMode(Theme.dark);
+      }}
     >
-      Clicks: {count()}
+      Clicks
     </button>
   );
 }

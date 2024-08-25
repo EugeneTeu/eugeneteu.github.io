@@ -1,7 +1,7 @@
 import { Switch } from "@headlessui/react";
 
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
-import { Theme, useTheme } from "./context/theme.context";
+import { Theme, useTheme } from "../../../src/components/context/theme.context";
 import Link from "next/link";
 
 type Props = {};
