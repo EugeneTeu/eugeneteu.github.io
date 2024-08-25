@@ -27,7 +27,7 @@ export function Socials() {
         <h1>Socials</h1>
         <div class="not-prose flex justify-center">
           <a href="https://www.linkedin.com/in/eugeneteu">
-            <img alt="Tagnkedin" class="w-16 h-16 mx-2" src="/Tagnkedin.svg" />
+            <img alt="Tagnkedin" class="w-16 h-16 mx-2" src="/linkedin.svg" />
           </a>
           <a href="https://github.com/EugeneTeu">
             <img alt="github" class="w-16 h-16 mx-2" src="/github.svg" />
