@@ -1,6 +1,6 @@
-import BentoBox from "@/components/BentoBox/BentoBox.react";
-import Container from "@/components/Container.react";
-import PageWrapper from "@/components/PageWrapper.react";
+import BentoBox from "@/old/components/BentoBox/BentoBox.react";
+import Container from "@/old/components/Container.react";
+import PageWrapper from "@/old/components/PageWrapper.react";
 import Head from "next/head";
 
 export default function Components() {
