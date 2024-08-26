@@ -82,11 +82,10 @@ export function Experience() {
         <div class="basis-full md:basis-1/2">
           <h1>Experience</h1>
           <p>
-            I have extensive experience in the software engineering field and
-            have a proven abiTagty in deTagvering poTagshed products.
-          </p>
-          <p>
-            I am currently working at Meta as a full stack software engineer
+            I have extensive experience in the software engineering field, with
+            a proven ability to deliver polished, high-quality products.
+            Currently, I'm working at Meta as a Full Stack Software Engineer,
+            where I continue to develop and refine my skills.
           </p>
         </div>
         <div class="basis-full md:basis-1/2">
@@ -126,12 +125,9 @@ export function Intro() {
     <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
       <h1>About</h1>
       <p>
-        Hello there, my name is Eugene Teu and I am currently a full time
-        Software Engineer based in sunny Singapore
-      </p>
-      <p>
-        I graduated in 2022 with a Bachelor Of Computing (Computer Science) from
-        the National University Of Singapore
+        Hello! I'm Eugene Teu, a full-time Software Engineer based in sunny
+        Singapore. I hold a Bachelor of Computing in Computer Science from the
+        National University of Singapore, which I earned in 2022.
       </p>
       <h3>I specialise in Full Stack Web Development</h3>
     </article>
