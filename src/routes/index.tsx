@@ -16,12 +16,13 @@ import {
   Socials,
 } from "~/content/content";
 import BentoBox from "~/components/BentoBox";
+import ETDSMainWrapper from "~/components/base-components/ETDSMainWrapper";
 
 export default function Home(): JSXElement {
   const [state] = useTheme();
 
   return (
-    <main class="bg-white dark:bg-gray-900 min-h-screen">
+    <ETDSMainWrapper>
       <div>
         <div class="pt-6">
           {RoundedAvatar()}
@@ -40,6 +41,6 @@ export default function Home(): JSXElement {
           </div>
         </div>
       </div>
-    </main>
+    </ETDSMainWrapper>
   );
 }
