@@ -17,9 +17,8 @@ export default defineConfig({
         jsx: true,
         jsxImportSource: "solid-js",
         providerImportSource: "solid-mdx",
-        remarkPlugins: [remarkFrontmatter], // Add it here
+        remarkPlugins: [remarkFrontmatter],
       }),
-      blogPostsPlugin(),
     ],
   },
 });

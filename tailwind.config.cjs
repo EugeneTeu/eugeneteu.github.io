@@ -1,12 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx,mdx}"],
   theme: {
     extend: {
       animation: {
         fadeIn: "fadeIn 800ms ease-in forwards",
         pulseWhite: "pulseWhite 2s infinite",
         pulseBlack: "pulseBlack 2s infinite",
+        textPulse: "textPulse 3s ease-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -33,6 +34,18 @@ module.exports = {
           },
           "100%": {
             boxShadow: "0 0 0 0 rgba(0,0,0,100)",
+          },
+        },
+
+        textPulse: {
+          "0%": {
+            opacity: 0.5,
+          },
+          "50%": {
+            opacity: 1.0,
+          },
+          "100%": {
+            opacity: 0.5,
           },
         },
       },

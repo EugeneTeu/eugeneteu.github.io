@@ -12,11 +12,22 @@ export function Hero() {
         <article class="mx-auto prose prose-md prose-normal dark:prose-invert">
           <div class="text-center">
             <h1 class="mb-1">Eugene Teu</h1>
-            <h2 class="mt-2">Software Engineer</h2>
+            <h2 class="mt-2 mb-0">Software Engineer</h2>
+            <a class="dark:animate-textPulse mt-2 underline " href="/blog/2024">
+              2024 year in review
+            </a>
           </div>
         </article>
       </div>
     </>
+  );
+}
+
+export function Blog() {
+  return (
+    <a class="mt-2" href="/blog/2024">
+      2024 year in review
+    </a>
   );
 }
 

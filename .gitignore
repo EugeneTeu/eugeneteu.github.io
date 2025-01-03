@@ -36,3 +36,5 @@ gh-pages
 gh-pages.pub
 
 .vscode
+
+.prettierignore
