@@ -1,6 +1,5 @@
 import { Theme, useTheme } from "./context/theme.context";
-import { ToggleButton } from "@kobalte/core/toggle-button";
-import EDSToggleButton from "./ToggleButton";
+import DarkModeToggleButton from "./DarkModeToggleButton";
 type Props = {};
 
 const Header = ({}: Props) => {
@@ -22,7 +21,7 @@ const Header = ({}: Props) => {
             </a>
           </div>
           <div class="items-center justify-center justify-items-center mx-3">
-            {EDSToggleButton(onModeChange)}
+            {DarkModeToggleButton(onModeChange)}
           </div>
         </div>
       </div>

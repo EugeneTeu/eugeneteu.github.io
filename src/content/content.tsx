@@ -13,13 +13,26 @@ export function Hero() {
           <div class="text-center">
             <h1 class="mb-1">Eugene Teu</h1>
             <h2 class="mt-2 mb-0">Software Engineer</h2>
-            <a class="dark:animate-textPulse mt-2 underline " href="/blog/2024">
-              2024 year in review
-            </a>
           </div>
         </article>
       </div>
     </>
+  );
+}
+
+export function Blog() {
+  return (
+    <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
+      <h1>Blog</h1>
+      <p>I write sometimes.</p>
+      <ul>
+        <li>
+          <a class="dark:animate-textPulse mt-2 underline" href="/blog/2024">
+            2024 year in review
+          </a>
+        </li>
+      </ul>
+    </article>
   );
 }
 

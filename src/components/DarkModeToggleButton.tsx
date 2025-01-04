@@ -5,7 +5,7 @@ import { arrowDown } from "solid-heroicons/solid-mini";
 import { Moon, Sun } from "lucide-solid";
 import { Toggle } from "./ui/toggle";
 
-export default function EDSToggleButton(onClick: () => void) {
+export default function DarkModeToggleButton(onClick: () => void) {
   return (
     <Toggle onClick={onClick}>
       {(state) => (
