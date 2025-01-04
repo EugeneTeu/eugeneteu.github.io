@@ -22,7 +22,7 @@ const Header = ({}: Props) => {
             </a>
           </div>
           <div class="items-center justify-center justify-items-center mx-3">
-            {/* {EDSToggleButton(onModeChange)} */}
+            {EDSToggleButton(onModeChange)}
           </div>
         </div>
       </div>

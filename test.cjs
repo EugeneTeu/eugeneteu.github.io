@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: ["variant", [".dark &", '[data-kb-theme="dark"] &']],
-  content: ["./src/**/*.{html,js,jsx,ts,tsx,mdx}"],
+  content: ["./src/**/*.{ts,tsx}"],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -85,66 +86,19 @@ module.exports = {
           from: { opacity: 1, transform: "scale(1)" },
           to: { opacity: 0, transform: "scale(0.96)" },
         },
+        "caret-blink": {
+          "0%,70%,100%": { opacity: "1" },
+          "20%,50%": { opacity: "0" },
+        },
       },
       animation: {
-        fadeIn: "fadeIn 800ms ease-in forwards",
-        pulseWhite: "pulseWhite 2s infinite",
-        pulseBlack: "pulseBlack 2s infinite",
-        textPulse: "textPulse 3s ease-out infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "content-show": "content-show 0.2s ease-out",
         "content-hide": "content-hide 0.2s ease-out",
+        "caret-blink": "caret-blink 1.25s ease-out infinite",
       },
-      keyframes: {
-        fadeIn: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
-        },
-        pulseWhite: {
-          "0%": {
-            boxShadow: "0 0 0 0 rgba(255, 255, 255, 0.7)",
-          },
-          "71%": {
-            boxShadow: "0 0 0 5px rgba(255, 255, 255, 0)",
-          },
-          "100%": {
-            boxShadow: "0 0 0 0 rgba(255, 255, 255, 0)",
-          },
-        },
-        pulseBlack: {
-          "0%": {
-            boxShadow: "0 0 0 0 rgba(0,0,100)",
-          },
-          "70%": {
-            boxShadow: "0 0 0 5px rgba(0,0,0,50)",
-          },
-          "100%": {
-            boxShadow: "0 0 0 0 rgba(0,0,0,100)",
-          },
-        },
-
-        textPulse: {
-          "0%": {
-            opacity: 0.5,
-          },
-          "50%": {
-            opacity: 1.0,
-          },
-          "100%": {
-            opacity: 0.5,
-          },
-        },
-      },
-      fontFamily: {
-        sans: [
-          ' ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;',
-        ],
-        mono: ["var(--font-Roboto_Mono)"],
-      },
-      typography: ({ theme }) => ({}),
     },
   },
-  darkMode: ["selector", "[data-theme*='dark']"],
-  plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate")],
 };

@@ -1,18 +1,23 @@
 {
   "name": "example-with-tailwindcss",
   "dependencies": {
-    "@kobalte/core": "^0.13.4",
+    "@kobalte/core": "^0.13.7",
     "@solidjs/router": "^0.14.3",
     "@solidjs/start": "^1.0.6",
     "@tailwindcss/typography": "^0.5.14",
     "@vinxi/plugin-mdx": "^3.7.2",
     "autoprefixer": "^10.4.20",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-solid": "^0.469.0",
     "postcss": "^8.4.41",
     "remark-frontmatter": "^5.0.0",
     "solid-heroicons": "^3.2.4",
     "solid-js": "^1.9.3",
     "solid-mdx": "^0.0.7",
+    "tailwind-merge": "^2.6.0",
     "tailwindcss": "^3.4.10",
+    "tailwindcss-animate": "^1.0.7",
     "vinxi": "^0.4.1"
   },
   "engines": {

@@ -7,12 +7,10 @@ import {
 } from "~/components/context/theme.context";
 
 import {
-  Blog,
   Divider,
   Experience,
   Hero,
   Intro,
-  RoundedAvatar,
   Skills,
   Socials,
 } from "~/content/content";
