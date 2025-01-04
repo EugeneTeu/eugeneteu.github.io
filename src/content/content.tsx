@@ -23,14 +23,6 @@ export function Hero() {
   );
 }
 
-export function Blog() {
-  return (
-    <a class="mt-2" href="/blog/2024">
-      2024 year in review
-    </a>
-  );
-}
-
 export function Socials() {
   return (
     <div class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>

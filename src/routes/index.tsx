@@ -23,21 +23,18 @@ export default function Home(): JSXElement {
 
   return (
     <main class="bg-white dark:bg-gray-900 min-h-screen">
-      <div>
-        <div class="pt-6">
-          <Hero />
-          <div class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto`}>
-            <div class="md:mx-auto md:w-fit">
-              <BentoBox>{Intro()}</BentoBox>
-              <Divider />
-              <BentoBox>{Experience()}</BentoBox>
-              <Divider />
-              <BentoBox>{Skills()}</BentoBox>
-              <Divider />
-              <BentoBox>{Socials()}</BentoBox>
-              <div class="pb-6"></div>
-            </div>
-          </div>
+      <div class={`pt-3 max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto`}>
+        <div class="md:mx-auto md:w-fit">
+          {Hero()}
+          <Divider />
+          <BentoBox>{Intro()}</BentoBox>
+          <Divider />
+          <BentoBox>{Experience()}</BentoBox>
+          <Divider />
+          <BentoBox>{Skills()}</BentoBox>
+          <Divider />
+          <BentoBox>{Socials()}</BentoBox>
+          <div class="pb-6"></div>
         </div>
       </div>
     </main>
