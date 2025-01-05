@@ -7,7 +7,7 @@ import { Toggle } from "./ui/toggle";
 
 export default function DarkModeToggleButton(onClick: () => void) {
   return (
-    <Toggle onClick={onClick}>
+    <Toggle aria-label="Dark mode toggle button" onClick={onClick}>
       {(state) => (
         <Show when={state.pressed()} fallback={<Moon color="white" />}>
           <Sun />

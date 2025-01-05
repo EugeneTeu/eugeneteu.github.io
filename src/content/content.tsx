@@ -1,5 +1,7 @@
+import { For } from "solid-js";
 import BentoBox from "~/components/BentoBox";
 import Tag from "~/components/Tag";
+import { posts } from "~/data/posts";
 
 export function Divider() {
   return <div class="animate-fadeIn my-6"></div>;
@@ -25,14 +27,31 @@ export function Blog() {
     <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
       <h1>Blog</h1>
       <p>I write sometimes.</p>
-      <ul>
-        <li>
-          <a class="dark:animate-textPulse mt-2 underline" href="/blog/2024">
-            2024 year in review
-          </a>
-        </li>
-      </ul>
+      {getBlogLinks()}
     </article>
+  );
+}
+
+// paginate in the future
+function getBlogLinks() {
+  return (
+    <ul>
+      <For each={posts} fallback={<></>}>
+        {(post) => {
+          const { slug, vanity } = post;
+          return (
+            <li>
+              <a
+                class="dark:animate-textPulse mt-2 underline"
+                href={`/blog/${slug}`}
+              >
+                {vanity}
+              </a>
+            </li>
+          );
+        }}
+      </For>
+    </ul>
   );
 }
 

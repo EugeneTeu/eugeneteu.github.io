@@ -1,3 +1,13 @@
 import JSONPosts from "./posts.json";
-type Post = { slug: string };
-export const posts: Post[] = JSONPosts;
+
+export type PostMetaData = {
+  slug: string;
+  title: string;
+  date: string;
+  author: string;
+  tags: string[];
+  description: string;
+  vanity: string;
+};
+
+export const posts: PostMetaData[] = JSONPosts;

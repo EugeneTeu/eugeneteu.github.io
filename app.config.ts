@@ -13,6 +13,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
+      blogPostsPlugin(),
       mdx.withImports({})({
         jsx: true,
         jsxImportSource: "solid-js",
