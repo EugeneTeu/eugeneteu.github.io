@@ -25,7 +25,7 @@ export function Hero() {
 export function Blog() {
   return (
     <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
-      <h1>Blog</h1>
+      <h2>Blog</h2>
       <p>I write sometimes.</p>
       {getBlogLinks()}
     </article>
@@ -59,7 +59,7 @@ export function Socials() {
   return (
     <div class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
       <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
-        <h1>Socials</h1>
+        <h2>Socials</h2>
         <div class="not-prose flex justify-center">
           <a href="https://www.linkedin.com/in/eugeneteu">
             <img alt="linkedin" class="w-16 h-16 mx-2" src="/linkedin.svg" />
@@ -77,7 +77,7 @@ export function Socials() {
 export function Skills() {
   return (
     <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
-      <h1>Skills</h1>
+      <h2>Skills</h2>
       <div class="not-prose  sd:flex-col md:flex-row">
         <div class="basis-1 md:basis-1/2">
           <h4>Web Technologies</h4>
@@ -115,7 +115,7 @@ export function Experience() {
     <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
       <div class="flex flex-col md:flex-row">
         <div class="basis-full md:basis-1/2">
-          <h1>Experience</h1>
+          <h2>Experience</h2>
           <p>
             I have extensive experience in the software engineering field, with
             a proven ability to deliver polished, high-quality products.
@@ -158,7 +158,7 @@ export function Experience() {
 export function Intro() {
   return (
     <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
-      <h1>About</h1>
+      <h2>About</h2>
       <p>
         Hello! I'm Eugene Teu, a full-time Software Engineer based in sunny
         Singapore. I hold a Bachelor of Computing in Computer Science from the

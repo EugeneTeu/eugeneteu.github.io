@@ -20,7 +20,7 @@ export default function BlogLayout(props: RouteSectionProps) {
           <div class="pt-6">
             <div class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto`}>
               <div class="md:mx-auto md:w-fit">
-                <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
+                <article class="prose prose-md  prose-normal dark:prose-invert">
                   <MDXProvider components={markdownComponents}>
                     {props.children}
                   </MDXProvider>

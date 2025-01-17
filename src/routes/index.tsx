@@ -1,5 +1,6 @@
 import { A } from "@solidjs/router";
 import { Component, JSXElement } from "solid-js";
+import { clientOnly } from "@solidjs/start";
 import {
   Theme,
   ThemeProvider,
