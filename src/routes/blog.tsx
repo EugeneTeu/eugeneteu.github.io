@@ -15,9 +15,9 @@ export default function BlogLayout(props: RouteSectionProps) {
       <Meta name="og:title" content={meta().title} />
       <Meta name="description" content={meta().description} />
       <Meta name="og:description" content={meta().description} />
-      <main class="bg-white dark:bg-gray-900 min-h-screen">
+      <main class="bg-white dark:bg-gray-900 min-h-screen pb-safe overflow-auto">
         <div>
-          <div class="pt-6">
+          <div class="pt-2 pb-2">
             <div class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto`}>
               <div class="md:mx-auto md:w-fit">
                 <article class="prose prose-md  prose-normal dark:prose-invert">
