@@ -32,11 +32,24 @@ export function Blog() {
   );
 }
 
+function parseDate(date: string) {
+  return new Date(
+    parseInt(date.slice(4)),
+    parseInt(date.slice(2, 4)),
+    parseInt(date.slice(0, 2))
+  );
+}
+
 // paginate in the future
 function getBlogLinks() {
+  const sortedPosts = posts.sort((a, b) => {
+    //date is DDMMYYYY
+    return parseDate(b.date).getTime() - parseDate(a.date).getTime();
+  });
+
   return (
     <ul>
-      <For each={posts} fallback={<></>}>
+      <For each={sortedPosts} fallback={<></>}>
         {(post) => {
           const { slug, vanity } = post;
           return (
