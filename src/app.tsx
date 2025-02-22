@@ -13,6 +13,17 @@ export default function App() {
       root={(props) => (
         <MetaProvider>
           <Title>Eugene Teu</Title>
+          <meta
+            name="theme-color"
+            content="#ffffff"
+            media="(prefers-color-scheme: light)"
+          />
+          <meta
+            name="theme-color"
+            content="#121212"
+            media="(prefers-color-scheme: dark)"
+          />
+
           <ThemeProvider>
             <Nav />
             <Suspense>{props.children}</Suspense>
