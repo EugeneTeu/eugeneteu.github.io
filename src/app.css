@@ -153,10 +153,17 @@
   --card-border-rgb: 131, 134, 135;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   html,
   body {
     background-color: #00000010;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: #111827;
   }
   :root {
     --foreground-rgb: 255, 255, 255;
