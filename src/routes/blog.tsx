@@ -4,6 +4,7 @@ import { RouteSectionProps } from "@solidjs/router";
 import { MDXProvider } from "solid-mdx";
 import { markdownComponents } from "~/components/Markdown";
 import { PostMetaData, posts } from "~/data/posts";
+import { ArrowLeft, MoveUpLeftIcon } from "lucide-solid";
 
 export default function BlogLayout(props: RouteSectionProps) {
   const meta = () =>
@@ -15,19 +16,21 @@ export default function BlogLayout(props: RouteSectionProps) {
       <Meta name="og:title" content={meta().title} />
       <Meta name="description" content={meta().description} />
       <Meta name="og:description" content={meta().description} />
-      <main class="bg-white dark:bg-gray-900 min-h-screen pb-safe overflow-auto">
-        <div>
-          <div class="pt-2 pb-2">
-            <div class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto`}>
-              <div class="md:mx-auto md:w-fit">
-                <article class="prose prose-md  prose-normal dark:prose-invert">
-                  <MDXProvider components={markdownComponents}>
-                    {props.children}
-                  </MDXProvider>
-                </article>
-              </div>
+      <main class="bg-white dark:bg-gray-900 min-h-screen pb-safeoverflow-auto">
+        <div
+          class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto md:w-fit lg:mx-auto pt-4 pb-4`}
+        >
+          <div class="prose prose-md  prose-normal dark:prose-invert pt-2 pb-2">
+            <div class="flex items-center gap-1">
+              <ArrowLeft size={16} />
+              <a href="/">Home</a>
             </div>
           </div>
+          <article class="prose prose-md  prose-normal dark:prose-invert">
+            <MDXProvider components={markdownComponents}>
+              {props.children}
+            </MDXProvider>
+          </article>
         </div>
       </main>
     </>
