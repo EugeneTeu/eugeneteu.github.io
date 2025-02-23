@@ -18,6 +18,7 @@ import {
 } from "~/content/content";
 import BentoBox from "~/components/BentoBox";
 import { Meta, Title } from "@solidjs/meta";
+import Footer from "~/components/Footer";
 
 export default function Home(): JSXElement {
   return (
@@ -30,7 +31,7 @@ export default function Home(): JSXElement {
         software development."
       />
 
-      <main class="bg-white dark:bg-gray-900 min-h-screen">
+      <main>
         <div class={`pt-3 max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto`}>
           <div class="md:mx-auto md:w-fit">
             {Hero()}
@@ -42,9 +43,6 @@ export default function Home(): JSXElement {
             <BentoBox>{Experience()}</BentoBox>
             <Divider />
             <BentoBox>{Skills()}</BentoBox>
-            <Divider />
-            <BentoBox>{Socials()}</BentoBox>
-            <div class="pb-6"></div>
           </div>
         </div>
       </main>

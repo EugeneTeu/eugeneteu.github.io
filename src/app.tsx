@@ -6,6 +6,7 @@ import Nav from "~/components/Nav";
 import "./app.css";
 import { ThemeProvider } from "./components/context/theme.context";
 import { MetaProvider, Title } from "@solidjs/meta";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -14,8 +15,11 @@ export default function App() {
         <MetaProvider>
           <Title>Eugene Teu</Title>
           <ThemeProvider>
-            <Nav />
-            <Suspense>{props.children}</Suspense>
+            <div class="bg-white dark:bg-gray-900">
+              <Nav />
+              <Suspense>{props.children}</Suspense>
+              <Footer />
+            </div>
           </ThemeProvider>
         </MetaProvider>
       )}
