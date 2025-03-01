@@ -1,13 +1,13 @@
-import React from "react";
+import { Component } from "solid-js";
 
-type Props = {
+type ButtonProps = {
   label: string;
-  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+  onClick?: (e: MouseEvent) => void;
 };
-const Button = ({ label, onClick }: Props): React.ReactElement => {
+const Button: Component<ButtonProps> = ({ label, onClick }) => {
   return (
     <button
-      className=" hover:scale-110 ease-in-out inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 dark:bg-blue-800 bg-blue-400 text-black dark:text-white"
+      class="hover:scale-110 ease-in-out inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 dark:bg-blue-800 bg-blue-400 text-black dark:text-white"
       onClick={onClick}
     >
       {label}
