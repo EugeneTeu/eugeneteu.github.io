@@ -7,20 +7,15 @@ function redirectOnDevOnlyRoute(urL: URL) {
   const isDevDomain = urL.hostname === "localhost";
   const path = urL.pathname;
 
-  if (INTERNAL_ROUTE_WHITELIST.includes(path) && !isDevDomain) {
-    const redirectUrl = `${urL.protocol}//${urL.hostname}`;
-    return new Response(null, {
-      status: 302,
-      headers: {
-        Location: redirectUrl,
-      },
-    });
+  if (INTERNAL_ROUTE_WHITELIST.includes(path) && isDevDomain) {
+    console.log(INTERNAL_ROUTE_WHITELIST.includes(path) && isDevDomain);
+    return redirect("/", 302);
   }
 }
 
 export default createMiddleware({
   onRequest: (event) => {
     const url = new URL(event.request.url);
-    redirectOnDevOnlyRoute(url);
+    return redirectOnDevOnlyRoute(url);
   },
 });
