@@ -51,11 +51,11 @@ function CountDownComponent() {
     <div class="lg:mt-[25%]">
       <article class="prose prose-md prose-normal dark:prose-invert">
         <h3 class="">
-          I have been building software professionally for{" "}
+          I've been building software professionally for{" "}
           <span class="animate-pulse">{daysWorked("2022-07-11")}</span> days
         </h3>
         <h4 class="">
-          I am a <GradientText>Product Hybrid</GradientText> who thrives where
+          I'm a <GradientText>Product Hybrid</GradientText> who thrives where
           users and products collide—turning ideas into real, impactful
           experiences.
         </h4>
