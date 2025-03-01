@@ -7,8 +7,7 @@ function redirectOnDevOnlyRoute(urL: URL) {
   const isDevDomain = urL.hostname === "localhost";
   const path = urL.pathname;
 
-  if (INTERNAL_ROUTE_WHITELIST.includes(path) && isDevDomain) {
-    console.log(INTERNAL_ROUTE_WHITELIST.includes(path) && isDevDomain);
+  if (INTERNAL_ROUTE_WHITELIST.includes(path) && !isDevDomain) {
     return redirect("/", 302);
   }
 }
