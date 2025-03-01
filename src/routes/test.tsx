@@ -6,8 +6,10 @@ export default function Home(): JSXElement {
   return (
     <>
       <main>
-        <div class="md:mx-auto md:w-fit px-3">
-          <Timeline />
+        <div class="md:mx-auto md:w-fit px-3 h-screen">
+          {/* <Timeline /> */}
+          <div class="my-4" />
+          <Carousel />
         </div>
       </main>
     </>
