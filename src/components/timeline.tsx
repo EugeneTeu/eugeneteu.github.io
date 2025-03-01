@@ -79,19 +79,10 @@ export default function Timeline(): JSXElement {
   });
 
   return (
-    <>
-      <main>
-        <div class={`pt-3 max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto`}>
-          <div class="md:mx-auto md:w-fit h-screen">
-            <div class="h-screen w-full overflow-hidden .gallery">
-              <ul class="cards absolute w-28 h-28">
-                <List ref={(el) => (containerRef = el)}>0</List>
-              </ul>
-            </div>
-            <div class="drag-proxy"></div>
-          </div>
-        </div>
-      </main>
-    </>
+    <div class="h-screen w-full overflow-hidden .gallery">
+      <ul class="cards absolute w-28 h-28">
+        <List ref={(el) => (containerRef = el)}>0</List>
+      </ul>
+    </div>
   );
 }

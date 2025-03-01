@@ -70,7 +70,7 @@ export function Hero() {
     <>
       <div class={`lg:min-h-[50vh] flex w-full`}>
         <div
-          class={`rounded-lg border-solid px-8 py-5 lg:py-10 w-full min-h-full dark:bg-black bg-yellow-200`}
+          class={`border-solid px-8 py-5 lg:py-10 w-full min-h-full dark:bg-black bg-yellow-200`}
         >
           <div class="max-w-screen-xl mx-auto h-full">
             <div class="flex flex-col lg:flex-row h-full align-top relative">
