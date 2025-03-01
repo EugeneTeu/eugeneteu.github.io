@@ -1,12 +1,4 @@
-import { A } from "@solidjs/router";
-import { Component, JSXElement } from "solid-js";
-import { clientOnly } from "@solidjs/start";
-import {
-  Theme,
-  ThemeProvider,
-  useTheme,
-} from "~/components/context/theme.context";
-
+import { JSXElement } from "solid-js";
 import {
   Blog,
   Divider,
@@ -14,11 +6,9 @@ import {
   Hero,
   Intro,
   Skills,
-  Socials,
 } from "~/content/content";
 import BentoBox from "~/components/BentoBox";
 import { Meta, Title } from "@solidjs/meta";
-import Footer from "~/components/Footer";
 
 export default function Home(): JSXElement {
   return (

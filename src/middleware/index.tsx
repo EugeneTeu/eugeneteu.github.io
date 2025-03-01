@@ -8,7 +8,8 @@ function redirectOnDevOnlyRoute(urL: URL) {
   const path = urL.pathname;
 
   if (INTERNAL_ROUTE_WHITELIST.includes(path) && !isDevDomain) {
-    throw redirect(urL.hostname);
+    const redirectUrl = `${urL.protocol}//${urL.hostname}`;
+    throw redirect(redirectUrl);
   }
 }
 
