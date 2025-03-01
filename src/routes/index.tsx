@@ -32,9 +32,9 @@ export default function Home(): JSXElement {
       />
 
       <main>
-        <div class={`pt-3 max-w-5xl mx-5 sm:mx-10 md:mx-auto lg:mx-auto`}>
-          <div class="md:mx-auto md:w-fit">
-            {Hero()}
+        <div class={`sm:mx-10 md:mx-auto lg:mx-auto`}>
+          <div class="">{Hero()}</div>
+          <div class="md:mx-auto md:w-fit px-3">
             <Divider />
             <BentoBox>{Blog()}</BentoBox>
             <Divider />
