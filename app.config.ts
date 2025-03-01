@@ -8,6 +8,7 @@ const { default: mdx } = pkg;
 
 export default defineConfig({
   extensions: ["mdx", "md"],
+  middleware: "src/middleware/index.tsx",
   server: {
     preset: "vercel",
   },
