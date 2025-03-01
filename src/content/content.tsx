@@ -1,4 +1,4 @@
-import { For } from "solid-js";
+import { For, JSXElement } from "solid-js";
 import BentoBox from "~/components/BentoBox";
 import Tag from "~/components/Tag";
 import { posts } from "~/data/posts";
@@ -7,16 +7,80 @@ export function Divider() {
   return <div class="animate-fadeIn my-6"></div>;
 }
 
+const GradientText = ({ children }: { children: JSXElement }) => {
+  return (
+    <span class="animate-pulse font-bold bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
+      {children}
+    </span>
+  );
+};
+
+function TextComponent() {
+  return (
+    <div class="lg:mt-16 mt-4">
+      <article class="prose prose-md prose-normal dark:prose-invert">
+        <div class="max-w-[400px]">
+          <h1 class="lg:text-[3.5rem] mb-0">
+            <GradientText>Eugene Teu</GradientText>
+          </h1>
+          <h2 class="mt-1">Software Engineer based in Singapore</h2>
+          <h3 class="mt-1">
+            I currently work @ <span class="animate-pulse font-bold">Meta</span>
+          </h3>
+        </div>
+      </article>
+    </div>
+  );
+}
+
+function daysWorked(startDate: string = "2022-07-11"): number {
+  const start = new Date(startDate);
+  const today = new Date();
+
+  // Calculate the difference in milliseconds
+  const diffTime = today.getTime() - start.getTime();
+
+  // Convert milliseconds to days
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+  return diffDays;
+}
+
+function CountDownComponent() {
+  return (
+    <div class="lg:mt-[25%]">
+      <article class="prose prose-md prose-normal dark:prose-invert">
+        <h3 class="">
+          I have been building software professionally for{" "}
+          <span class="animate-pulse">{daysWorked("2022-07-11")}</span> days
+        </h3>
+        <h4 class="">
+          I am a <GradientText>Product Hybrid</GradientText> who thrives where
+          users and products collide—turning ideas into real, impactful
+          experiences.
+        </h4>
+        <h3 class="">I'm driven to be world-class in everything I build.</h3>
+      </article>
+    </div>
+  );
+}
+
 export function Hero() {
   return (
     <>
-      <div class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
-        <article class="mx-auto prose prose-md prose-normal dark:prose-invert">
-          <div class="text-center">
-            <h1 class="mb-1">Eugene Teu</h1>
-            <h2 class="mt-2 mb-0">Software Engineer</h2>
+      <div class={`lg:min-h-[50vh] flex w-full`}>
+        <div
+          class={`rounded-lg border-solid px-8 py-5 lg:py-10 w-full min-h-full dark:bg-black bg-yellow-200`}
+        >
+          <div class="max-w-screen-xl mx-auto h-full">
+            <div class="flex flex-col lg:flex-row h-full align-top relative">
+              <div class="lg:basis-2/3">{TextComponent()}</div>
+              <div class="block lg:hidden my-3 w-full h-[2px] bg-gradient-to-b dark:bg-yellow-200 bg-black left-[50%]"></div>
+              <div class="hidden lg:block w-[2px] absolute mx-1 h-full bg-gradient-to-b dark:bg-yellow-200 bg-black left-[50%]"></div>
+              <div class="lg:basis-1/3">{CountDownComponent()}</div>
+            </div>
           </div>
-        </article>
+        </div>
       </div>
     </>
   );
@@ -173,9 +237,9 @@ export function Intro() {
     <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
       <h2>About</h2>
       <p>
-        Hello! I'm Eugene Teu, a full-time Software Engineer based in sunny
-        Singapore. I hold a Bachelor of Computing in Computer Science from the
-        National University of Singapore, which I earned in 2022.
+        I'm Eugene Teu, a full-time Software Engineer based in sunny Singapore.
+        I hold a Bachelor of Computing in Computer Science from the National
+        University of Singapore, which I earned in 2022.
       </p>
       <h3>I specialise in Full Stack Web Development</h3>
     </article>

@@ -1,4 +1,4 @@
-import { children, Component, JSXElement } from "solid-js";
+import { Component, JSXElement } from "solid-js";
 
 type ContainerProps = {
   children: JSXElement;

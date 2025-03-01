@@ -10,6 +10,7 @@
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "gsap": "^3.12.7",
     "lucide-solid": "^0.469.0",
     "postcss": "^8.4.41",
     "remark-frontmatter": "^5.0.0",
