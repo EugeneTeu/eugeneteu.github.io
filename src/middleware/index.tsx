@@ -9,7 +9,12 @@ function redirectOnDevOnlyRoute(urL: URL) {
 
   if (INTERNAL_ROUTE_WHITELIST.includes(path) && !isDevDomain) {
     const redirectUrl = `${urL.protocol}//${urL.hostname}`;
-    throw redirect(redirectUrl);
+    return new Response(null, {
+      status: 302,
+      headers: {
+        Location: redirectUrl,
+      },
+    });
   }
 }
 
