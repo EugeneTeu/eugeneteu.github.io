@@ -118,9 +118,9 @@ export default function Carousel() {
         onPointerUp={onPointerUp}
         onPointerMove={onPointerMove}
         onPointerDown={onPointerDown}
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
+        // onTouchStart={onTouchStart}
+        // onTouchMove={onTouchMove}
+        // onTouchEnd={onTouchEnd}
       >
         <div class="flex w-full transition-transform duration-500 justify-center">
           <For each={items}>

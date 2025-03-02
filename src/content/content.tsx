@@ -1,5 +1,6 @@
 import { For, JSXElement } from "solid-js";
 import BentoBox from "~/components/BentoBox";
+import CountUp from "~/components/CountUp";
 import Tag from "~/components/Tag";
 import { posts } from "~/data/posts";
 
@@ -47,12 +48,19 @@ function daysWorked(startDate: string = "2022-07-11"): number {
 }
 
 function CountDownComponent() {
+  const days = daysWorked("2022-07-11");
+  const dayWorked = CountUp({
+    start: 0,
+    end: days,
+    timer: 5,
+  });
+
   return (
     <div class="lg:mt-[25%]">
       <article class="prose prose-md prose-normal dark:prose-invert">
         <h3 class="">
           I've been building software professionally for{" "}
-          <span class="animate-pulse">{daysWorked("2022-07-11")}</span> days
+          <span class="animate-pulse">{dayWorked() + ""}</span> days
         </h3>
         <h4 class="">
           I'm a <GradientText>Product Hybrid</GradientText> who thrives where
