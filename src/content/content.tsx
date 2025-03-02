@@ -1,5 +1,7 @@
 import { For, JSXElement } from "solid-js";
 import BentoBox from "~/components/BentoBox";
+import CountUp from "~/components/CountUp";
+import HeroLogo from "~/components/HeroLogo";
 import Tag from "~/components/Tag";
 import { posts } from "~/data/posts";
 
@@ -15,7 +17,7 @@ const GradientText = ({ children }: { children: JSXElement }) => {
   );
 };
 
-function TextComponent() {
+function HeroIntro() {
   return (
     <div class="lg:mt-16 mt-4">
       <article class="prose prose-md prose-normal dark:prose-invert">
@@ -27,6 +29,7 @@ function TextComponent() {
           <h3 class="mt-1">
             I currently work @ <span class="animate-pulse font-bold">Meta</span>
           </h3>
+          <HeroLogo />
         </div>
       </article>
     </div>
@@ -47,12 +50,19 @@ function daysWorked(startDate: string = "2022-07-11"): number {
 }
 
 function CountDownComponent() {
+  const days = daysWorked("2022-07-11");
+  const dayWorked = CountUp({
+    start: 0,
+    end: days,
+    timer: 5,
+  });
+
   return (
     <div class="lg:mt-[25%]">
       <article class="prose prose-md prose-normal dark:prose-invert">
         <h3 class="">
           I've been building software professionally for{" "}
-          <span class="animate-pulse">{daysWorked("2022-07-11")}</span> days
+          <span class="animate-pulse">{dayWorked() + ""}</span> days
         </h3>
         <h4 class="">
           I'm a <GradientText>Product Hybrid</GradientText> who thrives where
@@ -70,11 +80,11 @@ export function Hero() {
     <>
       <div class={`lg:min-h-[50vh] flex w-full`}>
         <div
-          class={`rounded-lg border-solid px-8 py-5 lg:py-10 w-full min-h-full dark:bg-black bg-yellow-200`}
+          class={`border-solid px-8 py-5 lg:py-10 w-full min-h-full dark:bg-black bg-yellow-200`}
         >
           <div class="max-w-screen-xl mx-auto h-full">
             <div class="flex flex-col lg:flex-row h-full align-top relative">
-              <div class="lg:basis-2/3">{TextComponent()}</div>
+              <div class="lg:basis-2/3">{HeroIntro()}</div>
               <div class="block lg:hidden my-3 w-full h-[2px] bg-gradient-to-b dark:bg-yellow-200 bg-black left-[50%]"></div>
               <div class="hidden lg:block w-[2px] absolute mx-1 h-full bg-gradient-to-b dark:bg-yellow-200 bg-black left-[50%]"></div>
               <div class="lg:basis-1/3">{CountDownComponent()}</div>
