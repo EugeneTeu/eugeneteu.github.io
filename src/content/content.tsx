@@ -1,6 +1,7 @@
 import { For, JSXElement } from "solid-js";
 import BentoBox from "~/components/BentoBox";
 import CountUp from "~/components/CountUp";
+import HeroLogo from "~/components/HeroLogo";
 import Tag from "~/components/Tag";
 import { posts } from "~/data/posts";
 
@@ -16,7 +17,7 @@ const GradientText = ({ children }: { children: JSXElement }) => {
   );
 };
 
-function TextComponent() {
+function HeroIntro() {
   return (
     <div class="lg:mt-16 mt-4">
       <article class="prose prose-md prose-normal dark:prose-invert">
@@ -28,6 +29,7 @@ function TextComponent() {
           <h3 class="mt-1">
             I currently work @ <span class="animate-pulse font-bold">Meta</span>
           </h3>
+          <HeroLogo />
         </div>
       </article>
     </div>
@@ -82,7 +84,7 @@ export function Hero() {
         >
           <div class="max-w-screen-xl mx-auto h-full">
             <div class="flex flex-col lg:flex-row h-full align-top relative">
-              <div class="lg:basis-2/3">{TextComponent()}</div>
+              <div class="lg:basis-2/3">{HeroIntro()}</div>
               <div class="block lg:hidden my-3 w-full h-[2px] bg-gradient-to-b dark:bg-yellow-200 bg-black left-[50%]"></div>
               <div class="hidden lg:block w-[2px] absolute mx-1 h-full bg-gradient-to-b dark:bg-yellow-200 bg-black left-[50%]"></div>
               <div class="lg:basis-1/3">{CountDownComponent()}</div>
