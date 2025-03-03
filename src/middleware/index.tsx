@@ -4,7 +4,8 @@ import { createMiddleware } from "@solidjs/start/middleware";
 const INTERNAL_ROUTE_WHITELIST = ["/test"];
 
 function redirectOnDevOnlyRoute(urL: URL) {
-  const isDevDomain = urL.hostname === "localhost";
+  const isDevDomain =
+    urL.hostname === "localhost" || process.env.NODE_ENV === "development";
   const path = urL.pathname;
 
   if (INTERNAL_ROUTE_WHITELIST.includes(path) && !isDevDomain) {

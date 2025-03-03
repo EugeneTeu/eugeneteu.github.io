@@ -12,11 +12,6 @@ export default function HeroLogo(): JSXElement {
   //   });
   const enterAnimation = () => {
     if (codeRef && coffeeRef) {
-      //   tl.to(codeRef, {
-      //     translateX: "200%",
-      //     duration: 3,
-      //     ease: "elastic",
-      //   });
       tween2 = gsap.to(coffeeRef, {
         translateX: "200%",
         duration: 2,
