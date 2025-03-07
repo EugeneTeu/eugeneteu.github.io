@@ -26,7 +26,7 @@ function HeroIntro() {
   };
 
   return (
-    <div class="lg:mt-16 mt-4">
+    <div class="lg:mt-16">
       <article class="prose prose-md prose-normal dark:prose-invert">
         <div class="max-w-[400px]">
           <h1 class="lg:text-[3.5rem] mb-0">
