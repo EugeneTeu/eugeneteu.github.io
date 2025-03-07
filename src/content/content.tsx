@@ -216,8 +216,8 @@ export function Skills() {
 export function Experience() {
   return (
     <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
-      <div class="flex flex-col md:flex-row">
-        <div class="basis-full md:basis-1/2">
+      <div class="flex flex-col">
+        <div class="basis-full">
           <h2>Experience</h2>
           <p>
             I have extensive experience in the software engineering field, with
@@ -226,18 +226,12 @@ export function Experience() {
             where I continue to develop and refine my skills.
           </p>
         </div>
-        <div class="basis-full md:basis-1/2">
+        <div class="basis-full">
           <ul>
-            <BentoBox
-              backgroundDark="dark:bg-gray-700"
-              backgroundLight="bg-gray-100"
-            >
-              <div class="px-6">
-                <li>
-                  <b>Meta</b>, Full Stack Software Engineer (2022-)
-                </li>
-              </div>
-            </BentoBox>
+            <li>
+              <b>Meta</b>, Full Stack Software Engineer (2022-)
+            </li>
+
             <li>
               <b>Coinhall</b>, Founding Engineer (2021-2022)
             </li>
