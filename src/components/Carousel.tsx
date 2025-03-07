@@ -1,6 +1,6 @@
 import { createSignal, createEffect, onCleanup, JSXElement } from "solid-js";
 import { For } from "solid-js/web";
-import Button from "./Button";
+import Button from "./CustomButton";
 
 const items = [
   { id: 1, text: "Item 1" },

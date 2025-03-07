@@ -1,8 +1,10 @@
 import { For, JSXElement } from "solid-js";
 import BentoBox from "~/components/BentoBox";
+
 import CountUp from "~/components/CountUp";
 import HeroLogo from "~/components/HeroLogo";
 import Tag from "~/components/Tag";
+import { Button } from "~/components/ui/Button";
 import { posts } from "~/data/posts";
 
 export function Divider() {
@@ -18,6 +20,11 @@ const GradientText = ({ children }: { children: JSXElement }) => {
 };
 
 function HeroIntro() {
+  const onClickOpenMailTo = () => {
+    window.location.href =
+      "mailto:eugeneteu@gmail.com?subject=Hello there&body=Is this Eugene Teu";
+  };
+
   return (
     <div class="lg:mt-16 mt-4">
       <article class="prose prose-md prose-normal dark:prose-invert">
@@ -30,6 +37,11 @@ function HeroIntro() {
             I currently work @ <span class="animate-pulse font-bold">Meta</span>
           </h3>
           <HeroLogo />
+          <div class="mt-2">
+            <Button variant="default" onClick={onClickOpenMailTo}>
+              {"Email me"}
+            </Button>
+          </div>
         </div>
       </article>
     </div>

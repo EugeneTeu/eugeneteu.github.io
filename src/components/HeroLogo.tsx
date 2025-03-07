@@ -33,7 +33,7 @@ export default function HeroLogo(): JSXElement {
   });
 
   return (
-    <div ref={containerRef} class="flex gap-2 w-fit">
+    <div ref={containerRef} class="flex gap-2 w-fit mb-2">
       <Bitcoin />
       <CodeXml />
       <Coffee ref={coffeeRef} />
