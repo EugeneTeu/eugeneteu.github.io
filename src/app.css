@@ -19,7 +19,7 @@
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
 
-    --primary: 267 51% 17%;
+    --primary: 267 51% 70%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 207 50% 60%;
@@ -46,6 +46,51 @@
     --ring: 240 5.9% 10%;
 
     --radius: 0.5rem;
+  }
+
+  :root[data-theme="dark"] {
+    --background: 0 0% 10%; /* Dark background for dark mode */
+    --foreground: 240 10% 98%; /* Light foreground for text */
+
+    --muted: 240 4.8% 20%; /* Darker muted for dark mode */
+    --muted-foreground: 240 3.8% 80%; /* Lighter muted foreground */
+
+    --popover: 0 0% 20%; /* Dark popover background */
+    --popover-foreground: 240 10% 98%; /* Light text for popovers */
+
+    --border: 240 5.9% 30%; /* Darker borders */
+    --input: 240 5.9% 30%; /* Darker inputs */
+
+    --card: 240 5% 20%; /* Dark card background */
+    --card-foreground: 240 10% 98%; /* Light text for cards */
+
+    --primary: 267 51% 17%; /* Keep same primary blue */
+    --primary-foreground: 0 0% 98%; /* Light text for primary elements */
+
+    --secondary: 207 50% 75%; /* Light secondary blue */
+    --secondary-foreground: 240 5.9% 10%; /* Dark foreground for secondary text */
+
+    --accent: 240 10% 90%; /* Darker accent for dark mode */
+    --accent-foreground: 240 5.9% 10%; /* Dark foreground for accents */
+
+    --destructive: 0 84.2% 55%; /* Slightly toned-down destructive red */
+    --destructive-foreground: 0 0% 98%; /* Light text for destructive actions */
+
+    --info: 204 94% 80%; /* Deeper blue for info messages */
+    --info-foreground: 199 89% 48%; /* Same foreground for info */
+
+    --success: 149 80% 90%; /* Green for success stays the same */
+    --success-foreground: 160 84% 39%; /* Success text stays the same */
+
+    --warning: 48 96% 89%; /* Yellow for warning stays the same */
+    --warning-foreground: 25 95% 53%; /* Warning text stays the same */
+
+    --error: 0 93% 94%; /* Red for errors stays the same */
+    --error-foreground: 0 84% 60%; /* Error foreground stays the same */
+
+    --ring: 240 5.9% 10%; /* Dark ring for focus states */
+
+    --radius: 0.5rem; /* Keep rounded corners */
   }
 }
 

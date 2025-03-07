@@ -38,7 +38,11 @@ function HeroIntro() {
           </h3>
           <HeroLogo />
           <div class="mt-2">
-            <Button variant="default" onClick={onClickOpenMailTo}>
+            <Button
+              class="text-black dark:text-white"
+              variant="default"
+              onClick={onClickOpenMailTo}
+            >
               {"Email me"}
             </Button>
           </div>
