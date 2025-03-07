@@ -1,10 +1,9 @@
 import { Bitcoin, CodeXml, Coffee, Tally1 } from "lucide-solid";
 import { JSXElement, onMount } from "solid-js";
-import gsap from "gsap";
+import { gsap } from "gsap";
 
 export default function HeroLogo(): JSXElement {
   let containerRef: HTMLDivElement | undefined;
-  let codeRef: SVGSVGElement | undefined;
   let coffeeRef: SVGSVGElement | undefined;
   let tl = gsap.timeline({
     repeat: -1,
