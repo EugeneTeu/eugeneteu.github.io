@@ -216,9 +216,9 @@ export function Skills() {
 export function Experience() {
   return (
     <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
+      <h2>Experience</h2>
       <div class="flex flex-col">
         <div class="basis-full">
-          <h2>Experience</h2>
           <p>
             I have extensive experience in the software engineering field, with
             a proven ability to deliver polished, high-quality products.

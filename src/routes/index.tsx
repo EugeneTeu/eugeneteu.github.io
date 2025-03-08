@@ -28,21 +28,11 @@ export default function Home(): JSXElement {
       <main>
         <div class={`mx-auto`}>
           <div class="">{Hero()}</div>
-          <div class="mx-auto w-fit px-3 flex flex-col xl:hidden">
+          <div class="mx-auto w-fit px-3 flex flex-col ">
             {blogSection}
             {introSection}
             {experienceSection}
             {skillSection}
-          </div>
-          <div class="hidden xl:block">
-            <div class="mx-auto w-fit px-3">
-              <div class="flex flex-row gap-2 mb-8">
-                <div class="flex-1">{introSection}</div>
-                <div class="flex-1">{blogSection}</div>
-              </div>
-              {experienceSection}
-              {skillSection}
-            </div>
           </div>
         </div>
       </main>
