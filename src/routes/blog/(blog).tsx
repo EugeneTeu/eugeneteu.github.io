@@ -4,22 +4,12 @@ import { RouteSectionProps } from "@solidjs/router";
 import { MDXProvider } from "solid-mdx";
 import { markdownComponents } from "~/components/Markdown";
 import { PostMetaData, posts } from "~/data/posts";
-import { ArrowLeft } from "lucide-solid";
+import { ArrowLeft, MoveUpLeftIcon } from "lucide-solid";
+import { JSXElement } from "solid-js";
 
-export default function BlogLayout(props: RouteSectionProps) {
-  const meta = () =>
-    posts.find((p) => props.location.pathname.endsWith(p.slug)) as PostMetaData;
-  // handle index file for blog route
-  if (!meta()) {
-    return <>{props.children}</>;
-  }
-
+export default function Blog(): JSXElement {
   return (
     <>
-      <Title>{meta()?.title}</Title>
-      <Meta name="og:title" content={meta()?.title} />
-      <Meta name="description" content={meta()?.description} />
-      <Meta name="og:description" content={meta()?.description} />
       <main class="bg-white dark:bg-gray-900 pb-safe min-h-screen overflow-auto mb-10">
         <div
           class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto md:w-fit lg:mx-auto pt-4 pb-4`}
@@ -32,11 +22,7 @@ export default function BlogLayout(props: RouteSectionProps) {
               </a>
             </div>
           </div>
-          <article class="prose prose-md  prose-normal dark:prose-invert animate-fadeInPageTransition">
-            <MDXProvider components={markdownComponents}>
-              {props.children}
-            </MDXProvider>
-          </article>
+          <h1>hello world</h1>
         </div>
       </main>
     </>
