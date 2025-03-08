@@ -28,7 +28,7 @@ export default function Home(): JSXElement {
       <main>
         <div class={`mx-auto`}>
           <div class="">{Hero()}</div>
-          <div class="mx-auto w-fit px-3 flex flex-col ">
+          <div class="mx-auto w-fit px-3 flex flex-col animate-fadeInPageTransition">
             {blogSection}
             {introSection}
             {experienceSection}

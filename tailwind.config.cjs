@@ -88,6 +88,7 @@ module.exports = {
       },
       animation: {
         fadeIn: "fadeIn 800ms ease-in forwards",
+        fadeInPageTransition: "fadeIn 500ms ease-in forwards",
         pulseWhite: "pulseWhite 2s infinite",
         pulseBlack: "pulseBlack 2s infinite",
         textPulse: "textPulse 3s ease-out infinite",

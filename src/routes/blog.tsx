@@ -22,11 +22,13 @@ export default function BlogLayout(props: RouteSectionProps) {
         >
           <div class="prose prose-md  prose-normal dark:prose-invert pt-2 pb-2">
             <div class="flex items-center gap-1">
-              <ArrowLeft size={16} />
-              <a href="/">Home</a>
+              <a href="/">
+                <ArrowLeft size={16} class="inline" />
+                Home
+              </a>
             </div>
           </div>
-          <article class="prose prose-md  prose-normal dark:prose-invert">
+          <article class="prose prose-md  prose-normal dark:prose-invert animate-fadeInPageTransition">
             <MDXProvider components={markdownComponents}>
               {props.children}
             </MDXProvider>
