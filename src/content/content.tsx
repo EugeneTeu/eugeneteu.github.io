@@ -163,24 +163,16 @@ function getBlogLinks() {
       {(post) => {
         const { slug, vanity, description, date } = post;
         return (
-          <a class="no-underline hover:scale-105" href={`/blog/${slug}`}>
-            <div class="rounded">
-              <h3 class="text-xl font-bold mb-0">{vanity}</h3>
-              <h4>{formatDate(date)}</h4>
-              <p class="mt-0">{description}</p>
-            </div>
-          </a>
-        );
-
-        return (
-          <li>
-            <a
-              class="dark:animate-textPulse mt-2 underline"
-              href={`/blog/${slug}`}
-            >
-              {vanity}
+          <div>
+            <a class="no-underline" href={`/blog/${slug}`}>
+              <div class="rounded hover:animate-pulse">
+                <h3 class="text-xl font-bold mb-0">{vanity}</h3>
+                <h4>{formatDate(date)}</h4>
+                <p class="mt-0">{description}</p>
+              </div>
             </a>
-          </li>
+            <div class="block my-3 w-full h-[2px] bg-gradient-to-b dark:bg-yellow-200 bg-black left-[50%]" />
+          </div>
         );
       }}
     </For>
