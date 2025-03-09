@@ -114,7 +114,7 @@ export function Hero() {
 
 export function Blog() {
   return (
-    <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
+    <article class="prose prose-md prose-normal dark:prose-invert">
       <h2>Blog</h2>
       <p>I write sometimes.</p>
       {getBlogLinks()}
@@ -122,46 +122,75 @@ export function Blog() {
   );
 }
 
-function parseDate(date: string) {
-  return new Date(
-    parseInt(date.slice(4)),
-    parseInt(date.slice(2, 4)),
-    parseInt(date.slice(0, 2))
-  );
+function formatDate(inputDate: string): string {
+  // Create a new Date object from the input string
+  const date = new Date(inputDate);
+
+  // Define an array with the abbreviated month names
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  // Get the month, day, and year from the date object
+  const month = months[date.getMonth()];
+  const day = date.getDate();
+  const year = date.getFullYear();
+
+  // Return the formatted date string
+  return `${month} ${day}, ${year}`;
 }
 
 // paginate in the future
 function getBlogLinks() {
   const sortedPosts = posts.sort((a, b) => {
-    //date is DDMMYYYY
-    return parseDate(b.date).getTime() - parseDate(a.date).getTime();
+    //date is YYYY-MM-DD
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
 
   return (
-    <ul>
-      <For each={sortedPosts} fallback={<></>}>
-        {(post) => {
-          const { slug, vanity } = post;
-          return (
-            <li>
-              <a
-                class="dark:animate-textPulse mt-2 underline"
-                href={`/blog/${slug}`}
-              >
-                {vanity}
-              </a>
-            </li>
-          );
-        }}
-      </For>
-    </ul>
+    <For each={sortedPosts} fallback={<></>}>
+      {(post) => {
+        const { slug, vanity, description, date } = post;
+        return (
+          <a class="no-underline hover:scale-105" href={`/blog/${slug}`}>
+            <div class="rounded">
+              <h3 class="text-xl font-bold mb-0">{vanity}</h3>
+              <h4>{formatDate(date)}</h4>
+              <p class="mt-0">{description}</p>
+            </div>
+          </a>
+        );
+
+        return (
+          <li>
+            <a
+              class="dark:animate-textPulse mt-2 underline"
+              href={`/blog/${slug}`}
+            >
+              {vanity}
+            </a>
+          </li>
+        );
+      }}
+    </For>
   );
 }
 
 export function Socials() {
   return (
     <div class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto mt-6`}>
-      <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
+      <article class="prose prose-md  prose-normal dark:prose-invert">
         <h2>Socials</h2>
         <div class="not-prose flex justify-center">
           <a href="https://www.linkedin.com/in/eugeneteu">
@@ -179,7 +208,7 @@ export function Socials() {
 
 export function Skills() {
   return (
-    <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
+    <article class="prose prose-md  prose-normal dark:prose-invert">
       <h2>Skills</h2>
       <div class="not-prose  sd:flex-col md:flex-row">
         <div class="basis-1 md:basis-1/2">
@@ -215,7 +244,7 @@ export function Skills() {
 
 export function Experience() {
   return (
-    <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
+    <article class="prose prose-md  prose-normal dark:prose-invert">
       <h2>Experience</h2>
       <div class="flex flex-col">
         <div class="basis-full">
@@ -254,7 +283,7 @@ export function Experience() {
 
 export function Intro() {
   return (
-    <article class="prose prose-md lg:prose-xl prose-normal dark:prose-invert">
+    <article class="prose prose-md  prose-normal dark:prose-invert">
       <h2>About</h2>
       <p>
         I'm Eugene Teu, a full-time Software Engineer based in sunny Singapore.
