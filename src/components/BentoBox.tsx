@@ -19,7 +19,7 @@ const BentoBox: Component<ContainerProps> = ({
 
   return (
     <div
-      class={`lg:mx-4 my-4 rounded-lg border-solid px-6 py-6 w-full h-fit xl:h-full ${bgLight} ${bgDark} `}
+      class={`lg:mx-4 my-4 rounded-lg border-solid px-6 py-6 w-full h-fit xl:h-full  `}
     >
       {children}
     </div>

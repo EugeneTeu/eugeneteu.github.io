@@ -34,7 +34,7 @@ function HeroIntro() {
           </h1>
           <h2 class="mt-1">Software Engineer based in Singapore</h2>
           <h3 class="mt-1">
-            I currently work @ <span class="animate-pulse font-bold">Meta</span>
+            I currently work @ <span class="font-bold text-blue-500">Meta</span>
           </h3>
           <HeroLogo />
           <div class="mt-2">
