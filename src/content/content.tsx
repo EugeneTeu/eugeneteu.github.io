@@ -76,7 +76,7 @@ function CountDownComponent() {
   return (
     <div class="lg:mt-[25%]">
       <article class="prose prose-md prose-normal dark:prose-invert">
-        <h3 class="">
+        <h3>
           I've been building software professionally for{" "}
           <span class="animate-pulse">{dayWorked() + ""}</span> days
         </h3>

@@ -87,6 +87,7 @@ module.exports = {
         },
       },
       animation: {
+        infiniteScrolling: "infiniteScrolling  0.2s ease-out",
         fadeIn: "fadeIn 800ms ease-in forwards",
         fadeInPageTransition: "fadeIn 500ms ease-in forwards",
         pulseWhite: "pulseWhite 2s infinite",
@@ -134,6 +135,17 @@ module.exports = {
           },
           "100%": {
             opacity: 0.5,
+          },
+        },
+        infiniteScrolling: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "50%": {
+            transform: "translateX(100%)",
+          },
+          "100%": {
+            transform: "translateX(0%)",
           },
         },
       },

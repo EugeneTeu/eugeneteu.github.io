@@ -1,4 +1,4 @@
-import { JSXElement } from "solid-js";
+import { JSXElement, onMount } from "solid-js";
 import {
   Blog,
   Divider,
