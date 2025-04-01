@@ -31,5 +31,16 @@
       "year in review"
     ],
     "vanity": "On Growing up"
+  },
+  {
+    "slug": "you-have-to-learn-to-relax",
+    "title": "You have to learn to relax",
+    "date": "2025-04-01",
+    "description": "Learning to Relax",
+    "author": "Eugene Teu",
+    "tags": [
+      "relax"
+    ],
+    "vanity": "You have to learn to Relax"
   }
 ]
