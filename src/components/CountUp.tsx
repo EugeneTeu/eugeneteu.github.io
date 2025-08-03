@@ -16,7 +16,7 @@ export default function CountUp({
       if (starting() === end) {
         return;
       }
-      setStarting(starting() + 1);
+      setStarting(starting() + 5);
     }, timer)
   );
 
