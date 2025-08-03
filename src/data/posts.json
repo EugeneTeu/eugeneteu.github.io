@@ -1,14 +1,13 @@
 [
   {
     "slug": "2024",
-    "title": "2024",
+    "title": "2024 year in review",
     "date": "2025-01-01",
     "description": "Reflecting on 2024",
     "author": "Eugene Teu",
     "tags": [
       "year in review"
-    ],
-    "vanity": "2024 year in review"
+    ]
   },
   {
     "slug": "I-am-not-long-for-this-world",
@@ -18,8 +17,7 @@
     "author": "Eugene Teu",
     "tags": [
       "ending"
-    ],
-    "vanity": "I am not long for this world"
+    ]
   },
   {
     "slug": "choose-your-path-in-life",
@@ -29,8 +27,7 @@
     "author": "Eugene Teu",
     "tags": [
       "reflections"
-    ],
-    "vanity": "Choose your path in life"
+    ]
   },
   {
     "slug": "growing-up",
@@ -44,6 +41,16 @@
     "vanity": "On Growing up"
   },
   {
+    "slug": "the-path-to-greatness",
+    "title": "The path to greatness",
+    "date": "2025-08-03",
+    "description": "Reflecting on the path",
+    "author": "Eugene Teu",
+    "tags": [
+      "reflections"
+    ]
+  },
+  {
     "slug": "you-have-to-learn-to-relax",
     "title": "You have to learn to relax",
     "date": "2025-04-01",
@@ -51,7 +58,6 @@
     "author": "Eugene Teu",
     "tags": [
       "relax"
-    ],
-    "vanity": "You have to learn to Relax"
+    ]
   }
 ]

@@ -161,12 +161,12 @@ function getBlogLinks() {
   return (
     <For each={sortedPosts} fallback={<></>}>
       {(post) => {
-        const { slug, vanity, description, date } = post;
+        const { slug, title, description, date } = post;
         return (
           <div>
             <a class="no-underline" href={`/blog/${slug}`}>
               <div class="rounded hover:animate-pulse">
-                <h3 class="text-xl font-bold mb-0">{vanity}</h3>
+                <h3 class="text-xl font-bold mb-0">{title}</h3>
                 <h4>{formatDate(date)}</h4>
                 <p class="mt-0">{description}</p>
               </div>

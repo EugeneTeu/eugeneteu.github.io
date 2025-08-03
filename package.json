@@ -1,5 +1,5 @@
 {
-  "name": "example-with-tailwindcss",
+  "name": "eugeneteu.me",
   "dependencies": {
     "@kobalte/core": "^0.13.7",
     "@solidjs/meta": "^0.29.4",
@@ -22,7 +22,7 @@
     "tailwindcss-animate": "^1.0.7",
     "to-vfile": "^8.0.0",
     "vfile-matter": "^5.0.0",
-    "vinxi": "^0.4.1"
+    "vinxi": "^0.5.7"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

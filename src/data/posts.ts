@@ -7,7 +7,6 @@ export type PostMetaData = {
   author: string;
   tags: string[];
   description: string;
-  vanity: string;
 };
 
 export const posts: PostMetaData[] = JSONPosts;
