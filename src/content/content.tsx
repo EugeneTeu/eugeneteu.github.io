@@ -1,11 +1,11 @@
-import { For, JSXElement } from "solid-js";
+import { createMemo, createSignal, For, JSXElement } from "solid-js";
 import BentoBox from "~/components/BentoBox";
 
 import CountUp from "~/components/CountUp";
 import HeroLogo from "~/components/HeroLogo";
 import Tag from "~/components/Tag";
 import { Button } from "~/components/ui/Button";
-import { posts } from "~/data/posts";
+import { PostMetaData, posts } from "~/data/posts";
 
 export function Divider() {
   return <div class="animate-fadeIn my-6"></div>;
@@ -117,7 +117,9 @@ export function Blog() {
     <article class="prose prose-md prose-normal dark:prose-invert">
       <h2>Blog</h2>
       <p>I write sometimes.</p>
-      {getBlogLinks()}
+      {
+        getPaginatedBlogLinks()
+      }
     </article>
   );
 }
@@ -176,6 +178,94 @@ function getBlogLinks() {
         );
       }}
     </For>
+  );
+}
+
+function getPaginatedBlogLinks(
+) {
+
+  const PAGE_SIZE = 3;
+
+  // State to manage the current page
+  const [currentPage, setCurrentPage] = createSignal(1);
+
+  // Sort posts once when the component mounts or allPosts changes
+  const sortedPosts = createMemo(() => {
+    return posts.sort((a, b) => {
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
+  });
+
+  // Calculate the posts to display on the current page
+  const paginatedPosts = createMemo(() => {
+    const start = (currentPage() - 1) * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
+    return sortedPosts().slice(start, end);
+  });
+
+  // Calculate total number of pages
+  const totalPages = createMemo(() => {
+    return Math.ceil(sortedPosts().length / PAGE_SIZE);
+  });
+
+  const goToNextPage = () => {
+    if (currentPage() < totalPages()) {
+      setCurrentPage(currentPage() + 1);
+    }
+  };
+
+  const goToPrevPage = () => {
+    if (currentPage() > 1) {
+      setCurrentPage(currentPage() - 1);
+    }
+  };
+
+  const goToPage = (pageNumber: number) => {
+      setCurrentPage(pageNumber);
+  };
+
+  return (
+    <div>
+      <div class="min-h-[450px]">
+      <For each={paginatedPosts()} fallback={<p>No blog posts found.</p>}>
+        {(post) => {
+          const { slug, title, description, date } = post;
+          return (
+            <div>
+              <a class="no-underline" href={`/blog/${slug}`}>
+                <div class="rounded hover:animate-pulse">
+                  <h3 class="text-xl font-bold mb-0">{title}</h3>
+                  <h4>{formatDate(date)}</h4>
+                  <p class="mt-0">{description}</p>
+                </div>
+              </a>
+              <div class="block my-3 w-full h-[2px] bg-gradient-to-b dark:bg-yellow-200 bg-black left-[50%]" />
+            </div>
+          );
+        }}
+      </For>
+      </div>
+
+      {/* Pagination Controls */}
+      <div class="flex justify-end items-center space-x-2">
+
+        {/* Page number buttons */}
+        <For each={Array.from({ length: totalPages() }, (_, i) => i + 1)}>
+          {(pageNumber) => (
+            <button
+              onClick={() => goToPage(pageNumber)}
+              class={`px-4 py-2 rounded-md ${
+                currentPage() === pageNumber
+                  ? 'bg-blue-500 text-white'
+                  : 'bg-gray-200 dark:bg-gray-700'
+              }`}
+            >
+              {pageNumber}
+            </button>
+          )}
+        </For>
+      </div>
+    </div>
   );
 }
 
