@@ -13,10 +13,10 @@ export default function CountUp({
 
   createEffect(() =>
     setInterval(() => {
-      if (starting() === end) {
+      if (starting() >= end) {
         return;
       }
-      setStarting(starting() + 5);
+      setStarting(starting() + 3);
     }, timer)
   );
 
