@@ -13,7 +13,7 @@ const PerformanceProfiler: Component<ContainerProps> = ({}: ContainerProps) => {
 
   return (
     <Show when={lcp() !== null  && isVisible()}>
-     <div class="fixed bottom-4 right-4 z-50 bg-white/20 backdrop-blur-sm p-1">
+     <div class="fixed bottom-4 right-4 z-50 bg-white/20  p-1">
         <button
           onClick={() => setIsVisible(false)} // onClick handler to hide the component
           class="absolute -top-3 -right-1 text-white text-lg"
