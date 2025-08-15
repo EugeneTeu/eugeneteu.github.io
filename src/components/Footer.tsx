@@ -9,6 +9,9 @@ const Footer: Component = () => {
             <a href="https://www.linkedin.com/in/eugeneteu">
               <img alt="linkedin" class="w-8 h-8 mx-2" src="/linkedin.svg" />
             </a>
+            <a href="https://t.me/debee45" target="_blank">
+              <img alt="telegram" class="w-8 h-8 mx-2" src="/telegram.png" />
+            </a>
             <a href="https://github.com/EugeneTeu">
               <img alt="github" class="w-8 h-8 mx-2" src="/github.svg" />
             </a>

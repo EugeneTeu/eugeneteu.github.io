@@ -25,6 +25,27 @@ function HeroIntro() {
       "mailto:eugeneteu@gmail.com?subject=Hello there&body=Is this Eugene Teu";
   };
 
+  const contactMeComponent = (
+    <div class="not-prose flex justify-start flex-wrap items-center">
+      <Button
+        class="text-black dark:text-white mr-2"
+        variant="default"
+        onClick={onClickOpenMailTo}
+      >
+        {"Email me"}
+      </Button>
+      <a href="https://www.linkedin.com/in/eugeneteu">
+        <img alt="linkedin" class="w-8 h-8 mx-2" src="/linkedin.svg" />
+      </a>
+      <a href="https://t.me/debee45" target="_blank">
+        <img alt="telegram" class="w-8 h-8 mx-2" src="/telegram.png" />
+      </a>
+      <a href="https://github.com/EugeneTeu">
+        <img alt="github" class="w-8 h-8 mx-2" src="/github.svg" />
+      </a>
+    </div>
+  );
+
   return (
     <div class="lg:mt-16">
       <article class="prose prose-md prose-normal dark:prose-invert">
@@ -37,15 +58,7 @@ function HeroIntro() {
             I currently work @ <span class="font-bold text-blue-500">Meta</span>
           </h3>
           <HeroLogo />
-          <div class="mt-2">
-            <Button
-              class="text-black dark:text-white"
-              variant="default"
-              onClick={onClickOpenMailTo}
-            >
-              {"Email me"}
-            </Button>
-          </div>
+          <div class="mt-2">{contactMeComponent}</div>
         </div>
       </article>
     </div>
@@ -117,9 +130,7 @@ export function Blog() {
     <article class="prose prose-md prose-normal dark:prose-invert">
       <h2>Blog</h2>
       <p>I write sometimes.</p>
-      {
-        getPaginatedBlogLinks()
-      }
+      {getPaginatedBlogLinks()}
     </article>
   );
 }
@@ -181,9 +192,7 @@ function getBlogLinks() {
   );
 }
 
-function getPaginatedBlogLinks(
-) {
-
+function getPaginatedBlogLinks() {
   const PAGE_SIZE = 3;
 
   // State to manage the current page
@@ -221,34 +230,33 @@ function getPaginatedBlogLinks(
   };
 
   const goToPage = (pageNumber: number) => {
-      setCurrentPage(pageNumber);
+    setCurrentPage(pageNumber);
   };
 
   return (
     <div>
       <div class="min-h-[450px]">
-      <For each={paginatedPosts()} fallback={<p>No blog posts found.</p>}>
-        {(post) => {
-          const { slug, title, description, date } = post;
-          return (
-            <div>
-              <a class="no-underline" href={`/blog/${slug}`}>
-                <div class="rounded hover:animate-pulse">
-                  <h3 class="text-xl font-bold mb-0">{title}</h3>
-                  <h4>{formatDate(date)}</h4>
-                  <p class="mt-0">{description}</p>
-                </div>
-              </a>
-              <div class="block my-3 w-full h-[2px] bg-gradient-to-b dark:bg-yellow-200 bg-black left-[50%]" />
-            </div>
-          );
-        }}
-      </For>
+        <For each={paginatedPosts()} fallback={<p>No blog posts found.</p>}>
+          {(post) => {
+            const { slug, title, description, date } = post;
+            return (
+              <div>
+                <a class="no-underline" href={`/blog/${slug}`}>
+                  <div class="rounded hover:animate-pulse">
+                    <h3 class="text-xl font-bold mb-0">{title}</h3>
+                    <h4>{formatDate(date)}</h4>
+                    <p class="mt-0">{description}</p>
+                  </div>
+                </a>
+                <div class="block my-3 w-full h-[2px] bg-gradient-to-b dark:bg-yellow-200 bg-black left-[50%]" />
+              </div>
+            );
+          }}
+        </For>
       </div>
 
       {/* Pagination Controls */}
       <div class="flex justify-end items-center space-x-2">
-
         {/* Page number buttons */}
         <For each={Array.from({ length: totalPages() }, (_, i) => i + 1)}>
           {(pageNumber) => (
@@ -256,8 +264,8 @@ function getPaginatedBlogLinks(
               onClick={() => goToPage(pageNumber)}
               class={`px-4 py-2 rounded-md ${
                 currentPage() === pageNumber
-                  ? 'bg-blue-500 text-white'
-                  : 'bg-gray-200 dark:bg-gray-700'
+                  ? "bg-blue-500 text-white"
+                  : "bg-gray-200 dark:bg-gray-700"
               }`}
             >
               {pageNumber}
