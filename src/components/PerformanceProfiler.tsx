@@ -7,17 +7,13 @@ const PerformanceProfiler: Component<ContainerProps> = ({}: ContainerProps) => {
   const [lcp, setLCP] = createSignal<null | number>(null);
   const [isVisible, setIsVisible] = createSignal(true); // New signal for visibility
 
+  // does not work in
+  // safari since safari does not report LCP.
+  // see https://github.com/WordPress/performance/issues/1925
   initLCPObserver(setLCP);
 
   return (
-    <Show
-      when={lcp() !== null && isVisible()}
-      fallback={
-        <div class="fixed bottom-4 right-4 z-50 bg-white/20  p-1">
-          No LCP yet
-        </div>
-      }
-    >
+    <Show when={lcp() !== null && isVisible()}>
       <div class="fixed bottom-4 right-4 z-50 bg-white/20  p-1">
         <button
           onClick={() => setIsVisible(false)} // onClick handler to hide the component
