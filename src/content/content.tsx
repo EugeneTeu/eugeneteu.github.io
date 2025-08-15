@@ -38,7 +38,7 @@ function HeroIntro() {
         <img alt="linkedin" class="w-8 h-8 mx-2" src="/linkedin.svg" />
       </a>
       <a href="https://t.me/debee45" target="_blank">
-        <img alt="telegram" class="w-8 h-8 mx-2" src="/telegram.png" />
+        <img alt="telegram" class="w-8 h-8 mx-2" src="/telegram.svg" />
       </a>
       <a href="https://github.com/EugeneTeu">
         <img alt="github" class="w-8 h-8 mx-2" src="/github.svg" />
