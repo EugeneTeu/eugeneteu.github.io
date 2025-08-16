@@ -1,28 +1,40 @@
 {
   "name": "eugeneteu.me",
   "dependencies": {
+    "@chromatic-com/storybook": "^4.1.0",
     "@kobalte/core": "^0.13.7",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.14.3",
     "@solidjs/start": "^1.0.6",
+    "@storybook/addon-a11y": "^9.1.2",
+    "@storybook/addon-docs": "^9.1.2",
+    "@storybook/addon-links": "^9.1.2",
+    "@storybook/addon-onboarding": "^9.1.2",
+    "@storybook/addon-vitest": "^9.1.2",
     "@tailwindcss/typography": "^0.5.14",
     "@vinxi/plugin-mdx": "^3.7.2",
+    "@vitest/browser": "^3.2.4",
+    "@vitest/coverage-v8": "^3.2.4",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "gsap": "^3.12.7",
     "lucide-solid": "^0.469.0",
+    "playwright": "^1.54.2",
     "postcss": "^8.4.41",
     "remark-frontmatter": "^5.0.0",
     "solid-heroicons": "^3.2.4",
     "solid-js": "^1.9.3",
     "solid-mdx": "^0.0.7",
+    "storybook": "^9.1.2",
+    "storybook-solidjs-vite": "^9.0.3",
     "tailwind-merge": "^2.6.0",
     "tailwindcss": "^3.4.10",
     "tailwindcss-animate": "^1.0.7",
     "to-vfile": "^8.0.0",
     "vfile-matter": "^5.0.0",
-    "vinxi": "^0.5.7"
+    "vinxi": "^0.5.7",
+    "vitest": "^3.2.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
@@ -35,7 +47,9 @@
   "scripts": {
     "dev": "vinxi dev",
     "build": "vinxi build",
-    "start": "vinxi start"
+    "start": "vinxi start",
+    "storybook-build": "storybook build",
+    "storybook": "storybook dev -p 6006"
   },
   "type": "module"
 }
