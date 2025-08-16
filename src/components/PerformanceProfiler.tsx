@@ -1,19 +1,16 @@
 import { Component, createSignal, JSXElement, onMount, Show } from "solid-js";
-import { initLCPObserver } from "~/lib/performance";
+import { initLCPObserver, PerfMetric } from "~/lib/performance";
 
 type ContainerProps = {};
 
 const PerformanceProfiler: Component<ContainerProps> = ({}: ContainerProps) => {
-  const [lcp, setLCP] = createSignal<null | number>(null);
+  const [perfMetric, setPerfMetric] = createSignal<null | PerfMetric>(null);
   const [isVisible, setIsVisible] = createSignal(true); // New signal for visibility
 
-  // does not work in
-  // safari since safari does not report LCP.
-  // see https://github.com/WordPress/performance/issues/1925
-  initLCPObserver(setLCP);
+  initLCPObserver(setPerfMetric);
 
   return (
-    <Show when={lcp() !== null && isVisible()}>
+    <Show when={perfMetric() !== null && isVisible()}>
       <div class="fixed bottom-4 right-4 z-50 bg-white/20  p-1">
         <button
           onClick={() => setIsVisible(false)} // onClick handler to hide the component
@@ -21,7 +18,10 @@ const PerformanceProfiler: Component<ContainerProps> = ({}: ContainerProps) => {
         >
           &times;
         </button>
-        <div>LCP: {lcp()}ms</div>
+        <div>
+          <span class="font-bold">{perfMetric()!.type}:</span>{" "}
+          {perfMetric()!.value}ms
+        </div>
       </div>
     </Show>
   );
