@@ -1,5 +1,6 @@
 import { JSXElement } from "solid-js";
 import Carousel from "~/components/Carousel";
+import SignInButton from "~/components/SignInButton";
 import Timeline from "~/components/timeline";
 
 export default function Home(): JSXElement {
@@ -7,9 +8,7 @@ export default function Home(): JSXElement {
     <>
       <main>
         <div class="md:mx-auto md:w-fit px-3 h-screen">
-          {/* <Timeline /> */}
-          <div class="my-4" />
-          <Carousel />
+          <SignInButton />
         </div>
       </main>
     </>

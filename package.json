@@ -1,6 +1,8 @@
 {
   "name": "eugeneteu.me",
   "dependencies": {
+    "@auth/core": "^0.40.0",
+    "@auth/solid-start": "^0.18.0",
     "@kobalte/core": "^0.13.7",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.14.3",
