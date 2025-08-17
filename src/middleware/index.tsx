@@ -1,5 +1,7 @@
 import { redirect } from "@solidjs/router";
+import { authMiddleware } from '@solid-mediakit/auth'
 import { createMiddleware } from "@solidjs/start/middleware";
+import { authOpts } from '../server/auth'
 
 const INTERNAL_ROUTE_WHITELIST = ["/test", "/blog"];
 
@@ -14,8 +16,8 @@ function redirectOnDevOnlyRoute(urL: URL) {
 }
 
 export default createMiddleware({
-  onRequest: (event) => {
+  onRequest: [ authMiddleware(true, authOpts), (event) => {
     const url = new URL(event.request.url);
     return redirectOnDevOnlyRoute(url);
-  },
+  }],
 });
