@@ -32,7 +32,7 @@ Thumbs.db
 # typescript
 *.tsbuildinfo
 
-gh-pages 
+gh-pages
 gh-pages.pub
 
 .vscode

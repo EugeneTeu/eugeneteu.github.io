@@ -9,6 +9,7 @@ import { MetaProvider, Title } from "@solidjs/meta";
 import Footer from "./components/Footer";
 import { initLCPObserver, initResourceObserver } from "./lib/performance";
 import PerformanceProfiler from "./components/PerformanceProfiler";
+import SessionContext from "./lib/sessionContext";
 
 export default function App() {
 
@@ -18,6 +19,7 @@ export default function App() {
       root={(props) => (
         <MetaProvider>
           <Title>Eugene Teu</Title>
+          <SessionContext>
           <ThemeProvider>
             <div class="bg-white dark:bg-gray-900">
               <Nav />
@@ -26,6 +28,7 @@ export default function App() {
               <Footer />
             </div>
           </ThemeProvider>
+          </SessionContext>
         </MetaProvider>
       )}
     >
