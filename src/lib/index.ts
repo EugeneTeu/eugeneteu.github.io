@@ -5,7 +5,7 @@ import { getSession } from "./server";
 const PROTECTED_ROUTES = ["/test"];
 
 const isProtectedRoute = (path: string) =>
-  PROTECTED_ROUTES.some(route =>
+  PROTECTED_ROUTES.some((route) =>
     route.endsWith("/*")
       ? path.startsWith(route.slice(0, -2))
       : path === route || path.startsWith(route + "/")
@@ -14,12 +14,13 @@ const isProtectedRoute = (path: string) =>
 export const querySession = query(async (path: string) => {
   "use server";
   const { data } = await getSession();
-  if (path === "/login" && data.id) return redirect("/");
+  if (path === "/login" && data.id) {
+    return redirect("/test");
+  }
   if (data.id) return data;
   if (isProtectedRoute(path)) throw redirect(`/login?redirect=${path}`);
   return null;
 }, "session");
-
 
 export const logout = action(async () => {
   "use server";

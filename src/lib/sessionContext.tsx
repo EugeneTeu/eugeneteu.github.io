@@ -22,7 +22,6 @@ export default function SessionContext(props: ParentProps) {
   });
   const signOut = useAction(logout);
   const signedIn = () => Boolean(session()?.id);
-
   return (
     <Context.Provider
       value={{
