@@ -235,28 +235,26 @@ function getPaginatedBlogLinks() {
 
   return (
     <div>
-      <div class="min-h-[450px]">
-        <For each={paginatedPosts()} fallback={<p>No blog posts found.</p>}>
-          {(post) => {
-            const { slug, title, description, date } = post;
-            return (
-              <div>
-                <a class="no-underline" href={`/blog/${slug}`}>
-                  <div class="rounded hover:animate-pulse">
-                    <h3 class="text-xl font-bold mb-0">{title}</h3>
-                    <h4>{formatDate(date)}</h4>
-                    <p class="mt-0">{description}</p>
-                  </div>
-                </a>
-                <div class="block my-3 w-full h-[2px] bg-gradient-to-b dark:bg-yellow-200 bg-black left-[50%]" />
-              </div>
-            );
-          }}
-        </For>
-      </div>
+      <For each={paginatedPosts()} fallback={<p>No blog posts found.</p>}>
+        {(post) => {
+          const { slug, title, description, date } = post;
+          return (
+            <div>
+              <a class="no-underline" href={`/blog/${slug}`}>
+                <div class="rounded hover:animate-pulse">
+                  <h3 class="text-xl font-bold mb-0">{title}</h3>
+                  <h4>{formatDate(date)}</h4>
+                  <p class="mt-0">{description}</p>
+                </div>
+              </a>
+              <div class="block w-full h-[2px] bg-gradient-to-b dark:bg-yellow-200 bg-black left-[50%] mt-auto" />
+            </div>
+          );
+        }}
+      </For>
 
       {/* Pagination Controls */}
-      <div class="flex justify-end items-center space-x-2">
+      <div class="flex justify-end items-center space-x-2 my-3">
         {/* Page number buttons */}
         <For each={Array.from({ length: totalPages() }, (_, i) => i + 1)}>
           {(pageNumber) => (
