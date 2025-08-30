@@ -1,7 +1,7 @@
 import { redirect } from "@solidjs/router";
 import { createMiddleware } from "@solidjs/start/middleware";
 
-const INTERNAL_ROUTE_WHITELIST = ["/test", "/blog", "/login" , "/logout"];
+const INTERNAL_ROUTE_WHITELIST = ["/test", "/login" , "/logout"];
 
 function redirectOnDevOnlyRoute(urL: URL) {
   const isDevDomain =

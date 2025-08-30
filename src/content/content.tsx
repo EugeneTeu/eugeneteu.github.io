@@ -1,3 +1,4 @@
+import { A } from "@solidjs/router";
 import { createMemo, createSignal, For, JSXElement } from "solid-js";
 import BentoBox from "~/components/BentoBox";
 
@@ -240,13 +241,13 @@ function getPaginatedBlogLinks() {
           const { slug, title, description, date } = post;
           return (
             <div>
-              <a class="no-underline" href={`/blog/${slug}`}>
+              <A class="no-underline" href={`/blog/${slug}`}>
                 <div class="rounded hover:animate-pulse">
                   <h3 class="text-xl font-bold mb-0">{title}</h3>
                   <h4>{formatDate(date)}</h4>
                   <p class="mt-0">{description}</p>
                 </div>
-              </a>
+              </A>
               <div class="block w-full h-[2px] bg-gradient-to-b dark:bg-yellow-200 bg-black left-[50%] mt-auto" />
             </div>
           );
