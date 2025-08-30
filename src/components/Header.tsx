@@ -9,7 +9,7 @@ const Header = ({}: Props) => {
 
   const blogLink = (
     <div class="px-3">
-      <A href="/blog">
+      <A href="/blog-list">
         <Rss />
       </A>
     </div>

@@ -1,6 +1,4 @@
-import { Construction } from "lucide-solid";
 import { JSXElement } from "solid-js";
-import BentoBox from "~/components/BentoBox";
 import { Blog } from "~/content/content";
 
 export default function BlogHome(): JSXElement {
