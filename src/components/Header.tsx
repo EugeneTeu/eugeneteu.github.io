@@ -1,5 +1,6 @@
+import { Icon } from "@iconify-icon/solid";
 import { Theme, useTheme } from "./context/theme.context";
-import { Rss } from "lucide-solid";
+
 import DarkModeToggleButton from "./DarkModeToggleButton";
 import { A } from "@solidjs/router";
 type Props = {};
@@ -8,9 +9,9 @@ const Header = ({}: Props) => {
   const [state, { changeMode }] = useTheme();
 
   const blogLink = (
-    <div class="px-3">
+      <div class="px-3 pt-2">
       <A href="/blog-list">
-        <Rss />
+        <Icon icon="mdi:blog-outline" />
       </A>
     </div>
   );
@@ -30,7 +31,7 @@ const Header = ({}: Props) => {
               <h1>Eugene Teu 👋</h1>
             </a>
           </div>
-          <div>{blogLink}</div>
+          <div >{blogLink}</div>
           <div>{DarkModeToggleButton(onModeChange)}</div>
         </div>
       </div>

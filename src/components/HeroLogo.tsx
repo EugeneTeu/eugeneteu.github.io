@@ -1,10 +1,10 @@
-import { Bitcoin, CodeXml, Coffee, Tally1 } from "lucide-solid";
 import { JSXElement, onMount } from "solid-js";
 import { gsap } from "gsap";
+import { Icon } from "@iconify-icon/solid";
 
 export default function HeroLogo(): JSXElement {
   let containerRef: HTMLDivElement | undefined;
-  let coffeeRef: SVGSVGElement | undefined;
+  let coffeeRef: HTMLDivElement | undefined;
   let tl = gsap.timeline({
     repeat: -1,
   });
@@ -32,10 +32,20 @@ export default function HeroLogo(): JSXElement {
   });
 
   return (
-    <div ref={containerRef} class="flex gap-2 w-fit mb-2">
-      <Bitcoin />
-      <CodeXml />
-      <Coffee ref={coffeeRef} />
+    <div ref={containerRef} class="flex gap-3 w-fit mb-2">
+      <div>
+        <Icon icon="logos:bitcoin" height={24} width={24} />
+      </div>
+      <div>
+        <Icon
+          icon="streamline-ultimate:programming-book"
+          height={24}
+          width={24}
+        />
+      </div>
+      <div ref={coffeeRef}>
+        <Icon icon="mdi:coffee-outline" width="24" height="24" />
+      </div>
     </div>
   );
 }
