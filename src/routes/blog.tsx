@@ -26,11 +26,10 @@ export default function BlogLayout(props: RouteSectionProps) {
       <Meta name="og:title" content={meta()?.title} />
       <Meta name="description" content={meta()?.description} />
       <Meta name="og:description" content={meta()?.description} />
-      <main class="bg-white dark:bg-gray-900 pb-safe min-h-screen overflow-auto mb-10">
+      <main class="pb-safe min-h-screen overflow-auto mb-10 mt-10">
         <div
           class={`max-w-5xl mx-5 sm:mx-10 md:mx-auto md:w-fit lg:mx-auto pt-4 pb-4`}
         >
-
           <article class="prose prose-md  prose-normal dark:prose-invert animate-fadeInPageTransition">
             <MDXProvider components={markdownComponents}>
               {props.children}

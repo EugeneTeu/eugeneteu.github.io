@@ -11,7 +11,6 @@ import BentoBox from "~/components/BentoBox";
 import { Meta, Title } from "@solidjs/meta";
 
 export default function Home(): JSXElement {
-  const blogSection = <BentoBox>{Blog()}</BentoBox>;
   const experienceSection = <BentoBox>{Experience()}</BentoBox>;
   const skillSection = <BentoBox>{Skills()}</BentoBox>;
 
@@ -28,7 +27,6 @@ export default function Home(): JSXElement {
         <div class={`mx-auto`}>
           <div class="">{Hero()}</div>
           <div class="mx-auto w-fit px-3 flex flex-col animate-fadeInPageTransition">
-            {blogSection}
             {experienceSection}
             {skillSection}
           </div>

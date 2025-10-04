@@ -13,6 +13,7 @@ const isProtectedRoute = (path: string) =>
 
 export const querySession = query(async (path: string) => {
   "use server";
+  try {
   const { data } = await getSession();
   if (path === "/login" && data.id) {
     return redirect("/test");
@@ -20,6 +21,9 @@ export const querySession = query(async (path: string) => {
   if (data.id) return data;
   if (isProtectedRoute(path)) throw redirect(`/login?redirect=${path}`);
   return null;
+} catch (err) {
+  return null;
+}
 }, "session");
 
 export const logout = action(async () => {
