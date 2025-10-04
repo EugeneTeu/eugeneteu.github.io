@@ -1,6 +1,4 @@
 import { Theme, useTheme } from "./context/theme.context";
-import { Rss } from "lucide-solid";
-import DarkModeToggleButton from "./DarkModeToggleButton";
 import { A } from "@solidjs/router";
 type Props = {};
 
@@ -10,7 +8,7 @@ const Header = ({}: Props) => {
   const blogLink = (
     <div class="px-3">
       <A href="/blog-list">
-        <Rss />
+        <div>A</div>
       </A>
     </div>
   );
@@ -31,7 +29,6 @@ const Header = ({}: Props) => {
             </a>
           </div>
           <div>{blogLink}</div>
-          <div>{DarkModeToggleButton(onModeChange)}</div>
         </div>
       </div>
     </div>

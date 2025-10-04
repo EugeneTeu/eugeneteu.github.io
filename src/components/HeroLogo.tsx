@@ -1,4 +1,3 @@
-import { Bitcoin, CodeXml, Coffee, Tally1 } from "lucide-solid";
 import { JSXElement, onMount } from "solid-js";
 import { gsap } from "gsap";
 
@@ -33,9 +32,9 @@ export default function HeroLogo(): JSXElement {
 
   return (
     <div ref={containerRef} class="flex gap-2 w-fit mb-2">
-      <Bitcoin />
+      {/* <Bitcoin />
       <CodeXml />
-      <Coffee ref={coffeeRef} />
+      <Coffee ref={coffeeRef} /> */}
     </div>
   );
 }
