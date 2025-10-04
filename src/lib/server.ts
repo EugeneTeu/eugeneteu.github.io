@@ -5,10 +5,11 @@ export interface Session {
   email: string;
 }
 
-export const getSession = () =>
-  useSession<Session>({
+export const getSession = () => {
+  return useSession<Session>({
     password: process.env.SESSION_SECRET!
   });
+}
 
 export const createSession = async (user: Session, redirectTo?: string) => {
   const validDest = redirectTo?.[0] === "/" && redirectTo[1] !== "/";

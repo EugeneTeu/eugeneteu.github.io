@@ -10,7 +10,7 @@ const Header = ({}: Props) => {
 
   const blogLink = (
       <div class="px-3 pt-2">
-      <A href="/blog-list">
+      <A href="/writings">
         <Icon icon="mdi:blog-outline" />
       </A>
     </div>

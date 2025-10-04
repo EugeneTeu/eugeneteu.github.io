@@ -21,7 +21,7 @@ export default function App() {
           <Title>Eugene Teu</Title>
           <SessionContext>
           <ThemeProvider>
-            <div class="bg-white dark:bg-gray-900">
+            <div class="bg-white dark:bg-brand-dark">
               <Nav />
               <Suspense>{props.children}</Suspense>
               <PerformanceProfiler />
