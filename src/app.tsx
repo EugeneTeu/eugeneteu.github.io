@@ -7,7 +7,6 @@ import "./app.css";
 import { ThemeProvider } from "./components/context/theme.context";
 import { MetaProvider, Title } from "@solidjs/meta";
 import Footer from "./components/Footer";
-import { initLCPObserver, initResourceObserver } from "./lib/performance";
 import PerformanceProfiler from "./components/PerformanceProfiler";
 
 export default function App() {

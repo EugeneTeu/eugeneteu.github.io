@@ -12,10 +12,9 @@ import BentoBox from "~/components/BentoBox";
 import { Meta, Title } from "@solidjs/meta";
 
 export default function Home(): JSXElement {
-  const blogSection = <BentoBox>{BlogBlurp()}</BentoBox>
+  const blogSection = <BentoBox>{BlogBlurp()}</BentoBox>;
   const experienceSection = <BentoBox>{Experience()}</BentoBox>;
   const skillSection = <BentoBox>{Skills()}</BentoBox>;
-
 
   return (
     <>
