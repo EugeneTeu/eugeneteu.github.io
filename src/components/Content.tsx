@@ -1,6 +1,5 @@
 import { A } from "@solidjs/router";
 import { createMemo, createSignal, For, JSXElement } from "solid-js";
-import BentoBox from "~/components/BentoBox";
 
 import CountUp from "~/components/CountUp";
 import HeroLogo from "~/components/HeroLogo";
@@ -37,9 +36,6 @@ function HeroIntro() {
       </Button>
       <a href="https://www.linkedin.com/in/eugeneteu">
         <img alt="linkedin" class="w-8 h-8 mx-2" src="/linkedin.svg" />
-      </a>
-      <a href="https://t.me/debee45" target="_blank">
-        <img alt="telegram" class="w-8 h-8 mx-2" src="/telegram.svg" />
       </a>
       <a href="https://github.com/EugeneTeu">
         <img alt="github" class="w-8 h-8 mx-2" src="/github.svg" />
@@ -133,6 +129,22 @@ export function Blog() {
       <p>I write sometimes.</p>
       {getPaginatedBlogLinks()}
     </article>
+  );
+}
+
+export function BlogBlurp() {
+  return (
+    <div class="flex p-4 w-full rounded-md border align-items-center">
+      <article class="prose prose-md  prose-normal dark:prose-invert">
+          <h3>Writings</h3>
+          <p>I write sometimes</p>
+      </article>
+      <div class="ml-auto">
+        <A href="writings">
+          <Button variant="outline">Read</Button>
+        </A>
+      </div>
+    </div>
   );
 }
 
