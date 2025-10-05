@@ -136,6 +136,22 @@ export function Blog() {
   );
 }
 
+export function BlogBlurp() {
+  return (
+    <div class="flex p-4 w-full rounded-md border align-items-center">
+      <article class="prose prose-md  prose-normal dark:prose-invert">
+          <h3>Writings</h3>
+          <p>I write sometimes</p>
+      </article>
+      <div class="ml-auto">
+        <A href="writings">
+          <Button variant="outline">Read</Button>
+        </A>
+      </div>
+    </div>
+  );
+}
+
 function formatDate(inputDate: string): string {
   // Create a new Date object from the input string
   const date = new Date(inputDate);
