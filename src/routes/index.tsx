@@ -7,7 +7,7 @@ import {
   Hero,
   Intro,
   Skills,
-} from "~/content/content";
+} from "~/components/Content";
 import BentoBox from "~/components/BentoBox";
 import { Meta, Title } from "@solidjs/meta";
 

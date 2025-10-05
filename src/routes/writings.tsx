@@ -1,5 +1,5 @@
 import { JSXElement } from "solid-js";
-import { Blog } from "~/content/content";
+import { Blog } from "~/components/Content";
 
 export default function Writings(): JSXElement {
 

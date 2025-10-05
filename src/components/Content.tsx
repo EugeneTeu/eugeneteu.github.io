@@ -1,6 +1,5 @@
 import { A } from "@solidjs/router";
 import { createMemo, createSignal, For, JSXElement } from "solid-js";
-import BentoBox from "~/components/BentoBox";
 
 import CountUp from "~/components/CountUp";
 import HeroLogo from "~/components/HeroLogo";
@@ -137,7 +136,7 @@ export function BlogBlurp() {
   return (
     <div class="flex p-4 w-full rounded-md border align-items-center">
       <article class="prose prose-md  prose-normal dark:prose-invert">
-          <h3>Writings</h3>
+          <h3>Writings + vite</h3>
           <p>I write sometimes</p>
       </article>
       <div class="ml-auto">
