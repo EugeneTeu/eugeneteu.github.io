@@ -22,6 +22,7 @@ dist
 
 # Temp
 gitignore
+*.timestamp*.js
 
 # System Files
 .DS_Store

@@ -36,9 +36,20 @@ export const ThemeProvider: ParentComponent<{
   });
 
   const changeMode = (modeInput: Theme) => {
-    document.documentElement.setAttribute("data-theme", modeInput);
+    if (modeInput === Theme.dark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
     setState("mode", modeInput);
   };
+
+  // Set initial theme class on mount
+  if (typeof document !== "undefined") {
+    if (state.mode === Theme.dark) {
+      document.documentElement.classList.add("dark");
+    }
+  }
 
   return (
     <ThemeContext.Provider value={[state, { changeMode }]}>

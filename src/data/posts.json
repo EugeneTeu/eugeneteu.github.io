@@ -1,12 +1,12 @@
 [
   {
-    "slug": "2024",
-    "title": "2024 year in review",
-    "date": "2025-01-01",
-    "description": "Reflecting on 2024",
+    "slug": "you-have-to-learn-to-relax",
+    "title": "You have to learn to relax",
+    "date": "2025-04-01",
+    "description": "Learning to Relax",
     "author": "Eugene Teu",
     "tags": [
-      "year in review"
+      "relax"
     ]
   },
   {
@@ -14,6 +14,16 @@
     "title": "Choose your path in life",
     "date": "2025-02-12",
     "description": "Choosing your path in life",
+    "author": "Eugene Teu",
+    "tags": [
+      "reflections"
+    ]
+  },
+  {
+    "slug": "the-path-to-greatness",
+    "title": "The path to greatness",
+    "date": "2025-08-03",
+    "description": "Reflecting on the path",
     "author": "Eugene Teu",
     "tags": [
       "reflections"
@@ -31,23 +41,13 @@
     "vanity": "On Growing up"
   },
   {
-    "slug": "the-path-to-greatness",
-    "title": "The path to greatness",
-    "date": "2025-08-03",
-    "description": "Reflecting on the path",
+    "slug": "2024",
+    "title": "2024 year in review",
+    "date": "2025-01-01",
+    "description": "Reflecting on 2024",
     "author": "Eugene Teu",
     "tags": [
-      "reflections"
-    ]
-  },
-  {
-    "slug": "you-have-to-learn-to-relax",
-    "title": "You have to learn to relax",
-    "date": "2025-04-01",
-    "description": "Learning to Relax",
-    "author": "Eugene Teu",
-    "tags": [
-      "relax"
+      "year in review"
     ]
   }
 ]

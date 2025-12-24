@@ -6,6 +6,10 @@ import remarkFrontmatter from "remark-frontmatter";
 import pkg from "@vinxi/plugin-mdx";
 const { default: mdx } = pkg;
 
+if(!mdx) {
+  throw Error('mdx is undefined');
+}
+
 export default defineConfig({
   extensions: ["mdx", "md"],
   middleware: "src/middleware/index.tsx",
