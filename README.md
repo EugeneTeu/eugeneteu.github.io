@@ -8,8 +8,8 @@ Welcome to my personal site
 ### dev
 
 ```bash
-pnpm install
-pnpm run dev
+bun install
+bun run dev
 ```
 
 ### deployment
