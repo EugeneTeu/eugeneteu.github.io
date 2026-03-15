@@ -1,15 +1,13 @@
-import { Component } from "solid-js";
+import React from "react";
 
-export type TagProps = {
+interface TagProps {
   label: string;
   custom?: string;
-};
+}
 
-const Tag: Component<TagProps> = ({ label, custom }: TagProps) => {
+const Tag: React.FC<TagProps> = ({ label, custom = "bg-blue-500" }) => {
   return (
-    <span
-      class={`transition duration-150 transform hover:-translate-y-1 hover:scale-110 ease-in-out inline-block rounded-full px-3 py-1 text-sm text-white dark:text-black dark:font-semibold mr-2 mb-2 ${custom}`}
-    >
+    <span className={`inline-block px-3 py-1 mr-2 mb-2 text-xs font-semibold text-white rounded-full ${custom}`}>
       {label}
     </span>
   );

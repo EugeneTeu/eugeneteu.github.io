@@ -1,38 +1,40 @@
 {
-  "name": "eugeneteu.me",
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
   "dependencies": {
-    "@kobalte/core": "^0.13.7",
-    "@solidjs/meta": "^0.29.4",
-    "@solidjs/router": "^0.15.3",
-    "@solidjs/start": "^1.0.6",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "gsap": "^3.12.7",
-    "solid-js": "^1.9.3",
-    "tailwind-merge": "^2.6.0"
+    "@tailwindcss/typography": "^0.5.19",
+    "framer-motion": "^12.36.0",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.577.0",
+    "next": "16.1.6",
+    "next-mdx-remote": "^6.0.0",
+    "next-themes": "^0.4.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@iconify-icon/solid": "^3.0.0",
-    "@tailwindcss/typography": "^0.5.14",
-    "@vinxi/plugin-mdx": "^3.7.2",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.41",
-    "remark-frontmatter": "^5.0.0",
-    "solid-mdx": "^0.0.7",
-    "tailwindcss": "^3.4.10",
-    "tailwindcss-animate": "^1.0.7",
-    "to-vfile": "^8.0.0",
-    "vfile-matter": "^5.0.0",
-    "vinxi": "^0.5.7",
-    "vite": ">=7.0.0 <8.0.0"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   },
-  "engines": {
-    "node": ">=18"
-  },
-  "scripts": {
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start"
-  },
-  "type": "module"
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
 }

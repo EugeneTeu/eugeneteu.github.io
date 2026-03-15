@@ -1,26 +1,13 @@
-import { Component, JSXElement } from "solid-js";
+import React from "react";
 
-type ContainerProps = {
-  children: JSXElement;
-  backgroundDark?: string;
-  backgroundLight?: string;
-};
+interface BentoBoxProps {
+  children: React.ReactNode;
+  className?: string;
+}
 
-const defaultLight = "bg-gray-200";
-const defaultDark = "dark:bg-gray-800";
-
-const BentoBox: Component<ContainerProps> = ({
-  backgroundDark,
-  backgroundLight,
-  children,
-}: ContainerProps) => {
-  const bgLight = backgroundLight ?? defaultLight;
-  const bgDark = backgroundDark ?? defaultDark;
-
+const BentoBox: React.FC<BentoBoxProps> = ({ children, className = "" }) => {
   return (
-    <div
-      class={`lg:mx-4 my-2 rounded-lg border-solid px-6 py-6 w-full h-fit xl:h-full`}
-    >
+    <div className={`lg:mx-4 my-2 rounded-lg border border-zinc-200 dark:border-zinc-800 px-6 py-6 w-full h-fit ${className}`}>
       {children}
     </div>
   );

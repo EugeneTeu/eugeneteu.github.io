@@ -1,51 +1,36 @@
-import { JSXElement, onMount } from "solid-js";
-import { gsap } from "gsap";
-import { Icon } from "@iconify-icon/solid";
+"use client";
 
-export default function HeroLogo(): JSXElement {
-  let containerRef: HTMLDivElement | undefined;
-  let coffeeRef: HTMLDivElement | undefined;
-  let tl = gsap.timeline({
-    repeat: -1,
-  });
+import React from "react";
+import { motion } from "framer-motion";
 
-  onMount(() => {
-    setInterval(() => {
-      if (coffeeRef) {
-        tl.to(coffeeRef, {
-          duration: 1,
-        });
-        tl.to(coffeeRef, {
-          translateX: "200%",
-          duration: 2,
-          ease: "elastic",
-        });
-        tl.to(coffeeRef, {
-          duration: 1,
-        });
-        tl.to(coffeeRef, { translateX: "0%", duration: 2, ease: "power1.out" });
-        tl.to(coffeeRef, {
-          duration: 2,
-        });
-      }
-    }, 1000);
-  });
-
+const HeroLogo: React.FC = () => {
   return (
-    <div ref={containerRef} class="flex gap-3 w-fit mb-2">
-      <div>
-        <Icon icon="logos:bitcoin" height={24} width={24} />
+    <div className="flex gap-3 w-fit mb-2">
+      <div className="text-[#F7931A]">
+        {/* Bitcoin Icon Placeholder - Using a simple circle for now as we don't have iconify */}
+        <div className="w-6 h-6 rounded-full border-2 border-current flex items-center justify-center font-bold text-[10px]">₿</div>
       </div>
-      <div>
-        <Icon
-          icon="streamline-ultimate:programming-book"
-          height={24}
-          width={24}
-        />
+      <div className="text-zinc-500">
+        {/* Programming Book Icon Placeholder */}
+        <div className="w-6 h-6 border-2 border-current flex items-center justify-center font-bold text-[10px]">📖</div>
       </div>
-      <div ref={coffeeRef}>
-        <Icon icon="mdi:coffee-outline" width="24" height="24" />
-      </div>
+      <motion.div
+        animate={{
+          x: [0, 0, 48, 48, 0, 0],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+          times: [0, 0.125, 0.375, 0.5, 0.75, 1]
+        }}
+        className="text-zinc-500"
+      >
+        {/* Coffee Icon Placeholder */}
+        <div className="w-6 h-6 border-2 border-current flex items-center justify-center font-bold text-[10px]">☕</div>
+      </motion.div>
     </div>
   );
-}
+};
+
+export default HeroLogo;

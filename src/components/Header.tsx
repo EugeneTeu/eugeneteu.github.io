@@ -1,41 +1,17 @@
-import { Icon } from "@iconify-icon/solid";
-import { Theme, useTheme } from "./context/theme.context";
-
+import Link from "next/link";
 import DarkModeToggleButton from "./DarkModeToggleButton";
-import { A } from "@solidjs/router";
-type Props = {};
 
-const Header = ({}: Props) => {
-  const [state, { changeMode }] = useTheme();
-
-  const blogLink = (
-      <div class="px-3 pt-2">
-      <A href="/writings">
-        <Icon icon="mdi:blog-outline" />
-      </A>
-    </div>
-  );
-
-  const onModeChange = () => {
-    return state.mode === Theme.dark
-      ? changeMode(Theme.light)
-      : changeMode(Theme.dark);
-  };
-
+const Header = () => {
   return (
-    <div class="bg-yellow-200 dark:bg-black">
-      <div class="max-w-screen-xl mx-auto ">
-        <div class="flex h-14 sm:mx-4 mx-8 items-center justify-center justify-items-center">
-          <div class="flex-grow text-black dark:text-white">
-            <a href="/">
-              <h1>Eugene Teu 👋</h1>
-            </a>
-          </div>
-          <div >{blogLink}</div>
-          <div>{DarkModeToggleButton(onModeChange)}</div>
-        </div>
+    <header className="w-full border-b border-zinc-200 dark:border-zinc-800 bg-yellow-200/80 dark:bg-black/80 backdrop-blur-md sticky top-0 z-50">
+      <div className="max-w-screen-xl mx-auto px-8 h-16 flex items-center justify-between">
+        <Link href="/" className="font-bold text-xl tracking-tight">
+          Eugene Teu
+        </Link>
+        <DarkModeToggleButton />
       </div>
-    </div>
+    </header>
   );
 };
+
 export default Header;

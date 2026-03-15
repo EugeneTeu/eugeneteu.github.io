@@ -1,22 +1,35 @@
-import { Component, Show } from "solid-js";
+"use client";
 
-import { Toggle } from "./ui/toggle"
+import * as React from "react";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
-import { Icon } from '@iconify-icon/solid';
+export default function DarkModeToggleButton() {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
 
-export default function DarkModeToggleButton(onClick: () => void) {
+  // Avoid hydration mismatch by only rendering after mount
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="w-10 h-10 border-2 border-zinc-900 dark:border-zinc-500 rounded-xl"></div>
+    );
+  }
+
   return (
-    <div class="border-2 border-solid rounded-xl dark:border-gray-500 border-black">
-      <Toggle aria-label="Dark mode toggle button" onClick={onClick}>
-        {(state) => (
-          <Show when={state.pressed()} fallback={
-
-          <Icon icon="solar:moon-bold"  />
-          }>
-            <Icon icon="si:sun-fill" />
-          </Show>
-        )}
-      </Toggle>
-    </div>
+    <button
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="flex items-center justify-center w-10 h-10 border-2 border-zinc-900 dark:border-zinc-500 rounded-xl transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800"
+      aria-label="Toggle dark mode"
+    >
+      {theme === "dark" ? (
+        <Sun className="w-5 h-5 text-zinc-100" />
+      ) : (
+        <Moon className="w-5 h-5 text-zinc-900" />
+      )}
+    </button>
   );
 }
