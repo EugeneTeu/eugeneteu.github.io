@@ -166,3 +166,88 @@ export function Skills() {
     </article>
   );
 }
+
+export function CareerHighlights() {
+
+const highlights = [
+  {
+    year: "2023 — 2024",
+    title: "Brought 3D to Meta.com",
+    body: "Proposed an idea as a new grad, grew it into a 1.5-year team workstream with multiple projects. Owned creative direction and engineering end-to-end. Drove significant uplift in add-to-cart on Meta's commerce website across the flagships products like Quest 3 and Meta Ray-Bans.",
+    badge: "Redefined expectations · IC3 → IC4",
+    last: false,
+  },
+  {
+    year: "2025",
+    title: "Took a beta to general availability across Vietnam",
+    body: "Took a beta-validated catalog ads onboarding idea and drove it to GA — working across multiple ads teams to successfully onboard partners across Vietnam. A lightweight solution that meaningfully expanded the addressable market for 3P SaaS platforms.",
+    badge: "Significantly above expectations · IC4 → IC5",
+    last: false,
+  },
+  {
+    year: "Late 2024",
+    title: "New to the team, shipped in 4 weeks",
+    body: "Weeks into joining a new team, took on a high-stakes ads onboarding launch for Facebook. Rebuilt a large % of the codebase, navigated last-minute design and content pivots, and delivered on time.",
+    badge: "Move fast",
+    last: false,
+  },
+    {
+    year: "End 2025",
+    title: "Prototyped an AI productivity tool for MSL",
+    body: "End to end productivity tool, working alongside senior level engineers (IC7/IC8) and MSL Researcher.",
+    last: true,
+    badge: "AI . Coding machine"
+  },
+];
+
+
+
+  return (
+    <section className="py-4">
+      {/* Section label */}
+      <p className="text-3xl font-medium tracking-widest uppercase text-neutral-400 mb-5">
+        Career highlights
+      </p>
+
+      {/* Summary line */}
+      <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed mb-8">
+        Worked across multiple orgs at Meta, spanning web, iOS, and Android.
+      </p>
+
+      {/* Divider */}
+      <div className="border-t border-neutral-200 dark:border-neutral-800 mb-8" />
+
+      {/* Timeline */}
+      <div className="flex flex-col">
+        {highlights.map((item) => (
+          <div key={item.title} className="flex gap-0">
+            {/* Left — dot + line */}
+            <div className="flex flex-col items-center w-11 shrink-0">
+              <div className="w-2 h-2 rounded-full bg-neutral-900 dark:bg-neutral-100 shrink-0 mt-1.5" />
+              {!item.last && (
+                <div className="w-px flex-1 bg-neutral-200 dark:bg-neutral-800 mt-1.5" />
+              )}
+            </div>
+
+            {/* Content */}
+            <div className={`flex-1 ${!item.last ? "pb-10" : ""}`}>
+              <p className="text-md text-neutral-400 mb-1">{item.year}</p>
+              <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100 leading-snug mb-1.5">
+                {item.title}
+              </p>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-3">
+                {item.body}
+              </p>
+              {item.badge && (
+                <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200 dark:bg-blue-950 dark:text-blue-200 dark:border-blue-800">
+                  {item.badge}
+                </span>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
