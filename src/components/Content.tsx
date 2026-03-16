@@ -65,6 +65,12 @@ function HeroIntro() {
           <p className="text-lg lg:text-xl leading-relaxed max-w-3xl text-foreground opacity-90">
             <GradientText>Product Hybrid</GradientText> building at the edge of user experience and technical scale. Obsessed with the craft. Driven to build world-class.
           </p>
+           <p className="text-lg lg:text-xl leading-relaxed max-w-3xl text-foreground opacity-90">
+           Open to opportunities. <span className="font-bold">Let's connect.</span>
+          </p>
+          <div>
+          <ContactButton />
+          </div>
         </div>
       </div>
     </div>
@@ -83,87 +89,124 @@ export function Hero() {
 
 export function BlogBlurp() {
   return (
-  <>
-      <article className="prose prose-md  prose-normal dark:prose-invert">
-        <h3>Writings</h3>
-        <p>I write sometimes</p>
-      </article>
-      <div className="ml-auto">
-        <Link href="writings"><Button variant="outline">Read</Button></Link>
-      </div>
-    </>
-  );
+    <>
+        <p className="text-3xl font-medium tracking-widest uppercase text-neutral-400 mb-5">
+        Writings
+        </p>
+        
+        <p className="text-sm font-medium tracking-widest  text-neutral-400 mb-5">
+        I write sometimes
+        </p>
+        <div className="ml-auto text-sm ">
+          <Link href="writings"><Button variant="outline">Read</Button></Link>
+        </div>
+      </>
+    );
 }
 
 export function Experience() {
-  return (
-    <article className="prose prose-md prose-normal dark:prose-invert w-full">
-      <h2 className="text-3xl font-bold mb-6">Experience</h2>
-      <div className="flex flex-col gap-6">
-        <p className="text-lg">
-          I have extensive experience in the software engineering field, with
-          a proven ability to deliver polished, high-quality products.
-          Currently, I'm working at Meta as a Full Stack Software Engineer,
-          where I continue to develop and refine my skills.
-        </p>
-        <ul className="list-disc pl-6 space-y-2 text-lg">
-          <li>
-            <b>Meta</b>, Full Stack Software Engineer (2022-)
-          </li>
-          <li>
-            <b>Coinhall</b>, Founding Engineer (2021-2022)
-          </li>
-          <li>
-            <b>Sprinklr</b>, Backend Developer Intern (2021)
-          </li>
-          <li>
-            <b>Shopee</b>, Backend Developer Intern (2021)
-          </li>
-          <li>
-            <b>Shopee</b>, Frontend Developer Intern (2020)
-          </li>
-        </ul>
+
+  const highlights = [
+  {
+    year: "2022-present",
+    title: "Software Engineer at Meta",
+    body: "IC3 to IC5 in 3.5 years.",
+    last: false,
+  },
+  {
+    year: "2021-2022",
+    title: "Coinhall, Founding Engineer",
+      body: "Had fun, learned a lot, built a lot. Left to join Facebook. Coinhall was eventually acquired",
+    last: false,
+  },
+  {
+    year: "2019-2021",
+    title: "Internships at Shopee, Sprinklr",
+    body: "Training in an pre AI era",
+    last: true,
+  }
+];
+
+
+  return <section className="py-4">
+      {/* Section label */}
+      <p className="text-3xl font-medium tracking-widest uppercase text-neutral-400 mb-5">
+        Experience
+      </p>
+
+
+
+      {/* Timeline */}
+      <div className="flex flex-col">
+        {highlights.map((item) => (
+          <div key={item.title} className="flex gap-0">
+            {/* Left — dot + line */}
+            <div className="flex flex-col items-center w-11 shrink-0">
+              <div className="w-2 h-2 rounded-full bg-neutral-900 dark:bg-neutral-100 shrink-0 mt-1.5" />
+              {!item.last && (
+                <div className="w-px flex-1 bg-neutral-200 dark:bg-neutral-800 mt-1.5" />
+              )}
+            </div>
+
+            {/* Content */}
+            <div className={`flex-1 ${!item.last ? "pb-10" : ""}`}>
+              <p className="text-md text-neutral-400 mb-1">{item.year}</p>
+              <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100 leading-snug mb-1.5">
+                {item.title}
+              </p>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
+              {item.body}
+            </p>
+
+            </div>
+          </div>
+        ))}
       </div>
-      <h3 className="text-2xl font-semibold mt-8 italic">I thrive in Collaborative Environments</h3>
-    </article>
-  );
+    </section>
 }
 
-export function Skills() {
+const strengths = [
+  {
+    title: "Coding machine",
+    body: "I ship fast and I ship clean. Speed without quality is just debt — I don't trade one for the other.",
+  },
+  {
+    title: "Product hybrid",
+    body: "I think in user experiences, not just systems. The best engineers know what they're building and why.",
+  },
+  {
+    title: "Obsessed with what's new",
+    body: "New technologies excite me. I'm always exploring what's next — whether that's a new framework, a new paradigm, or a new way to build.",
+  },
+  {
+    title: "Outside the box",
+    body: 'I see problems others don\'t. I look at "what ifs." and see possibilities, not just roadblocks. I find creative solutions to hard problems.',
+  },
+];
+ 
+export  function Strengths() {
   return (
-    <article className="prose prose-md prose-normal dark:prose-invert w-full">
-      <h2 className="text-3xl font-bold mb-6">Skills</h2>
-      <div className="flex flex-col md:flex-row gap-8">
-        <div className="flex-1">
-          <h4 className="text-xl font-semibold mb-4">Web Technologies</h4>
-          <div className="flex flex-wrap">
-            <Tag label="ReactJS" custom="bg-blue-800" />
-            <Tag label="Javascript" custom="bg-indigo-500" />
-            <Tag label="HTML/CSS" custom="bg-indigo-500" />
-            <Tag label="SolidJS" custom="bg-blue-500" />
-            <Tag label="Relay" custom="bg-purple-800" />
-            <Tag label="VueJS" custom="bg-purple-700" />
-            <Tag label="Graphql" custom="bg-yellow-600" />
-            <Tag label="NodeJS" custom="bg-orange-500" />
-            <Tag label="ExpressJS" custom="bg-red-800" />
-            <Tag label="NestJS" custom="bg-red-700" />
-            <Tag label="Lucene/Elasticsearch" custom="bg-orange-800" />
+    <section className="py-4">
+      <p className="text-3xl font-medium tracking-widest uppercase text-neutral-400 mb-8">
+        Strengths
+      </p>
+ 
+      <div className="grid grid-cols-1 sm:grid-cols-2 border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden">
+        {strengths.map((item) => (
+          <div
+            key={item.title}
+            className="p-5 bg-white dark:bg-neutral-950 hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-150 border-b border-r border-neutral-200 dark:border-neutral-800 last:border-b-0"
+          >
+            <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100 mb-1.5 leading-snug">
+              {item.title}
+            </p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
+              {item.body}
+            </p>
           </div>
-        </div>
-        <div className="flex-1">
-          <h4 className="text-xl font-semibold mb-4">Languages</h4>
-          <div className="flex flex-wrap">
-            <Tag label="Typescript" custom="bg-blue-800" />
-            <Tag label="Javascript" custom="bg-indigo-600" />
-            <Tag label="Java" custom="bg-yellow-800" />
-            <Tag label="C++" custom="bg-indigo-500" />
-            <Tag label="Python" custom="bg-purple-700" />
-            <Tag label="Hack/php" custom="bg-indigo-800" />
-          </div>
-        </div>
+        ))}
       </div>
-      <h3 className="text-2xl font-semibold mt-8 italic">Using the newest Technologies excites me</h3>
-    </article>
+    </section>
   );
 }
 
@@ -249,5 +292,27 @@ const highlights = [
       </div>
     </section>
   );
+}
+
+
+export function ContactButton() {
+  const BOOKING_URL = "https://calendar.app.google/xxbusxeWeuJhap2E8";
+ 
+   return (
+    <a
+      href={BOOKING_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 text-sm font-medium text-neutral-900 dark:text-neutral-100 border border-neutral-300 dark:border-neutral-700 rounded-lg px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150"
+    >
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="2.5" width="12" height="10.5" rx="1.5" stroke="currentColor" strokeWidth="1.2"/>
+        <path d="M1 5.5h12" stroke="currentColor" strokeWidth="1.2"/>
+        <path d="M4 1v3M10 1v3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+      </svg>
+      Book a call
+    </a>
+  );
+
 }
 
