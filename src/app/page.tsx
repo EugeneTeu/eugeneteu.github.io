@@ -1,5 +1,5 @@
 import React from "react";
-import { Hero, Experience, Skills, BlogBlurp, CareerHighlights } from "@/components/Content";
+import { Hero, Experience, BlogBlurp, CareerHighlights, Strengths } from "@/components/Content";
 import BentoBox from "@/components/BentoBox";
 
 
@@ -11,15 +11,16 @@ export default function Home() {
         <BentoBox>
           <CareerHighlights />
         </BentoBox>
+           <BentoBox>
+        <Strengths />
+        </BentoBox>
         <BentoBox>
           <Experience />
         </BentoBox>
         <BentoBox>
           <BlogBlurp />
         </BentoBox>
-        <BentoBox>
-          <Skills />
-        </BentoBox>
+     
       </div>
     </div>
   );

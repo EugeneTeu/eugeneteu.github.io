@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-zinc-500 dark:text-zinc-400">
         <div className="flex flex-col items-center md:items-start gap-1">
           <p>© {new Date().getFullYear()} Eugene Teu. All rights reserved.</p>
-          <p className="text-[10px] opacity-70">Built with Gemini CLI.</p>
+          <p className="text-[10px] opacity-70">Built with Gemini CLI and Claude.</p>
         </div>
         <div className="flex gap-6 items-center">
           <a href="https://github.com/eugeneteu" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors flex items-center gap-2">
