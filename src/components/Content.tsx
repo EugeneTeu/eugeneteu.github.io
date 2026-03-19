@@ -168,7 +168,7 @@ export function Experience() {
 const strengths = [
   {
     title: "Coding machine",
-    body: "I ship fast and I ship clean. Speed without quality is just debt — I don't trade one for the other.",
+    body: "AI is my multiplier. I use it to ship more, think deeper, and stay ahead of the curve.",
   },
   {
     title: "Product hybrid",
@@ -221,17 +221,17 @@ const highlights = [
     last: false,
   },
   {
-    year: "2025",
-    title: "Took a beta to general availability across Vietnam",
-    body: "Took a beta-validated catalog ads onboarding idea and drove it to GA — working across multiple ads teams to successfully onboard partners across Vietnam. A lightweight solution that meaningfully expanded the addressable market for 3P SaaS platforms.",
-    badge: "Significantly above expectations · IC4 → IC5",
-    last: false,
-  },
-  {
     year: "Late 2024",
     title: "New to the team, shipped in 4 weeks",
     body: "Weeks into joining a new team, took on a high-stakes ads onboarding launch for Facebook. Rebuilt a large % of the codebase, navigated last-minute design and content pivots, and delivered on time.",
     badge: "Move fast",
+    last: false,
+  },
+    {
+    year: "2025",
+    title: "Took a beta to general availability across Vietnam",
+    body: "Took a beta-validated catalog ads onboarding idea and drove it to GA — working across multiple ads teams to successfully onboard partners across Vietnam. A lightweight solution that meaningfully expanded the addressable market for 3P SaaS platforms.",
+    badge: "Significantly above expectations · IC4 → IC5",
     last: false,
   },
     {
@@ -248,13 +248,15 @@ const highlights = [
   return (
     <section className="py-4">
       {/* Section label */}
-      <p className="text-3xl font-medium tracking-widest uppercase text-neutral-400 mb-5">
-        Career highlights
-      </p>
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-5">
+        <p className="text-3xl font-medium tracking-widest uppercase text-neutral-400">
+          Career highlights
+        </p>
+      </div>
 
       {/* Summary line */}
       <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed mb-8">
-        Worked across multiple orgs at Meta, spanning web, iOS, and Android.
+        Work-ing across multiple orgs at Meta, spanning web, iOS, and Android.
       </p>
 
       {/* Divider */}
