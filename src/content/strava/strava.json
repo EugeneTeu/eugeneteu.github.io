@@ -1,0 +1,124 @@
+{
+  "total_activities": 872,
+  "total_distance_km": 2046.18,
+  "total_moving_time_s": 2368985,
+  "total_elevation_gain_m": 11558.2,
+  "longest_distance_km": 25.98,
+  "longest_moving_time_s": 220921,
+  "first_activity_date": "2022-06-04T23:22:19Z",
+  "latest_activity_date": "2026-03-18T14:13:32Z",
+  "by_sport": [
+    {
+      "sport_type": "Run",
+      "activities": 370,
+      "distance_km": 1690.14,
+      "moving_time_s": 715239,
+      "elevation_gain_m": 7019.3,
+      "longest_distance_km": 10.07
+    },
+    {
+      "sport_type": "WeightTraining",
+      "activities": 252,
+      "distance_km": 0.0,
+      "moving_time_s": 948676,
+      "elevation_gain_m": 0,
+      "longest_distance_km": 0.0
+    },
+    {
+      "sport_type": "Workout",
+      "activities": 127,
+      "distance_km": 1.97,
+      "moving_time_s": 353278,
+      "elevation_gain_m": 2.1,
+      "longest_distance_km": 1.41
+    },
+    {
+      "sport_type": "Walk",
+      "activities": 50,
+      "distance_km": 155.83,
+      "moving_time_s": 110701,
+      "elevation_gain_m": 2463.7,
+      "longest_distance_km": 7.31
+    },
+    {
+      "sport_type": "Golf",
+      "activities": 22,
+      "distance_km": 102.31,
+      "moving_time_s": 83417,
+      "elevation_gain_m": 189.0,
+      "longest_distance_km": 20.02
+    },
+    {
+      "sport_type": "Swim",
+      "activities": 10,
+      "distance_km": 0.9,
+      "moving_time_s": 3826,
+      "elevation_gain_m": 0,
+      "longest_distance_km": 0.25
+    },
+    {
+      "sport_type": "Pilates",
+      "activities": 10,
+      "distance_km": 0.0,
+      "moving_time_s": 27570,
+      "elevation_gain_m": 0,
+      "longest_distance_km": 0.0
+    },
+    {
+      "sport_type": "Badminton",
+      "activities": 9,
+      "distance_km": 5.55,
+      "moving_time_s": 26406,
+      "elevation_gain_m": 61.4,
+      "longest_distance_km": 4.08
+    },
+    {
+      "sport_type": "Yoga",
+      "activities": 8,
+      "distance_km": 0.0,
+      "moving_time_s": 34606,
+      "elevation_gain_m": 0,
+      "longest_distance_km": 0.0
+    },
+    {
+      "sport_type": "Hike",
+      "activities": 6,
+      "distance_km": 55.27,
+      "moving_time_s": 40662,
+      "elevation_gain_m": 1689.2,
+      "longest_distance_km": 25.98
+    },
+    {
+      "sport_type": "Ride",
+      "activities": 5,
+      "distance_km": 33.69,
+      "moving_time_s": 16484,
+      "elevation_gain_m": 119.4,
+      "longest_distance_km": 18.4
+    },
+    {
+      "sport_type": "RockClimbing",
+      "activities": 1,
+      "distance_km": 0.0,
+      "moving_time_s": 6480,
+      "elevation_gain_m": 0,
+      "longest_distance_km": 0.0
+    },
+    {
+      "sport_type": "Kayaking",
+      "activities": 1,
+      "distance_km": 0.52,
+      "moving_time_s": 552,
+      "elevation_gain_m": 14.1,
+      "longest_distance_km": 0.52
+    },
+    {
+      "sport_type": "HighIntensityIntervalTraining",
+      "activities": 1,
+      "distance_km": 0.0,
+      "moving_time_s": 1088,
+      "elevation_gain_m": 0,
+      "longest_distance_km": 0.0
+    }
+  ]
+}
