@@ -1,19 +1,19 @@
 {
-  "total_activities": 884,
-  "total_distance_km": 2066.41,
-  "total_moving_time_s": 2400800,
-  "total_elevation_gain_m": 11650.2,
+  "total_activities": 886,
+  "total_distance_km": 2073.16,
+  "total_moving_time_s": 2404137,
+  "total_elevation_gain_m": 11676.2,
   "longest_distance_km": 25.98,
   "longest_moving_time_s": 220921,
   "first_activity_date": "2022-06-04T23:22:19Z",
-  "latest_activity_date": "2026-04-01T14:42:17Z",
+  "latest_activity_date": "2026-04-04T02:57:30Z",
   "by_sport": [
     {
       "sport_type": "Run",
-      "activities": 374,
-      "distance_km": 1710.37,
-      "moving_time_s": 723431,
-      "elevation_gain_m": 7111.3,
+      "activities": 375,
+      "distance_km": 1716.43,
+      "moving_time_s": 725894,
+      "elevation_gain_m": 7137.3,
       "longest_distance_km": 10.07
     },
     {
@@ -50,11 +50,11 @@
     },
     {
       "sport_type": "Swim",
-      "activities": 10,
-      "distance_km": 0.9,
-      "moving_time_s": 3826,
+      "activities": 11,
+      "distance_km": 1.6,
+      "moving_time_s": 4700,
       "elevation_gain_m": 0,
-      "longest_distance_km": 0.25
+      "longest_distance_km": 0.7
     },
     {
       "sport_type": "Pilates",
