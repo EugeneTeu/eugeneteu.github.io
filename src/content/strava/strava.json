@@ -1,12 +1,12 @@
 {
-  "total_activities": 930,
+  "total_activities": 931,
   "total_distance_km": 2151.14,
-  "total_moving_time_s": 2518820,
+  "total_moving_time_s": 2520287,
   "total_elevation_gain_m": 12041.2,
   "longest_distance_km": 25.98,
   "longest_moving_time_s": 220921,
   "first_activity_date": "2022-06-04T23:22:19Z",
-  "latest_activity_date": "2026-05-30T02:09:45Z",
+  "latest_activity_date": "2026-05-31T10:30:49Z",
   "by_sport": [
     {
       "sport_type": "Run",
@@ -81,20 +81,20 @@
       "longest_distance_km": 0.0
     },
     {
+      "sport_type": "Ride",
+      "activities": 6,
+      "distance_km": 33.69,
+      "moving_time_s": 17951,
+      "elevation_gain_m": 119.4,
+      "longest_distance_km": 18.4
+    },
+    {
       "sport_type": "Hike",
       "activities": 6,
       "distance_km": 55.27,
       "moving_time_s": 40662,
       "elevation_gain_m": 1689.2,
       "longest_distance_km": 25.98
-    },
-    {
-      "sport_type": "Ride",
-      "activities": 5,
-      "distance_km": 33.69,
-      "moving_time_s": 16484,
-      "elevation_gain_m": 119.4,
-      "longest_distance_km": 18.4
     },
     {
       "sport_type": "RockClimbing",
