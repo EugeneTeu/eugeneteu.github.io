@@ -1,12 +1,12 @@
 {
-  "total_activities": 953,
+  "total_activities": 954,
   "total_distance_km": 2196.33,
-  "total_moving_time_s": 2577232,
+  "total_moving_time_s": 2581111,
   "total_elevation_gain_m": 12217.2,
   "longest_distance_km": 25.98,
   "longest_moving_time_s": 220921,
   "first_activity_date": "2022-06-04T23:22:19Z",
-  "latest_activity_date": "2026-06-25T22:57:02Z",
+  "latest_activity_date": "2026-06-30T13:49:45Z",
   "by_sport": [
     {
       "sport_type": "Run",
@@ -18,9 +18,9 @@
     },
     {
       "sport_type": "WeightTraining",
-      "activities": 299,
+      "activities": 300,
       "distance_km": 0.0,
-      "moving_time_s": 1086421,
+      "moving_time_s": 1090300,
       "elevation_gain_m": 0,
       "longest_distance_km": 0.0
     },
