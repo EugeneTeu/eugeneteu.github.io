@@ -1,18 +1,18 @@
 {
-  "total_activities": 986,
-  "total_distance_km": 2290.95,
-  "total_moving_time_s": 2665534,
+  "total_activities": 987,
+  "total_distance_km": 2296.24,
+  "total_moving_time_s": 2668171,
   "total_elevation_gain_m": 12621.2,
   "longest_distance_km": 25.98,
   "longest_moving_time_s": 220921,
   "first_activity_date": "2022-06-04T23:22:19Z",
-  "latest_activity_date": "2026-08-11T15:11:24Z",
+  "latest_activity_date": "2026-08-13T10:10:42Z",
   "by_sport": [
     {
       "sport_type": "Run",
-      "activities": 414,
-      "distance_km": 1923.88,
-      "moving_time_s": 812509,
+      "activities": 415,
+      "distance_km": 1929.17,
+      "moving_time_s": 815146,
       "elevation_gain_m": 7946.3,
       "longest_distance_km": 10.07
     },
