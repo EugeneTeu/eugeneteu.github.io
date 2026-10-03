@@ -1,12 +1,12 @@
 {
-  "total_activities": 1019,
-  "total_distance_km": 2360.66,
-  "total_moving_time_s": 2745033,
-  "total_elevation_gain_m": 12983.2,
+  "total_activities": 1021,
+  "total_distance_km": 2363.63,
+  "total_moving_time_s": 2751981,
+  "total_elevation_gain_m": 12986.2,
   "longest_distance_km": 25.98,
   "longest_moving_time_s": 220921,
   "first_activity_date": "2022-06-04T23:22:19Z",
-  "latest_activity_date": "2026-09-30T16:18:47Z",
+  "latest_activity_date": "2026-10-02T05:25:05Z",
   "by_sport": [
     {
       "sport_type": "Run",
@@ -34,10 +34,10 @@
     },
     {
       "sport_type": "Walk",
-      "activities": 54,
-      "distance_km": 165.76,
-      "moving_time_s": 117549,
-      "elevation_gain_m": 2599.7,
+      "activities": 55,
+      "distance_km": 168.35,
+      "moving_time_s": 119475,
+      "elevation_gain_m": 2602.7,
       "longest_distance_km": 7.31
     },
     {
@@ -103,6 +103,14 @@
       "moving_time_s": 6480,
       "elevation_gain_m": 0,
       "longest_distance_km": 0.0
+    },
+    {
+      "sport_type": "Pickleball",
+      "activities": 1,
+      "distance_km": 0.39,
+      "moving_time_s": 5022,
+      "elevation_gain_m": 0,
+      "longest_distance_km": 0.39
     },
     {
       "sport_type": "Kayaking",
