@@ -1,12 +1,12 @@
 {
-  "total_activities": 1025,
-  "total_distance_km": 2363.63,
-  "total_moving_time_s": 2764005,
+  "total_activities": 1026,
+  "total_distance_km": 2363.8,
+  "total_moving_time_s": 2767680,
   "total_elevation_gain_m": 12986.2,
   "longest_distance_km": 25.98,
   "longest_moving_time_s": 220921,
   "first_activity_date": "2022-06-04T23:22:19Z",
-  "latest_activity_date": "2026-10-08T14:01:59Z",
+  "latest_activity_date": "2026-10-09T10:59:42Z",
   "by_sport": [
     {
       "sport_type": "Run",
@@ -95,6 +95,14 @@
       "moving_time_s": 40662,
       "elevation_gain_m": 1689.2,
       "longest_distance_km": 25.98
+    },
+    {
+      "sport_type": "Squash",
+      "activities": 1,
+      "distance_km": 0.17,
+      "moving_time_s": 3675,
+      "elevation_gain_m": 0,
+      "longest_distance_km": 0.17
     },
     {
       "sport_type": "RockClimbing",
