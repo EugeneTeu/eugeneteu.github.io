@@ -1,12 +1,12 @@
 {
-  "total_activities": 1027,
-  "total_distance_km": 2363.8,
-  "total_moving_time_s": 2773197,
-  "total_elevation_gain_m": 12986.2,
+  "total_activities": 1028,
+  "total_distance_km": 2375.85,
+  "total_moving_time_s": 2780906,
+  "total_elevation_gain_m": 13123.2,
   "longest_distance_km": 25.98,
   "longest_moving_time_s": 220921,
   "first_activity_date": "2022-06-04T23:22:19Z",
-  "latest_activity_date": "2026-10-10T05:42:02Z",
+  "latest_activity_date": "2026-10-11T01:49:21Z",
   "by_sport": [
     {
       "sport_type": "Run",
@@ -34,11 +34,11 @@
     },
     {
       "sport_type": "Walk",
-      "activities": 55,
-      "distance_km": 168.35,
-      "moving_time_s": 119475,
-      "elevation_gain_m": 2602.7,
-      "longest_distance_km": 7.31
+      "activities": 56,
+      "distance_km": 180.4,
+      "moving_time_s": 127184,
+      "elevation_gain_m": 2739.7,
+      "longest_distance_km": 12.05
     },
     {
       "sport_type": "Golf",
